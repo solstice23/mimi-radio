@@ -1,0 +1,106 @@
+.iconButton {
+	width: 40px;
+	height: 40px;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1000px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+	
+
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.2s ease, background-color 0.2s ease;
+	}
+	&:hover::before {
+		opacity: 0.08;
+	}
+	&:active::before {
+		opacity: 0.12;
+	}
+
+
+
+	&.standard {
+		color: var(--md-sys-color-on-surface-variant);
+		&::before {
+			background-color: var(--md-sys-color-on-surface-variant);
+		}
+		&.selected {
+			color: var(--md-sys-color-primary);
+		}
+	}
+
+	&.outlined {
+		color: var(--md-sys-color-on-surface-variant);
+		border: 1px solid var(--md-sys-color-outline);
+		&::before {
+			background-color: var(--md-sys-color-on-surface-variant);
+		}
+		&.selected {
+			color: var(--md-sys-color-inverse-on-surface);
+			background-color: var(--md-sys-color-inverse-surface);
+			&::before {
+				background-color: var(--md-sys-color-inverse-on-surface);
+			}
+		}
+	}
+
+	
+	&.filled {
+		color: var(--md-sys-color-on-primary);
+		background-color: var(--md-sys-color-primary);
+		&::before {
+			background-color: var(--md-sys-color-on-primary);
+		}
+		&.toggle {
+			&:not(.selected) {
+				color: var(--md-sys-color-primary);
+				background-color: var(--md-sys-color-surface-container-highest);
+				&::before {
+					background-color: var(--md-sys-color-primary);
+				}
+			}
+			&.selected {
+				color: var(--md-sys-color-on-primary);
+				background-color: var(--md-sys-color-primary);
+				&::before {
+					background-color: var(--md-sys-color-on-primary);
+				}
+			}
+		}
+	}
+
+	
+	&.tonal {
+		color: var(--md-sys-color-on-secondary-container);
+		background-color: var(--md-sys-color-secondary-container);
+		&::before {
+			background-color: var(--md-sys-color-on-secondary-container);
+		}
+		&.toggle {
+			&:not(.selected) {
+				color: var(--md-sys-color-on-surface-variant);
+				background-color: var(--md-sys-color-surface-container-highest);
+				&::before {
+					background-color: var(--md-sys-color-on-surface-variant);
+				}
+			}
+			&.selected {
+				color: var(--md-sys-color-on-secondary-container);
+				background-color: var(--md-sys-color-secondary-container);
+				&::before {
+					background-color: var(--md-sys-color-on-secondary-container);
+				}
+			}
+		}
+	}
+}

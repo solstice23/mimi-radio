@@ -1,0 +1,79 @@
+.checkbox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.2em;
+	.input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+	}
+	.checkmarkContainer {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		overflow: hidden;
+		border-radius: 1000px;
+		position: relative;
+		--ripple-color: var(--md-sys-color-primary);
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			inset: 0;
+			background-color: var(--md-sys-color-on-surface-variant);
+			opacity: 0;
+			transition: opacity 0.2s ease, background-color 0.2s ease;
+		}
+		&:hover::before {
+			opacity: 0.08;
+		}
+		&:active::before {
+			opacity: 0.12;
+		}
+		&.checked::before {
+			background-color: var(--md-sys-color-primary);
+		}
+		
+		.checkmark {
+			border-width: 2px;
+			border-style: solid;
+			border-radius: 2px;
+			border-color: var(--md-sys-color-on-surface-variant);
+			background-color: transparent;
+
+			fill: none;
+			stroke: var(--md-sys-color-on-primary);
+			stroke-miterlimit: 12;
+			stroke-width: 12px;
+			stroke-dasharray: 80.5px;
+			stroke-dashoffset: 80.5px;
+			transition: stroke-dashoffset 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+			width: 18px;
+			height: 18px;
+
+			
+			&.checked {
+				background-color: var(--md-sys-color-primary);
+				stroke-dashoffset: 0px;
+				border-color: transparent;
+			}
+
+			path {
+				transform: scale(1.2);
+				transform-origin: center;
+			}
+		}
+	}
+
+	.label {
+		cursor: pointer;
+		user-select: none;
+	}
+}

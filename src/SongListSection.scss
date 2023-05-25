@@ -1,0 +1,132 @@
+.list-section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	.list-section-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 20px;
+		align-items: center;
+		@media screen and (max-width: 550px) {
+			.song-type-filter {
+				width: 100%;
+			}
+			.song-filter-btn {
+				position: fixed !important;
+				right: 20px;
+				top: 20px;
+			}
+		}
+	}
+	.song-list {
+		flex: 1;
+		overflow: hidden;
+		position: relative;
+		.song-list-inner {
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			display: grid;
+			grid-template-columns: min(repeat(auto-fill, minmax(550px, 1fr)), 1fr);
+			/*@media screen and (max-width: 600px) {
+				grid-template-columns: 1fr;
+			}*/
+			row-gap: 20px;
+			column-gap: 20px;
+			//padding-right: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			.song {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				height: 100px;
+				.song-cover {
+					height: 100%;
+					aspect-ratio: 1 / 1;
+					background-position: center;
+					background-size: cover;
+					background-repeat: no-repeat;
+					border-radius: inherit;
+					margin-right: 20px;
+					flex-shrink: 0;
+				}
+				.song-info {
+					flex: 1;
+					line-height: 1.8;
+					.song-title {
+						display: flex;
+						align-items: center;
+						gap: 1em;
+						.song-name {
+							font-size: 1.2rem;
+							font-weight: bold;
+						}
+					}
+					.song-creators {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 0.4em;
+						opacity: .8;
+						> * {
+							display: flex;
+							flex-direction: row;
+							align-items: center;
+							svg {
+								margin-right: 0.2em;
+							}
+						}
+					}
+					.song-metas {
+						font-size: 0.9em;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						gap: 0.8em;
+						opacity: .6;
+					}
+				}
+				.song-actions {
+					margin-right: 10px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+				}
+			}
+			&::-webkit-scrollbar {
+				width: 0px;
+				background: transparent; /* make scrollbar transparent */
+			}
+		}
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 10px;
+			background: linear-gradient(to bottom, var(--md-sys-color-background), transparent);
+			z-index: 1;
+			pointer-events: none;
+		}
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 10px;
+			background: linear-gradient(to top, var(--md-sys-color-background), transparent);
+			z-index: 1;
+			pointer-events: none;
+		}
+	}
+}
+
+.song-filter-menu {
+	margin-top: 10px;
+}

@@ -1,0 +1,54 @@
+.menuItem {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+	padding-left: 12px;
+	padding-right: 12px;
+	height: 48px;
+	cursor: pointer;
+	user-select: none;
+
+	.icon {
+		font-size: 24px;
+		padding-right: 12px;
+		color: var(--md-sys-color-on-surface-variant);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.content {
+		flex: 1;
+		padding-right: 28px;
+		color: var(--md-sys-color-on-surface);
+	}
+	.checkbox {
+		margin-right: -8px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		inset: 0;
+		background-color: var(--md-sys-color-on-surface);
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	&:hover::before {
+		opacity: 0.08;
+	}
+	&:active::before {
+		opacity: 0.12;
+	}
+}
+
+.divider {
+	height: 1px;
+	width: 100%;
+	display: block;
+	background-color: var(--md-sys-color-outline-variant);
+	margin-top: 7.5px;
+	margin-bottom: 7.5px;
+}

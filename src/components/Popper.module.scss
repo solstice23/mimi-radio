@@ -1,0 +1,7 @@
+.popper {
+	position: absolute;
+	z-index: 10;
+	&.noClick {
+		pointer-events: none;
+	}
+}

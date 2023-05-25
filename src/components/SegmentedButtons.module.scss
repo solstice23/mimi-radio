@@ -1,0 +1,89 @@
+.segmentedButtons {
+	display: flex;
+	width: fit-content;
+	.segmentedButton {
+		flex: 1;
+		flex-shrink: 0;
+		border-radius: 0;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		color: var(--md-sys-color-on-surface);
+		border: 1px solid var(--md-sys-color-outline);
+		height: 40px;
+		font-size: 1em;
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		transition: background-color 0.2s ease, color 0.2s ease;
+		padding-left: 36px;
+		padding-right: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:first-child {
+			border-radius: 1000px 0 0 1000px;
+		}
+		&:last-child {
+			border-radius: 0 1000px 1000px 0;
+		}
+		&:not(:last-child) {
+			border-right: none;
+		}
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			inset: 0;
+			background-color: var(--md-sys-color-on-surface);
+			opacity: 0;
+			transition: opacity 0.2s ease, background-color 0.2s ease;
+		}
+		&:hover::before {
+			opacity: 0.08;
+		}
+		/*&:focus::before {
+			opacity: 0.12;
+		}*/
+		&:active::before {
+			opacity: 0.12;
+		}
+		&.selected {
+			background-color: var(--md-sys-color-secondary-container);
+			color: var(--md-sys-color-on-secondary-container);
+			&::before {
+				background-color: var(--md-sys-color-on-secondary-container);
+			}
+		}
+
+		$icon-size: 1.25em;
+		$icon-label-spacing: 0.2em;
+		
+		.icon {
+			font-size: $icon-size;
+			width: 0;
+			transform: translateX(($icon-size + $icon-label-spacing) * -0.5);
+			transition: opacity 0.2s ease;
+			margin-bottom: -0.15em;
+		}
+		.iconCheck {
+			opacity: 0;
+		}
+		&.selected {
+			.iconCheck {
+				opacity: 1;
+			}
+			.iconCustom {
+				opacity: 0;
+			}
+		}
+		.label {
+			transform: none;
+			transition: transform 0.2s ease;
+		}
+		&.selected .label,
+		.iconCustom + .label {
+			transform: translateX(($icon-size + $icon-label-spacing) * 0.5);
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.card {
+	border-radius: 12px;
+	overflow: hidden;
+	position: relative;
+	transition: box-shadow 0.2s ease;
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		inset: 0;
+		background-color: var(--md-sys-color-on-surface);
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	&.filled {
+		background-color: var(--md-sys-color-surface-container-highest);
+		color: var(--md-sys-color-on-surface-variant);
+		&:hover {
+			&::before {
+				opacity: 0.08;
+			}
+			&:not(:active) {
+				//box-shadow: 0 1px 2px 1px rgba(var(--md-sys-color-shadow-rgb), 0.1), 0 3px 8px 3px rgba(var(--md-sys-color-shadow-rgb), 0.05);
+				//level2 shadow, should be revised to level1
+			}
+		}
+		&:active {
+			&::before {
+				opacity: 0.12;
+			}
+		}
+	}
+}

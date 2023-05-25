@@ -1,0 +1,16 @@
+.rippleWrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0px;
+	height: 0px;
+}
+.ripple {
+	border-radius: 50%;
+	position: absolute;
+	background-color: var(--ripple-color, var(--md-sys-color-on-surface));
+	filter: opacity(0.1);
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	z-index: 999;
+}

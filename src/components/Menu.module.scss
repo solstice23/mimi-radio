@@ -1,0 +1,18 @@
+.menu {
+	display: block;
+	background-color: var(--md-sys-color-surface-container);
+	border-radius: 4px;
+	min-width: 112px;
+	max-width: 280px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+    box-shadow: 0 1px 2px 1px rgba(var(--md-sys-color-shadow-rgb), 0.1), 0 3px 8px 3px rgba(var(--md-sys-color-shadow-rgb), 0.05);
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	transform-origin: var(--anchor-position, center top);
+
+	&.hide {
+		pointer-events: none;
+		opacity: 0;
+		transform: scale(0.9);
+	}
+}
