@@ -70,13 +70,18 @@ export function getSongsData() {
 }
 
 export function formatLength(length) {
-	let result = '';
-	while (length) {
-		result = (length % 60).toString().padStart(2, '0') + ':' + result;
-		length = Math.floor(length / 60);
+	if (typeof(length) === 'undefined') length = 0;
+
+	const hour = Math.floor(length / 3600);
+	length %= 3600;
+	const minute = Math.floor(length / 60);
+	const second = Math.floor(length % 60);
+	
+	if (hour) {
+		return hour + ':' + minute.toString().padStart(2, '0') + ':' + second.toString().padStart(2, '0');
+	} else {
+		return minute + ':' + second.toString().padStart(2, '0');
 	}
-	result = result.replace(/^0+/, '').replace(/:$/, '');
-	return result;
 }
 
 export function formatDate(date) {

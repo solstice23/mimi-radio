@@ -11,6 +11,13 @@
 		background-color: var(--md-sys-color-on-surface);
 		opacity: 0;
 		transition: opacity 0.2s ease;
+		pointer-events: none;
+	}
+	&.noRipple > *[class*='ripple-wrap'] {
+		display: none !important;
+	}
+	&.noLayer::before {
+		display: none;
 	}
 	&.filled {
 		background-color: var(--md-sys-color-surface-container-highest);

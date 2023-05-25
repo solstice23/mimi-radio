@@ -10,6 +10,7 @@ function addRipple(e, target, options = {}) {
 	}*/
 
 	const rippleWrap = document.createElement('div');
+	rippleWrap.classList.add('ripple-wrap');
 	rippleWrap.classList.add(css.rippleWrap);
 
 	const ripple = document.createElement('span');

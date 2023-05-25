@@ -14,6 +14,10 @@ function Card(props) {
 					[css.elevated]: (props.type ?? 'filled') === 'elevated',
 					[css.filled]: (props.type ?? 'filled') === 'filled',
 					[css.outlined]: (props.type ?? 'filled') === 'outlined',
+				},
+				{
+					[css.noRipple]: props.ripple === false,
+					[css.noLayer]: props.layer === false,
 				}
 			)}>
 			{props.children}

@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useState } from 'react'
 import Toolbar from './components/Toolbar.jsx'
 import Card from './components/Card.jsx'
 import { SongListSection } from './SongListSection.jsx'
+import { NowPlayingSection } from './NowPlayingSection.jsx'
 import './App.scss'
 
 function App() {
@@ -12,9 +13,8 @@ function App() {
 			/>
 			<div className="main">
 				<SongListSection/>
-				<div className="info-section">
-				</div>
-			</div>						
+				<NowPlayingSection/>
+			</div>
 		</>
 	)
 }

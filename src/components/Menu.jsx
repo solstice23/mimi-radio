@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import Popper from './Popper.jsx';
 import css from './Menu.module.scss';
-import { useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 
-function Menu(props) {
-	const ref = useRef();
+const Menu = forwardRef(function Menu(props, ref) {
+	if (ref === null) ref = useRef();
 	return (
 		<Popper
 			anchorElement={props.anchorElement}
@@ -12,17 +12,23 @@ function Menu(props) {
 			noClick={!(props.open ?? true)}
 			ref={ref}
 		>
-			<div className={classNames(
-				css.menu,
-				props.className,
-				{
-					[css.hide]: !(props.open ?? true)
-				}
-			)}>
+			<div 
+				className={classNames(
+					css.menu,
+					props.className,
+					{
+						[css.hide]: !(props.open ?? true)
+					}
+				)}
+				onClick={e => {
+					e.stopPropagation();
+					props.onClose?.();
+				}}
+			>
 				{props.children}
 			</div>
 		</Popper>
 	)
-}
+});
 
 export default Menu;

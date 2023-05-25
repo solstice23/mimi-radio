@@ -1,4 +1,4 @@
-import { useEffect, useState, useReducer, useRef } from 'react';
+import { useEffect, useState, useReducer, useRef, useContext } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit'
 import { getSongsData, formatLength, formatDate } from './utils.js'
 import Icon from './components/Icon.jsx'
@@ -10,11 +10,14 @@ import Menu from './components/Menu.jsx';
 import MenuItem, {MenuDivider} from './components/MenuItem.jsx';
 import Checkbox from './components/Checkbox.jsx';
 import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert } from 'react-icons/md';
+import { QueueContext } from './contexts/QueueContext.jsx';
 import './SongListSection.scss';
 
 const songs = getSongsData();
 
 export function SongListSection(props) {
+	const queueManager = useContext(QueueContext);
+
 	const [selectedTypes, setSelectedTypes] = useState(['standalone', 'collab']);
 	const [sortCriteria, setSortCriteria] = useState('date');
 	const [sortDirection, setSortDirection] = useState('asc');
@@ -56,7 +59,7 @@ export function SongListSection(props) {
 			</div>
 			<Flipper className="song-list" flipKey={JSON.stringify(filteredSongs)}>
 				<div className="song-list-inner">
-					{filteredSongs.map((song) => (
+					{filteredSongs.map((song, index) => (
 						<Flipped
 							key={song.hash}
 							flipId={song.hash}
@@ -82,6 +85,9 @@ export function SongListSection(props) {
 							<div>
 								<Song
 									song={song}
+									onClick={() => {
+										queueManager.setQueueAndIndex(filteredSongs, index);
+									}}
 								/>
 							</div>
 						</Flipped>
@@ -95,6 +101,7 @@ export function SongListSection(props) {
 function SongFilter(props) {
 	const [open, setOpen] = useState(false);
 	const openBtnRef = useRef(null);
+	const menuRef = useRef(null);
 
 	const [sortCriteria, setSortCriteria] = useState('date');
 	useEffect(() => {
@@ -105,6 +112,18 @@ function SongFilter(props) {
 	useEffect(() => {
 		props.setSortDirection(sortDirection);
 	}, [sortDirection]);
+
+	const handleClickAway = (e) => {
+		if (open && !menuRef.current.contains(e.target) && !openBtnRef.current.contains(e.target)) {
+			setOpen(false);
+		}
+	}
+	useEffect(() => {
+		document.addEventListener('click', handleClickAway);
+		return () => {
+			document.removeEventListener('click', handleClickAway);
+		}
+	}, [open]);
 
 
 	return (
@@ -121,60 +140,59 @@ function SongFilter(props) {
 			>
 				<MdSort/>
 			</IconButton>
-			{
-				<Menu
-					className="song-filter-menu"
-					anchorElement={openBtnRef?.current}
-					anchorPosition="right top"
-					open={open}
+			<Menu
+				ref={menuRef}
+				className="song-filter-menu"
+				anchorElement={openBtnRef?.current}
+				anchorPosition="right top"
+				open={open}
+			>
+				<MenuItem
+					icon={<MdCalendarMonth/>}
+					checkbox
+					onChange={(e) => {
+						setSortCriteria('date');
+					}}
+					checked={sortCriteria === 'date'}
 				>
-					<MenuItem
-						icon={<MdCalendarMonth/>}
-						checkbox
-						onChange={(e) => {
-							setSortCriteria('date');
-						}}
-						checked={sortCriteria === 'date'}
-					>
-						Release Date
-					</MenuItem>
-					<MenuItem
-						icon={<MdSchedule/>}
-						checkbox
-						onChange={(e) => {
-							setSortCriteria('length');
-						}}
-						checked={sortCriteria === 'length'}
-					>
-						Length
-					</MenuItem>
-					<MenuItem
-						icon={<MdSortByAlpha/>}
-						checkbox
-						onChange={(e) => {
-							setSortCriteria('name');
-						}}
-						checked={sortCriteria === 'name'}
-					>
-						Name
-					</MenuItem>
-					<MenuDivider/>
-					<MenuItem
-						icon={<MdSwapVert/>}
-						checkbox
-						onChange={(e) => {
-							if (sortDirection === 'asc') {
-								setSortDirection('desc');
-							} else {
-								setSortDirection('asc');
-							}
-						}}
-						checked={sortDirection === 'desc'}
-					>
-						Descending
-					</MenuItem>
-				</Menu>
-			}
+					Release Date
+				</MenuItem>
+				<MenuItem
+					icon={<MdSchedule/>}
+					checkbox
+					onChange={(e) => {
+						setSortCriteria('length');
+					}}
+					checked={sortCriteria === 'length'}
+				>
+					Length
+				</MenuItem>
+				<MenuItem
+					icon={<MdSortByAlpha/>}
+					checkbox
+					onChange={(e) => {
+						setSortCriteria('name');
+					}}
+					checked={sortCriteria === 'name'}
+				>
+					Name
+				</MenuItem>
+				<MenuDivider/>
+				<MenuItem
+					icon={<MdSwapVert/>}
+					checkbox
+					onChange={(e) => {
+						if (sortDirection === 'asc') {
+							setSortDirection('desc');
+						} else {
+							setSortDirection('asc');
+						}
+					}}
+					checked={sortDirection === 'desc'}
+				>
+					Descending
+				</MenuItem>
+			</Menu>
 		</>
 	)
 }
@@ -182,6 +200,7 @@ function SongFilter(props) {
 function Song(props) {
 	const onClick = (e) => {
 		console.log('play', props.song);
+		props.onClick();
 	}
 
 	return (
