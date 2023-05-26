@@ -19,7 +19,10 @@ function Card(props) {
 					[css.noRipple]: props.ripple === false,
 					[css.noLayer]: props.layer === false,
 				}
-			)}>
+			)}
+			onClick={props.onClick}
+			onDoubleClick={props.onDoubleClick}
+		>
 			{props.children}
 		</div>
 	)

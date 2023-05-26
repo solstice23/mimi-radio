@@ -35,6 +35,7 @@
 		background-color: var(--md-sys-color-on-surface);
 		opacity: 0;
 		transition: opacity 0.2s ease;
+		pointer-events: none;
 	}
 	&:hover::before {
 		opacity: 0.08;

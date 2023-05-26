@@ -107,3 +107,24 @@
 .paused .sinWave {
 	//animation-play-state: paused;
 }
+.waveProgressBar.disabled {
+	pointer-events: none !important;
+	* {
+		pointer-events: none !important;
+	}
+	.track {
+		.played {
+			opacity: 0.38;
+		}
+		.unplayed {
+			background-color: var(--md-sys-color-on-surface);
+		}
+	}
+	.handleContainer {
+		.handle {
+			&::before {
+				background-color: var(--md-sys-color-on-surface);
+			}
+		}
+	}	
+}

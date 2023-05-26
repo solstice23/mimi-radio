@@ -75,6 +75,7 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 				props.className,
 				{
 					[css.paused]: props.paused,
+					[css.disabled]: props.disabled,
 				}
 			)}
 			style={{
@@ -84,7 +85,7 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 		>
 			<div className={classNames('wave-progress-bar-track', css.track)}>
 				<div className={classNames('wave-progress-bar-played', css.played)}>
-					<SinWave paused={props.paused}/>
+					<SinWave paused={props.paused} disabled={props.disabled}/>
 				</div>
 				<div className={classNames('wave-progress-bar-unplayed', css.unplayed)}></div>
 				<div className={classNames('wave-progress-bar-control', css.control)} ref={controlTrackRef}></div>
@@ -102,6 +103,8 @@ function SinWave(props) {
 	const targetAmplitudeMultiplierRef = useRef(props.paused ? 0 : 1);
 	const amplitudeMultiplier = useRef(props.paused ? 0 : 1);
 
+	const disabledRef = useRef(false);
+
 	const draw = (canvas) => {
 		if (targetAmplitudeMultiplierRef.current !== amplitudeMultiplier.current) {
 			amplitudeMultiplier.current += (targetAmplitudeMultiplierRef.current - amplitudeMultiplier.current) * 0.1;
@@ -118,6 +121,7 @@ function SinWave(props) {
 
 		ctx.clearRect(0, 0, width, height);
 		ctx.strokeStyle = getComputedStyle(canvas).getPropertyValue('--md-sys-color-primary');
+		if (disabledRef.current) ctx.strokeStyle = getComputedStyle(canvas).getPropertyValue('--md-sys-color-on-surface');
 		ctx.lineWidth = 4;
 		ctx.beginPath();
 		ctx.moveTo(0, height / 2);
@@ -146,6 +150,10 @@ function SinWave(props) {
 		//draw(canvasRef.current);
 		targetAmplitudeMultiplierRef.current = props.paused ? 0 : 1;
 	}, [props.paused]);
+
+	useEffect(() => {
+		disabledRef.current = props.disabled ?? false;
+	}, [props.disabled]);
 
 	return (
 		<canvas

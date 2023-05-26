@@ -89,3 +89,12 @@ export function formatDate(date) {
 	if (typeof date === 'string') date = new Date(date);
 	return date.toLocaleDateString();
 }
+
+export const shuffle = (list) => {
+	const newList = [...list];
+	for (let i = newList.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[newList[i], newList[j]] = [newList[j], newList[i]];
+	}
+	return newList;
+}

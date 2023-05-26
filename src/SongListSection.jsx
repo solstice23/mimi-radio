@@ -9,8 +9,10 @@ import IconButton from './components/IconButton.jsx';
 import Menu from './components/Menu.jsx';
 import MenuItem, {MenuDivider} from './components/MenuItem.jsx';
 import Checkbox from './components/Checkbox.jsx';
-import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert } from 'react-icons/md';
+import NowPlayingIndicatorIcon from './components/NowPlayingIndicatorIcon.jsx';
+import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew } from 'react-icons/md';
 import { QueueContext } from './contexts/QueueContext.jsx';
+import classNames from 'classnames';
 import './SongListSection.scss';
 
 const songs = getSongsData();
@@ -47,7 +49,7 @@ export function SongListSection(props) {
 					buttons={[
 						{label: 'Standalone', value: 'standalone', selected: true},
 						{label: 'Collab', value: 'collab', selected: true},
-						{label: 'Short', value: 'short'},
+						{label: 'Cover', value: 'cover'},
 					]}
 					multiple={true}
 					setSelected={setSelectedTypes}
@@ -85,6 +87,7 @@ export function SongListSection(props) {
 							<div>
 								<Song
 									song={song}
+									playing={queueManager.currentSong?.hash === song.hash}
 									onClick={() => {
 										queueManager.setQueueAndIndex(filteredSongs, index);
 									}}
@@ -198,13 +201,25 @@ function SongFilter(props) {
 }
 
 function Song(props) {
+	const queueManager = useContext(QueueContext);
+
 	const onClick = (e) => {
 		console.log('play', props.song);
 		props.onClick();
 	}
 
 	return (
-		<Card className="song">
+		<Card
+			className={
+				classNames(
+					"song",
+					{
+						playing: props.playing
+					}
+				)
+			}
+			onDoubleClick={onClick}
+		>
 			<div
 				className="song-cover" 
 				style={{
@@ -233,12 +248,31 @@ function Song(props) {
 			</div>
 			<div className="song-actions">
 				{
-					<IconButton
-						label="Play"
-						onClick={onClick}
-					>
-						<MdPlayCircleOutline/>
-					</IconButton>
+					props.song.link &&
+					<a href={props.song.link} target="_blank" rel="noopener noreferrer" style={{borderRadius: '50%'}}>
+						<IconButton
+							className="auto-hide"
+							title="Open in YouTube"
+						>
+								<MdOpenInNew/>
+						</IconButton>
+					</a>
+				}
+				{
+					!props.playing ?
+						<IconButton
+							title="Play"
+							onClick={onClick}
+						>
+							<MdPlayCircleOutline/>
+						</IconButton>
+					:
+						<IconButton
+							className="playing-icon"
+							title="Playing"
+						>
+							<NowPlayingIndicatorIcon paused={queueManager.playState === 'paused' || queueManager.playState === 'ended'} />
+						</IconButton>
 				}
 			</div>
 		</Card>

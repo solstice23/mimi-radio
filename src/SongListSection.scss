@@ -42,6 +42,7 @@
 				flex-direction: row;
 				align-items: center;
 				height: 100px;
+				transition: background-color 0.5s ease;
 				.song-cover {
 					height: 100%;
 					aspect-ratio: 1 / 1;
@@ -55,6 +56,7 @@
 				.song-info {
 					flex: 1;
 					line-height: 1.8;
+					width: 0;
 					.song-title {
 						display: flex;
 						align-items: center;
@@ -74,6 +76,8 @@
 						align-items: center;
 						gap: 0.4em;
 						opacity: .8;
+						white-space: nowrap;
+						overflow: hidden;
 						> * {
 							display: flex;
 							flex-direction: row;
@@ -97,6 +101,28 @@
 					display: flex;
 					flex-direction: row;
 					align-items: center;
+					gap: 4px;
+					.playing-icon {
+						font-size: 20px;
+						pointer-events: none;
+					}
+					.auto-hide {
+						opacity: 0;
+						transition: opacity 0.2s ease;
+					}
+				}
+				&.playing {
+					background-color: var(--md-sys-color-secondary-container);
+				}
+				&:hover {
+					.song-actions {
+						.auto-hide {
+							opacity: .4;
+							&:hover {
+								opacity: 1;
+							}
+						}
+					}
 				}
 			}
 			&::-webkit-scrollbar {

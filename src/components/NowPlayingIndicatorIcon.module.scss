@@ -1,0 +1,43 @@
+.nowPlayingIndicatorIcon {
+	width: 1em;
+	height: 1em;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	$bar-space: 0.2em;
+	span {
+		width: calc((1em - #{$bar-space}) / 3);
+		height: 100%;
+		background-color: currentColor;
+		border-radius: 0.05em;
+		animation: bounce 2.2s ease infinite alternate;
+		transform-origin: bottom;
+		&:nth-of-type(2) {
+			animation-delay: -2.2s;
+		}
+		&:nth-of-type(3) {
+			animation-delay: -3.7s;
+		}
+		
+	}
+	&.paused span {
+		animation-play-state: paused;
+	}
+}
+@keyframes bounce {
+	10% {
+		transform: scaleY(0.3);
+	}
+	30% {
+		transform: scaleY(1);
+	}
+	60% {
+		transform: scaleY(0.5);
+	}
+	80% {
+		transform: scaleY(0.75);
+	}
+	100% {
+		transform: scaleY(0.6);
+	}
+}
