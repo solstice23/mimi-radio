@@ -8,7 +8,7 @@
 		left: 20px;
 		right: 20px;
 		height: $track-height;
-		top: calc(50% - #{$track-height / 2});
+		top: calc(50% - #{$track-height * 0.5});
 		.played {
 			position: absolute;
 			left: 0;
