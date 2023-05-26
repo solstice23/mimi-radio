@@ -49,7 +49,7 @@ function VideoPlayer() {
 						opts={{
 							playerVars: {
 								// https://developers.google.com/youtube/player_parameters
-								autoplay: 1,
+								autoplay: queueManager.autoPlay ? 1 : 0,
 								modestbranding: true,
 								controls: 0,
 							}
@@ -59,7 +59,12 @@ function VideoPlayer() {
 						//title={string}                    // defaults -> ''
 						loading="eager"                  // defaults -> undefined
 						//opts={obj}                        // defaults -> {}
-						onReady={(e) => queueManager.iframeTarget.current = e.target}
+						onReady={(e) => {
+							queueManager.iframeTarget.current = e.target;
+							if (!queueManager.autoPlay) {
+								queueManager.setPlayState('unstarted');
+							}
+						}}
 						onPlay={(e) => {
 							queueManager.iframeTarget.current = e.target;
 							window.dispatchEvent(new Event('ytb-play'));

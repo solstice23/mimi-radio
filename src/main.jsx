@@ -41,9 +41,9 @@ function ThemeManager(props) {
 
 import { QueueContext } from './contexts/QueueContext.jsx'
 function QueueManager(props) {
-	const [queue, queueRef, setQueue] = useRefState([]);
-	const [playMode, playModeRef, setPlayMode] = useRefStateStorage('repeat');
-	const [currentIndex, currentIndexRef, setCurrentIndex] = useRefState(null);
+	const [queue, queueRef, setQueue] = useRefStateStorage([], 'queue');
+	const [playMode, playModeRef, setPlayMode] = useRefStateStorage('repeat', 'playMode');
+	const [currentIndex, currentIndexRef, setCurrentIndex] = useRefStateStorage(null, 'queueIndex');
 
 	const currentSong = currentIndex !== null ? queue?.[currentIndex] : null;
 	
@@ -51,11 +51,17 @@ function QueueManager(props) {
 	const currentTime = useRef(0);
 	const duration = useRef(0);
 	const iframeTarget = useRef(null);
+	const [autoPlay, setAutoPlay] = useState(false);
+
+	useEffect(() => {
+		console.log('playState', playState);
+	}, [playState]);
 
 	const setQueueAndIndex = (newQueue, newIndex) => {
 		setQueue(newQueue);
 		setCurrentIndex(newIndex);
 		shuffleSetList(newQueue, [newQueue[newIndex]]);
+		setAutoPlay(true);
 	};
 	const clearQueue = () => {
 		setQueueAndIndex([], null);
@@ -68,10 +74,10 @@ function QueueManager(props) {
 		setCurrentIndex(index);
 		if (resetShuffle) shuffleSetList(queueRef.current, [queueRef.current[index]]);
 	};
-	const removeSong = (song) => {
-		removeSongByIndex(queueRef.current.findIndex((s) => s.hash === song.hash));
+	const removeSong = (song, autoPlayNextSong = true) => {
+		removeSongByIndex(queueRef.current.findIndex((s) => s.hash === song.hash), autoPlayNextSong);
 	};
-	const removeSongByIndex = (index) => {
+	const removeSongByIndex = (index, autoPlayNextSong = true) => {
 		if (currentIndex === index) {
 			setCurrentIndex(currentIndexRef.current === queueRef.current.length - 1 ? queueRef.current.length - 2 : currentIndexRef.current);
 		} else if (currentIndex > index) {
@@ -80,6 +86,7 @@ function QueueManager(props) {
 		const newQueue = queueRef.current.filter((_, i) => i !== index);
 		setQueue(newQueue);
 		shuffleSetList(newQueue, [newQueue[currentIndex]]);
+		setAutoPlay(autoPlayNextSong);
 	};
 
 
@@ -100,37 +107,40 @@ function QueueManager(props) {
 
 
 	const onSongEnd = () => {
-		if (playMode === 'loop') {
+		if (playModeRef.current === 'loop') {
 			iframeTarget.current.seekTo(0);
 			iframeTarget.current.playVideo();
-		} else if (playMode === 'repeat') {
+		} else if (playModeRef.current === 'repeat') {
 			const nextIndex = (currentIndex + 1) % queue.length;
 			setCurrentIndex(nextIndex);
-		} else if (playMode === 'shuffle') {
+			setAutoPlay(true);
+		} else if (playModeRef.current === 'shuffle') {
 			const nextSong = shuffleNext();
 			playSong(nextSong);
 		}
 	}
 	const nextSong = () => {
-		if (playMode === 'loop') {
+		if (playModeRef.current === 'loop') {
 			iframeTarget.current.seekTo(0);
 			iframeTarget.current.playVideo();
-		} else if (playMode === 'repeat') {
+		} else if (playModeRef.current === 'repeat') {
 			const nextIndex = (currentIndex + 1) % queue.length;
 			setCurrentIndex(nextIndex);
-		} else if (playMode === 'shuffle') {
+			setAutoPlay(true);
+		} else if (playModeRef.current === 'shuffle') {
 			const nextSong = shuffleNext();
 			playSong(nextSong, false);
 		}
 	}
 	const prevSong = () => {
-		if (playMode === 'loop') {
+		if (playModeRef.current === 'loop') {
 			iframeTarget.current.seekTo(0);
 			iframeTarget.current.playVideo();
-		} else if (playMode === 'repeat') {
+		} else if (playModeRef.current === 'repeat') {
 			const prevIndex = (currentIndex - 1 + queue.length) % queue.length;
 			setCurrentIndex(prevIndex);
-		} else if (playMode === 'shuffle') {
+			setAutoPlay(true);
+		} else if (playModeRef.current === 'shuffle') {
 			const prevSong = shufflePrev();
 			playSong(prevSong, false);
 		}
@@ -147,6 +157,7 @@ function QueueManager(props) {
 			playSong, playSongByIndex,
 			nextSong, prevSong,
 			removeSong, removeSongByIndex,
+			autoPlay,
 			playMode, setPlayMode,
 			play, pause,
 			playState, setPlayState,

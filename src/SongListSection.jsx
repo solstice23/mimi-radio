@@ -271,7 +271,7 @@ function Song(props) {
 							className="playing-icon"
 							title="Playing"
 						>
-							<NowPlayingIndicatorIcon paused={queueManager.playState === 'paused' || queueManager.playState === 'ended'} />
+							<NowPlayingIndicatorIcon paused={queueManager.playState === 'paused' || queueManager.playState === 'ended' || queueManager.playState === 'unstarted' || queueManager.playState === 'cued'} />
 						</IconButton>
 				}
 			</div>

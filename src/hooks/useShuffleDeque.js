@@ -19,10 +19,7 @@ function useShuffleDeque(initDeque, initList) {
 		if (list.current.length === 0) {
 			return null;
 		}
-		console.log("asd",currentIndexRef.current);
 		currentIndexRef.current++;
-		console.log("as2",currentIndexRef.current);
-		console.log( dequeRef.current.length, currentIndexRef.current)
 		if (currentIndexRef.current >= dequeRef.current.length) {
 			const append = shuffle(list.current);
 			if (dequeRef.current.length && append[0] === dequeRef.current[dequeRef.current.length - 1]) {
@@ -30,7 +27,6 @@ function useShuffleDeque(initDeque, initList) {
 			}
 			dequeRef.current = dequeRef.current.concat(append);
 		}
-		console.log(currentIndexRef.current, dequeRef.current, dequeRef.current[currentIndexRef.current]);
 		return dequeRef.current[currentIndexRef.current];
 	}
 	const prev = () => {
@@ -46,7 +42,6 @@ function useShuffleDeque(initDeque, initList) {
 			}
 			dequeRef.current = prepend.concat(dequeRef.current);
 		}
-		console.log(currentIndexRef.current, dequeRef.current, dequeRef.current[currentIndexRef.current]);
 		return dequeRef.current[currentIndexRef.current];
 	}
 	return [prev, next, setList];

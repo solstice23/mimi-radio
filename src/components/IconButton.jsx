@@ -8,7 +8,7 @@ const IconButton = forwardRef(function IconButton(props, ref) {
 	useRipple(ref);
 
 	return (
-		<div ref={ref}
+		<div ref={ref} role="button"
 			className={classNames(
 				css.iconButton,
 				props.className,

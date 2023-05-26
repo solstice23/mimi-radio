@@ -14,7 +14,7 @@ import classNames from 'classnames';
 
 export function Controller(props) {
 	const queueManager = useContext(QueueContext);
-	const isPaused = queueManager.playState === 'paused' || queueManager.playState === 'ended';
+	const isPaused = queueManager.playState === 'paused' || queueManager.playState === 'ended' || queueManager.playState === 'unstarted' || queueManager.playState === 'cued';
 	return (
 		<Card className="controller" ripple={false} layer={false}>
 			<ControllerBg/>
@@ -280,7 +280,7 @@ function QueueSong(props) {
 	const queueManager = useContext(QueueContext);
 	const song = props.song;
 	const index = props.index;
-	const isPaused = queueManager.playState === 'paused' || queueManager.playState === 'ended';
+	const isPaused = queueManager.playState === 'paused' || queueManager.playState === 'ended' || queueManager.playState === 'unstarted' || queueManager.playState === 'cued';
 	return (
 		<div
 			className={

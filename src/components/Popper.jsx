@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import css from './Popper.module.scss';
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useRef, useState, useLayoutEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 const getRelativePosition = (element, relativeToElement) => {
@@ -106,13 +106,16 @@ const Popper = forwardRef(function Popper(props, ref) {
 		setRevisedAnchorPosition(`${anchorPositionX} ${anchorPositionY}`);
 	}
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		recalcPosition();
+	}, [props.anchorPosition, props.anchorElement, props.relativeToElement]);
+
+	useEffect(() => {
 		window.addEventListener('resize', recalcPosition);
 		return () => {
 			window.removeEventListener('resize', recalcPosition);
 		}
-	}, [props.anchorPosition, props.anchorElement, props.relativeToElement]);
+	}, []);
 
 	return (
 		createPortal(
