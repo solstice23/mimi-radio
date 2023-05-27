@@ -109,7 +109,7 @@ const Popper = forwardRef(function Popper(props, ref) {
 
 	useLayoutEffect(() => {
 		recalcPosition();
-	}, [props.anchorPosition, props.anchorElement, props.relativeToElement]);
+	}, [props.anchorPosition, props.anchorElement, props.relativeToElement, props.noClick, props.state]);
 
 	useEffect(() => {
 		window.addEventListener('resize', recalcPosition);
