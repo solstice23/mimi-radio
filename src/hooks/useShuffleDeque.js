@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { shuffle } from '../utils.js'
 
 function useShuffleDeque(initList, initDeque) {
-	console.log('useShuffleDeque', initDeque, initList)
 	const currentIndexRef = useRef(-1);
 	const dequeRef = useRef(initDeque);
 	const list = useRef(initList);
@@ -20,7 +19,6 @@ function useShuffleDeque(initList, initDeque) {
 		if (list.current.length === 0) {
 			return null;
 		}
-		console.log(currentIndexRef.current, currentIndexRef.current + 1, dequeRef.current);
 		currentIndexRef.current++;
 		if (currentIndexRef.current >= dequeRef.current.length) {
 			const append = shuffle(list.current);
