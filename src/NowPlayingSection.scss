@@ -11,6 +11,7 @@
 		display: flex;
 		background-color: var(--md-sys-color-surface-container-highest);
 		border-radius: 16px;
+		view-transition-name: youtube-player-container;
 		.youtube-player {
 			display: flex;
 			width: 100%;
@@ -88,6 +89,19 @@
 				opacity: .6;
 			}
 		}
+		.player-control-btn {
+			position: absolute;
+			right: 8px;
+			top: 8px;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+			mix-blend-mode: luminosity;
+		}
+		&:hover {
+			.player-control-btn {
+				opacity: 1;
+			}
+		}
 	}
 
 	.lyrics {
@@ -97,6 +111,7 @@
 	.controller {
 		height: 200px;
 		background-color: var(--md-sys-color-secondary-container);
+		view-transition-name: controller;
 		
 		.controller-bg {
 			position: absolute;
@@ -318,6 +333,87 @@
 			justify-content: center;
 			align-items: center;
 			opacity: .5;
+		}
+	}
+}
+
+body {
+	&.video-exclusive{
+		.now-playing-section {
+			.youtube-player-container {
+				position: fixed !important;
+				inset: 0;
+				z-index: 2;
+				aspect-ratio: unset;
+			}
+			.youtube-player-fullscreen {
+				display: none;
+			}
+		}
+	}
+	&:not(.video-exclusive) {
+		.now-playing-section {
+			.youtube-player-container {
+				position: relative;
+				z-index: 1;
+				aspect-ratio: 16 / 9;
+			}
+		}
+		.youtube-player-exit-fullscreen {
+			display: none;
+		}
+	}
+	&.video-exclusive, &.lyric-exclusive {
+		.now-playing-section .controller {
+			position: fixed !important;
+			left: calc(50% - min(calc((50vw - 10px) / 2), 400px));
+			right: calc(50% - min(calc((50vw - 10px) / 2), 400px));
+			bottom: 15px;
+			height: 60px;
+			z-index: 2;
+			opacity: .4;
+			transition: opacity .3s ease;
+			&:hover {
+				opacity: 1;
+			}
+			.controller-inner {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 5px;
+				flex-direction: row;
+				align-items: center;
+				
+				.song-badges {
+					display: none;
+				}
+				.controller-top {
+					flex: unset;
+					height: 100%;
+					align-items: center;
+					flex-direction: row-reverse;
+					gap: 5px;
+					margin-right: -15px;
+		
+					.play-pause-button {
+						border-radius: 500px;
+						width: 46px;
+						height: 36px;
+					}
+					.song-info > *:not(.song-time) {
+						display: none;
+					}
+					.song-info > .song-time {
+						width: 85px;
+						text-align: right;
+					}
+				}
+				.controller-bottom {
+					flex: 1;
+				}
+			}
+			.controller-bg {
+				display: none;
+			}
 		}
 	}
 }

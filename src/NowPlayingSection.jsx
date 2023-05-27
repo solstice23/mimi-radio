@@ -11,13 +11,12 @@ import Menu from './components/Menu.jsx';
 import MenuItem, {MenuDivider} from './components/MenuItem.jsx';
 import Checkbox from './components/Checkbox.jsx';
 import WaveProgressBar from './components/WaveProgressBar.jsx';
-import { MdSkipPrevious, MdSkipNext, MdOutlineSkipPrevious, MdOutlineSkipNext, MdPause, MdPlayArrow, MdShuffle, MdRepeat, MdRepeatOne, MdQueueMusic, MdPlaylistRemove, MdClearAll } from 'react-icons/md';
+import { MdSkipPrevious, MdSkipNext, MdOutlineSkipPrevious, MdOutlineSkipNext, MdPause, MdPlayArrow, MdShuffle, MdRepeat, MdRepeatOne, MdQueueMusic, MdPlaylistRemove, MdClearAll, MdOpenInFull, MdCloseFullscreen } from 'react-icons/md';
 import './NowPlayingSection.scss';
 import YouTube from 'react-youtube';
 import { Controller } from './Controller.jsx';
 
 import { QueueContext } from './contexts/QueueContext.jsx';
-import { ThemeColorSetContext } from './contexts/ThemeColorSetContext.jsx'
 import classNames from 'classnames';
 
 
@@ -113,6 +112,36 @@ function VideoPlayer() {
 					backgroundImage: `url(${cover})`
 				}}
 			/>
+			<IconButton
+				className="player-control-btn youtube-player-fullscreen"
+				onClick={() => {
+					if (document.startViewTransition) {
+						document.startViewTransition(() => {
+							document.body.classList.add('video-exclusive');
+						});
+					} else {
+						document.body.classList.add('video-exclusive');
+					}
+				}}
+			>
+				<MdOpenInFull/>
+			</IconButton>
+			<IconButton
+				className="player-control-btn youtube-player-exit-fullscreen"
+				onClick={() => {
+					if (document.startViewTransition) {
+						document.startViewTransition(() => {
+							document.body.classList.remove('video-exclusive');
+						});
+					} else {
+						document.body.classList.remove('video-exclusive');
+					}
+				}}
+			>
+				<MdCloseFullscreen/>
+			</IconButton>
+					
+
 		</Card>
 	)
 }

@@ -71,7 +71,7 @@ const getRevisedPosition = (anchorElement, relativeToElement, sizeW, sizeH, anch
 	let availableAnchorPositionY = null;
 	for (let y of YList) {
 		availableAnchorPositionY = y;
-		if (checkAvailableSpace(anchorElement, relativeToElement, sizeW, sizeH, availableAnchorPositionX, y).y) { break; }
+		if (checkAvailableSpace(anchorElement, relativeToElement, sizeW, sizeH, anchorPositionX, y).y) { break; }
 	}
 
 	return [availableAnchorPositionX, availableAnchorPositionY];
@@ -81,7 +81,8 @@ const getRevisedPosition = (anchorElement, relativeToElement, sizeW, sizeH, anch
 const Popper = forwardRef(function Popper(props, ref) {
 	if (!ref) ref = useRef();
 
-	const anchorElement = props?.anchorElement ?? document.body;
+	const anchorElementRef = useRef(null);
+	anchorElementRef.current = props?.anchorElement ?? document.body;
 	const relativeToElement = props?.relativeToElement ?? document.body;
 
 	const [revisedAnchorPosition, setRevisedAnchorPosition] = useState(props.anchorPosition);
@@ -91,11 +92,11 @@ const Popper = forwardRef(function Popper(props, ref) {
 		const [sizeW, sizeH] = [container.offsetWidth, container.offsetHeight];
 
 		let [anchorPositionX, anchorPositionY] = ((props.anchorPosition ?? 'center') + ' center').split(' ');
-		[anchorPositionX, anchorPositionY] = getRevisedPosition(anchorElement, relativeToElement, sizeW, sizeH, anchorPositionX, anchorPositionY);
+		[anchorPositionX, anchorPositionY] = getRevisedPosition(anchorElementRef.current, relativeToElement, sizeW, sizeH, anchorPositionX, anchorPositionY);
 
 		container.style.left = container.style.right = container.style.top = container.style.bottom = null;
 
-		const {x, y} = getAnchorPoint(anchorElement, relativeToElement, anchorPositionX, anchorPositionY);
+		const {x, y} = getAnchorPoint(anchorElementRef.current, relativeToElement, anchorPositionX, anchorPositionY);
 		if (anchorPositionX == 'left') { container.style.left = x + 'px'; }
 		else if (anchorPositionX == 'right') { container.style.right = (relativeToElement.offsetWidth - x) + 'px'; }
 		else { container.style.left = (x - sizeW / 2) + 'px'; }

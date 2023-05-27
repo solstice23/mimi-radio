@@ -42,6 +42,7 @@ export function Controller(props) {
 					{
 						queueManager.currentSong &&
 						<FAB
+							className="play-pause-button"
 							title={isPaused ? "Play" : "Pause"}
 							color="primary"
 							onClick={() => {
@@ -102,7 +103,7 @@ function Time() {
 
 	return (
 		<div className="song-time">
-			{formatLength(currentTime)} / {formatLength(duration)}
+			{formatLength(queueManager.currentSong ? currentTime : 0)} / {formatLength(queueManager.currentSong ? duration : 0)}
 		</div>
 	)
 }
@@ -139,7 +140,7 @@ function ProgressBar() {
 		<WaveProgressBar
 			className="progress-bar"
 			defaultProgress={50}
-			progress={progress}
+			progress={queueManager.currentSong ? progress : 0}
 			paused={(queueManager.playState === 'paused' || queueManager.playState === 'ended' || queueManager.playState === 'unstarted' || queueManager.playState === 'cued')}
 			disabled={!queueManager.currentSong}
 			onChange={(progress) => {

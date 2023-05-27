@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import css from './Ripple.module.scss';
 
 function addRipple(e, target, options = {}) {
-	if (getComputedStyle(target).position !== 'absolute') {
+	if (getComputedStyle(target).position !== 'absolute' && getComputedStyle(target).position !== 'relative') {
 		target.style.position = 'relative';
 	}
 	/*if (getComputedStyle(target).overflow !== 'hidden') {

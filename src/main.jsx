@@ -73,6 +73,7 @@ function QueueManager(props) {
 	const playSongByIndex = (index, resetShuffle = true) => {
 		setCurrentIndex(index);
 		if (resetShuffle) shuffleSetList(queueRef.current, [queueRef.current[index]]);
+		setAutoPlay(true);
 	};
 	const removeSong = (song, autoPlayNextSong = true) => {
 		removeSongByIndex(queueRef.current.findIndex((s) => s.hash === song.hash), autoPlayNextSong);
@@ -117,6 +118,7 @@ function QueueManager(props) {
 		} else if (playModeRef.current === 'shuffle') {
 			const nextSong = shuffleNext();
 			playSong(nextSong);
+			setAutoPlay(true);
 		}
 	}
 	const nextSong = () => {
