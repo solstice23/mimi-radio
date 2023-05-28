@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRipple } from './Ripple.jsx';
 
 function Checkbox(props) {
-	const [checked, setChecked] = useState(props.defaultChecked ?? false);
+	const [checked, setChecked] = useState((props.checked !== undefined ? props.checked : props.defaultChecked) || false);
 
 	const checkmarkContainerRef = useRipple(null, { center: true });
 
