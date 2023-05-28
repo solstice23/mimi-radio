@@ -84,7 +84,6 @@ export function Lyrics(props) {
 
 		const em = getComputedStyle(containerRef.current).fontSize.replace('px', '');
 		const gap = 1.3 * em;
-		console.log(em);
 
 
 		attrs[cur].center = containerHeight / 2;
@@ -122,7 +121,7 @@ export function Lyrics(props) {
 		});
 		resizeObserver.observe(containerRef.current);
 		return () => resizeObserver.disconnect();
-	}, []);
+	}, [lyrics]);
 	useLayoutEffect(() => {
 		recalculate(false);
 	}, [lyrics]);
@@ -173,12 +172,11 @@ export function Lyrics(props) {
 					if (document.startViewTransition) {
 						document.startViewTransition(() => {
 							document.body.classList.add('lyrics-exclusive');
-							recalculate(false);
 						});
 					} else {
 						document.body.classList.add('lyrics-exclusive');
-						recalculate(false);
 					}
+					recalculate(false);
 				}}
 			>
 				<MdOpenInFull/>
@@ -191,10 +189,8 @@ export function Lyrics(props) {
 						document.startViewTransition(() => {
 							document.body.classList.remove('lyrics-exclusive');
 						});
-						recalculate(false);
 					} else {
 						document.body.classList.remove('lyrics-exclusive');
-						recalculate(false);
 					}
 				}}
 			>
