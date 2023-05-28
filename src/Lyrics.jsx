@@ -24,11 +24,14 @@ export function Lyrics(props) {
 
 	useEffect(() => {
 		async function loadLyrics() {
-			setLyrics((await import(`${queueManager.currentSong.lyrics}`)).default);
+			const json = await fetch(queueManager.currentSong.lyrics).then(res => res.json());
+			setLyrics(json);
 			setLoading(false);
 			setCurrentLine(0);
 		}
 		if (queueManager.currentSong?.lyrics) {
+			setLyrics(null);
+			setCurrentLine(0);
 			setLoading(true);
 			loadLyrics();
 		} else {
@@ -154,16 +157,19 @@ export function Lyrics(props) {
 					classNames(
 						"no-lyrics-text",
 						{
-							"show": lyrics === null && !loading
+							"show": lyrics === null || loading
 						}
 					)
 				}>
-					{
-						loading ?
-						'Loading lyrics...'
-						:
-						'No lyrics'
-					}
+					<div className="no-lyrics-text-inner">
+						{
+							(loading || lyrics) ?
+							'Loading lyrics...'
+							:
+							'No lyrics'
+						}
+					</div>
+					
 			</div>
 			<IconButton
 				className="player-control-btn lyrics-fullscreen"

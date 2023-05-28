@@ -84,8 +84,8 @@ const songs = songsRaw.map((song) => {
 	if (song.isMix) song.isMix = song.isMix.toLowerCase() === 'yes' ? true : false;
 	if (song.isRearrange) song.isRearrange = song.isRearrange.toLowerCase() === 'yes' ? true : false;
 
-	//if (song.lyrics) song.lyrics = new URL(`./data/lyrics/${song.lyrics}`, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29');
-	if (song.lyrics) song.lyrics = `./data/lyrics/${song.lyrics}`;
+	if (song.lyrics) song.lyrics = new URL(`./data/lyrics/${song.lyrics}`, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29');
+	//if (song.lyrics) song.lyrics = `./data/lyrics/${song.lyrics}`;
 
 	return song;
 });
