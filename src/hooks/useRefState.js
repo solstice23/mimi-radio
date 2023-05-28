@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 const useRefState = (initialState) => {
-	const [state, setState] = useState(initialState);
+	let [state, _setState] = useState(initialState);
 	const stateRef = useRef(state);
-	useEffect(() => {
-		stateRef.current = state;
-	}, [state]);
+	const setState = (data) => {
+		stateRef.current = data;
+		_setState(data);
+	};
 	return [state, stateRef, setState];
 }
 export default useRefState;

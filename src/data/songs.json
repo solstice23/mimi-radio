@@ -74,7 +74,7 @@
     {
         "name": "NOREEN",
         "artist": "MIMI",
-        "singer": "初音ミク",
+        "singer": null,
         "translatedName": null,
         "length": "1:51",
         "type": "Piano",
@@ -254,7 +254,7 @@
     {
         "name": "Cold Waltz - in G Minor",
         "artist": "MIMI",
-        "singer": "初音ミク",
+        "singer": null,
         "translatedName": null,
         "length": "2:03",
         "type": "Piano",
@@ -285,7 +285,8 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
-        "cover": "LSCM,MIMI - そして夜と灯る (feat. MIMI).jpg"
+        "cover": "LSCM,MIMI - そして夜と灯る (feat. MIMI).jpg",
+        "lyrics": "LSCM,MIMI - そして夜と灯る (feat. MIMI).json"
     },
     {
         "name": "ルルージュ",
@@ -470,7 +471,7 @@
     {
         "name": "LyriC",
         "artist": "MIMI",
-        "singer": "初音ミク",
+        "singer": null,
         "translatedName": null,
         "length": "2:16",
         "type": "Piano",
@@ -987,7 +988,8 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
-        "cover": "MIMI,初音ミク - ロココ (feat. 初音ミク).jpg"
+        "cover": "MIMI,初音ミク - ロココ (feat. 初音ミク).jpg",
+        "lyrics": "MIMI,初音ミク - ロココ (feat. 初音ミク).json"
     },
     {
         "name": "silence",
@@ -1059,7 +1061,8 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
-        "cover": "MIMI,初音ミク - GLACIES (feat. 初音ミク).jpg"
+        "cover": "MIMI,初音ミク - GLACIES (feat. 初音ミク).jpg",
+        "lyrics": "MIMI,初音ミク - GLACIES (feat. 初音ミク).json"
     },
     {
         "name": "ツキミチシルベ",

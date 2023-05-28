@@ -59,6 +59,7 @@ export function VideoPlayer() {
 			<IconButton
 				className="player-control-btn video-player-fullscreen"
 				onClick={() => {
+					document.body.setAttribute("now-view-transition", "video");
 					if (document.startViewTransition) {
 						document.startViewTransition(() => {
 							document.body.classList.add('video-exclusive');
@@ -73,6 +74,7 @@ export function VideoPlayer() {
 			<IconButton
 				className="player-control-btn video-player-exit-fullscreen"
 				onClick={() => {
+					document.body.setAttribute("now-view-transition", "video");
 					if (document.startViewTransition) {
 						document.startViewTransition(() => {
 							document.body.classList.remove('video-exclusive');
@@ -84,8 +86,6 @@ export function VideoPlayer() {
 			>
 				<MdCloseFullscreen/>
 			</IconButton>
-					
-
 		</Card>
 	)
 }

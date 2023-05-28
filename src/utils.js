@@ -59,12 +59,13 @@ export function applyNewMdTokens(theme, dark = false) {
 import songsRaw from './data/songs.json'
 import shortsRaw from './data/shorts.json'
 
+
+
 const songs = songsRaw.map((song) => {
 	if (song.type === 'Piano') {
 		song.type = 'Standalone';
 		song.isPiano = true;
 	}
-
 	song.length = song.length.split(':').map((value) => parseInt(value)).reduce((acc, time) => (60 * acc) + time);
 	song.hash = song.name + song.length;
 	song.releaseDate = new Date(song.releaseDate);
@@ -82,6 +83,10 @@ const songs = songsRaw.map((song) => {
 	if (song.hasLyrics) song.hasLyrics = song.hasLyrics.toLowerCase() === 'yes' ? true : false;
 	if (song.isMix) song.isMix = song.isMix.toLowerCase() === 'yes' ? true : false;
 	if (song.isRearrange) song.isRearrange = song.isRearrange.toLowerCase() === 'yes' ? true : false;
+
+	//if (song.lyrics) song.lyrics = new URL(`./data/lyrics/${song.lyrics}`, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29');
+	if (song.lyrics) song.lyrics = `./data/lyrics/${song.lyrics}`;
+
 	return song;
 });
 
