@@ -41,7 +41,7 @@ function ThemeManager(props) {
 
 import { QueueContext } from './contexts/QueueContext.jsx'
 function QueueManager(props) {
-	const [queue, queueRef, setQueue] = useRefStateStorage([], 'queue');
+	const [queue, queueRef, setQueue] = useRefStateStorage([], 'playQueue');
 	const [playMode, playModeRef, setPlayMode] = useRefStateStorage('repeat', 'playMode');
 	const [currentIndex, currentIndexRef, setCurrentIndex] = useRefStateStorage(null, 'queueIndex');
 
