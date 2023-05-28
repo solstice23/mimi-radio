@@ -14,15 +14,16 @@ import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCal
 import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import './SongListSection.scss';
+import useStateStorage from './hooks/useStateStorage.js';
 
 const songs = getSongsData();
 
 export function SongListSection(props) {
 	const queueManager = useContext(QueueContext);
 
-	const [selectedTypes, setSelectedTypes] = useState(['standalone', 'collab']);
-	const [sortCriteria, setSortCriteria] = useState('date');
-	const [sortDirection, setSortDirection] = useState('asc');
+	const [selectedTypes, setSelectedTypes] = useStateStorage(['standalone', 'collab'], 'song-type-filter');
+	const [sortCriteria, setSortCriteria] = useStateStorage('date', 'song-sort-criteria');
+	const [sortDirection, setSortDirection] = useStateStorage('asc', 'song-sort-direction');
 
 	const filteredSongs = songs
 		.filter((song) => selectedTypes.includes(song.type.toLowerCase()))
@@ -47,9 +48,9 @@ export function SongListSection(props) {
 				<SegmentedButtons
 					className="song-type-filter"
 					buttons={[
-						{label: 'Standalone', value: 'standalone', selected: true},
-						{label: 'Collab', value: 'collab', selected: true},
-						{label: 'Cover', value: 'cover'},
+						{label: 'Standalone', value: 'standalone', selected: selectedTypes.includes('standalone')},
+						{label: 'Collab', value: 'collab', selected: selectedTypes.includes('collab')},
+						{label: 'Short', value: 'short', selected: selectedTypes.includes('short')},
 					]}
 					multiple={true}
 					setSelected={setSelectedTypes}
@@ -231,14 +232,20 @@ function Song(props) {
 					<div className='song-name'>{props.song.name}</div>
 				</div>
 				<div className="song-creators">
-					<div className="song-artist">
-						<MdDesignServices/>
-						{props.song.artist.split(',').map((x) => x.trim()).join(', ')}
-					</div>
-					<div className="song-singer">
-						<MdMic/>
-						{props.song.singer.split(',').map((x) => x.trim()).join(', ')}
-					</div>
+					{
+						props.song.artist &&
+						<div className="song-artist">
+							<MdDesignServices/>
+							{props.song.artist.split(',').map((x) => x.trim()).join(', ')}
+						</div>
+					}
+					{
+						props.song.singer &&
+						<div className="song-singer">
+							<MdMic/>
+							{props.song.singer.split(',').map((x) => x.trim()).join(', ')}
+						</div>
+					}
 				</div>
 				<div className="song-metas">
 					<Tag className="song-type">{props.song.type}</Tag>

@@ -42,7 +42,7 @@ const SegmentedButtons = forwardRef(
 						label={button.label}
 						value={button.value}
 						icon={button.icon}
-						selected={selected.includes(button.value)}
+						selected={(button.selected !== 'undefined') ? button.selected : selected.includes(button.value)}
 						dispatchSelected={dispatchSelected}
 					/>
 				))}

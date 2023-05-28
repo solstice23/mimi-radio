@@ -130,8 +130,8 @@ function ProgressBar() {
 		hanging.current = false;
 	}
 	useEffect(() => {
-		window.addEventListener('ytb-play', onResume);
-		return () => window.removeEventListener('ytb-play', onResume);
+		window.addEventListener('video-play', onResume);
+		return () => window.removeEventListener('video-play', onResume);
 	}, []);
 
 

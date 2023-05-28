@@ -108,6 +108,7 @@ function QueueManager(props) {
 
 
 	const onSongEnd = () => {
+		console.log('endddddddddddddd');
 		if (playModeRef.current === 'loop') {
 			iframeTarget.current.seekTo(0);
 			iframeTarget.current.playVideo();
@@ -117,6 +118,7 @@ function QueueManager(props) {
 			setAutoPlay(true);
 		} else if (playModeRef.current === 'shuffle') {
 			const nextSong = shuffleNext();
+			console.log('next', nextSong);
 			playSong(nextSong);
 			setAutoPlay(true);
 		}

@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { shuffle } from '../utils.js'
 
 function useShuffleDeque(initList, initDeque) {
-	const currentIndexRef = useRef(-1);
+	const currentIndexRef = useRef(initDeque.length ? 0 : -1);
 	const dequeRef = useRef(initDeque);
 	const list = useRef(initList);
 	
@@ -19,6 +19,7 @@ function useShuffleDeque(initList, initDeque) {
 		if (list.current.length === 0) {
 			return null;
 		}
+		console.log(currentIndexRef.current, currentIndexRef.current + 1, JSON.parse(JSON.stringify(dequeRef.current)));
 		currentIndexRef.current++;
 		if (currentIndexRef.current >= dequeRef.current.length) {
 			const append = shuffle(list.current);
@@ -26,6 +27,7 @@ function useShuffleDeque(initList, initDeque) {
 				append.reverse();
 			}
 			dequeRef.current = dequeRef.current.concat(append);
+			console.log(JSON.parse(JSON.stringify(dequeRef.current)), dequeRef.current[currentIndexRef.current]);
 		}
 		return dequeRef.current[currentIndexRef.current];
 	}

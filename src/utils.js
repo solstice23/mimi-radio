@@ -57,11 +57,31 @@ export function applyNewMdTokens(theme, dark = false) {
 
 
 import songsRaw from './data/songs.json'
+import shortsRaw from './data/shorts.json'
 
 const songs = songsRaw.map((song) => {
+	if (song.type === 'Piano') {
+		song.type = 'Standalone';
+		song.isPiano = true;
+	}
+
 	song.length = song.length.split(':').map((value) => parseInt(value)).reduce((acc, time) => (60 * acc) + time);
 	song.hash = song.name + song.length;
 	song.releaseDate = new Date(song.releaseDate);
+	if (song.link.includes('youtube.com') || song.link.includes('youtu.be')) {
+		song.youtubeID = song.link.replace('https://www.youtube.com/watch?v=', '').replace('https://youtu.be/', '');
+	}
+	return song;
+}).concat(shortsRaw.map((short) => {
+	short.length = short.length.split(':').map((value) => parseInt(value)).reduce((acc, time) => (60 * acc) + time);
+	short.hash = short.name + short.length;
+	short.releaseDate = new Date(short.releaseDate);
+	short.videoURL = `//mimi-radio-files.s23.moe/` + short.fileName;
+	return short;
+})).map((song) => {
+	if (song.hasLyrics) song.hasLyrics = song.hasLyrics.toLowerCase() === 'yes' ? true : false;
+	if (song.isMix) song.isMix = song.isMix.toLowerCase() === 'yes' ? true : false;
+	if (song.isRearrange) song.isRearrange = song.isRearrange.toLowerCase() === 'yes' ? true : false;
 	return song;
 });
 
@@ -71,6 +91,7 @@ export function getSongsData() {
 
 export function formatLength(length) {
 	if (typeof(length) === 'undefined') length = 0;
+	if (length !== length) length = 0;
 
 	const hour = Math.floor(length / 3600);
 	length %= 3600;
