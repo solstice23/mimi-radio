@@ -18,8 +18,9 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 	if (currentProgress !== currentProgress) currentProgress = 0;
 
 	const getPercentByEvent = (e) => {
+		const clientX = e.clientX ?? e.touches[0].clientX;
 		const rect = ref.current.getBoundingClientRect();
-		const x = e.clientX - (rect.left + 20);
+		const x = clientX - (rect.left + 20);
 		const width = rect.right - rect.left - 40;
 		return Math.max(Math.min(x / width * 100, 100), 0);
 	}
@@ -28,6 +29,8 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 		isDragging.current = true;
 		window.addEventListener('mousemove', handleMouseMove);
 		window.addEventListener('mouseup', handleMouseUp);
+		window.addEventListener('touchmove', handleMouseMove);
+		window.addEventListener('touchend', handleMouseUp);
 		const newProgress = getPercentByEvent(e);
 		setProgress(newProgress);
 		props.onInput?.(newProgress);
@@ -43,6 +46,8 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 		isDragging.current = false;
 		window.removeEventListener('mousemove', handleMouseMove);
 		window.removeEventListener('mouseup', handleMouseUp);
+		window.removeEventListener('touchmove', handleMouseMove);
+		window.removeEventListener('touchend', handleMouseUp);
 		const newProgress = getPercentByEvent(e);
 		setProgress(newProgress);
 		props.onInput?.(newProgress);
@@ -52,6 +57,8 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 		isDragging.current = true;
 		window.addEventListener('mousemove', handleMouseMove);
 		window.addEventListener('mouseup', handleMouseUp);
+		window.addEventListener('touchmove', handleMouseMove);
+		window.addEventListener('touchend', handleMouseUp);
 		const newProgress = getPercentByEvent(e);
 		setProgress(newProgress);
 		props.onChange?.(newProgress);
@@ -60,10 +67,14 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 	useEffect(() => {
 		const handle = handleRef.current;
 		handle.addEventListener('mousedown', handleMouseDown);
+		handle.addEventListener('touchstart', handleMouseDown);
 		controlTrackRef.current.addEventListener('mousedown', controlTrackMouseDown);
+		controlTrackRef.current.addEventListener('touchstart', controlTrackMouseDown);
 		return () => {
 			handle.removeEventListener('mousedown', handleMouseDown);
+			handle.removeEventListener('touchstart', handleMouseDown);
 			controlTrackRef.current.removeEventListener('mousedown', controlTrackMouseDown);
+			controlTrackRef.current.removeEventListener('touchstart', controlTrackMouseDown);
 		}
 	}, []);
 

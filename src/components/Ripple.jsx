@@ -9,6 +9,10 @@ function addRipple(e, target, options = {}) {
 		target.style.overflow = 'hidden';
 	}*/
 
+	if (e.type === 'mousedown' && e.sourceCapabilities?.firesTouchEvents) {
+		return;
+	}
+
 	const rippleWrap = document.createElement('div');
 	rippleWrap.classList.add('ripple-wrap');
 	rippleWrap.classList.add(css.rippleWrap);
@@ -18,8 +22,10 @@ function addRipple(e, target, options = {}) {
 
 	const rect = target.getBoundingClientRect();
 	const diagonal = Math.sqrt(rect.width ** 2 + rect.height ** 2);
-	let ox = e.clientX - rect.left;
-	let oy = e.clientY - rect.top;
+	const clientX = e.clientX ?? e.touches[0].clientX;
+	const clientY = e.clientY ?? e.touches[0].clientY;
+	let ox = clientX - rect.left;
+	let oy = clientY - rect.top;
 	if (options.center) {
 		ox = rect.width / 2;
 		oy = rect.height / 2;
@@ -87,10 +93,12 @@ export function useRipple(ref = null, options = {}) {
 	useEffect(() => {
 		if (!containerRef.current) return;
 		containerRef.current.addEventListener('mousedown', onMouseDown);
+		containerRef.current.addEventListener('touchstart', onMouseDown);
 		containerRef.current.setAttribute('ripple', '');
 		return () => {
 			if (!containerRef.current) return;
 			containerRef.current.removeEventListener('mousedown', onMouseDown);
+			containerRef.current.removeEventListener('touchstart', onMouseDown);
 			containerRef.current.removeAttribute('ripple');
 		}
 	}, []);

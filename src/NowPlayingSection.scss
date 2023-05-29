@@ -278,7 +278,7 @@
 		view-transition-name: controller;
 
 		@media screen and (max-width: 950px) {
-			view-transition-name: unset
+			view-transition-name: unset;
 		}
 		
 		.controller-bg {
@@ -569,6 +569,7 @@ body {
 			z-index: 2;
 			transition: opacity .3s ease;
 			min-height: unset;
+			opacity: 1;
 			&:hover {
 				opacity: 1;
 			}
