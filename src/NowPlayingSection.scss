@@ -130,6 +130,8 @@
 			text-align: center;
 			align-items: center;
 			user-select: none;
+			padding-left: 15px;
+			padding-right: 15px;
 			.lyrics-line {
 				display: block;
 				flex-shrink: 0;
@@ -274,6 +276,10 @@
 		z-index: 2;
 		background-color: var(--md-sys-color-secondary-container);
 		view-transition-name: controller;
+
+		@media screen and (max-width: 950px) {
+			view-transition-name: unset
+		}
 		
 		.controller-bg {
 			position: absolute;
@@ -554,8 +560,8 @@ body {
 	&.video-exclusive, &.lyrics-exclusive {
 		.now-playing-section .controller {
 			position: fixed !important;
-			left: calc(50% - min(calc((50vw - 10px) / 2), 400px));
-			right: calc(50% - min(calc((50vw - 10px) / 2), 400px));
+			left: calc(50% - min(calc((100vw - 15px) / 2), 400px));
+			right: calc(50% - min(calc((100vw - 15px) / 2), 400px));
 			bottom: 15px;
 			height: 60px;
 			z-index: 2;
@@ -565,6 +571,12 @@ body {
 			min-height: unset;
 			&:hover {
 				opacity: 1;
+			}
+			@media screen and (max-width: 950px) {
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: 0;
 			}
 			.controller-inner {
 				padding-top: 0;
@@ -624,6 +636,78 @@ body {
 	&[now-view-transition=lyrics] {
 		.lyrics-container {
 			view-transition-name: lyrics-container;
+		}
+	}
+
+	
+}
+
+body.now-playing-expanded {
+	.expand-button > svg {
+		transform: rotate(180deg);
+	}
+}
+
+
+@media screen and (min-width: 951px) {
+	.expand-button {
+		display: none;
+	}
+}
+@media screen and (max-width: 950px) {
+	.now-playing-section {
+		flex-direction: column-reverse;
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		top: calc(100vh - 200px);
+		padding-bottom: 15px;
+		background: var(--md-sys-color-background);
+		height: calc(100% - 72px) !important;
+		transition: top 0.5s ease;
+		z-index: 3;
+		&.not-playing {
+			top: 100vh;
+			pointer-events: none;
+		}
+		.controller {
+			transition: margin 0.5s ease, border-radius 0.5s ease;
+		}
+		.expand-button {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+			height: 40px;
+			margin-bottom: -15px;
+			border-radius: 8px;
+			flex-shrink: 0;
+			z-index: 2;
+			transition: margin 0.5s ease, color 0.5s ease;
+			svg {
+				transition: transform 0.5s ease;
+			}
+		}
+	}
+	body.now-playing-expanded {
+		.now-playing-section {
+			top: 72px;
+		}
+	}
+	body:not(.now-playing-expanded) {
+		.controller {
+			margin-left: -15px;
+			margin-right: -15px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		.expand-button {
+			margin-bottom: -60px;
+			color: var(--md-sys-color-on-secondary-container);
 		}
 	}
 }

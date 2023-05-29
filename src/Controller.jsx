@@ -254,6 +254,7 @@ function QueuePanel() {
 				className="queue-menu"
 				anchorElement={openBtnRef?.current}
 				anchorPosition="right bottom"
+				fixed={true}
 				open={open}
 			>
 				<div className="queue-menu-header">
@@ -265,7 +266,7 @@ function QueuePanel() {
 					</div>
 					{
 						queueManager.queue.length > 0 && (	
-							<IconButton	title="Clear Queue" onClick={() => queueManager.clearQueue()}>
+							<IconButton	title="Clear Queue" onClick={() => {queueManager.clearQueue(); setOpen(false);}}>
 								<MdClearAll/>
 							</IconButton>
 						)

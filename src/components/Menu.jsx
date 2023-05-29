@@ -9,6 +9,8 @@ const Menu = forwardRef(function Menu(props, ref) {
 		<Popper
 			anchorElement={props.anchorElement}
 			anchorPosition={props.anchorPosition ?? 'left top'}
+			relativeToElement={props.relativeToElement}
+			fixed={props.fixed}
 			noClick={!(props.open ?? true)}
 			ref={ref}
 		>

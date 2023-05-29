@@ -35,7 +35,12 @@ const SegmentedButtons = forwardRef(
 
 
 		return (
-			<div className={css.segmentedButtons} ref={ref}>
+			<div
+				className={
+					classNames(css.segmentedButtons, props.className)
+				}
+				ref={ref}
+			>
 				{props.buttons.map((button, index) => (
 					<SegmentedButton
 						key={button.value}

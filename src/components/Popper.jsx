@@ -3,16 +3,24 @@ import css from './Popper.module.scss';
 import { forwardRef, useEffect, useRef, useState, useLayoutEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-const getRelativePosition = (element, relativeToElement) => {
-	const relativeToElementRect = relativeToElement.getBoundingClientRect();
+const getRelativePosition = (element, parentElement, fixed) => {
+	const parentElementRect = parentElement.getBoundingClientRect();
 	const elementRect = element.getBoundingClientRect();
+
+	if (fixed) {
+		return {
+			top: elementRect.top,
+			left: elementRect.left
+		}
+	}
+
 	return {
-		top: elementRect.top - relativeToElementRect.top + relativeToElement.scrollTop,
-		left: elementRect.left - relativeToElementRect.left + relativeToElement.scrollLeft
+		top: elementRect.top - parentElementRect.top + parentElement.scrollTop,
+		left: elementRect.left - parentElementRect.left + parentElement.scrollLeft
 	}
 }
-const getAnchorPoint = (anchorElement, relativeToElement, anchorPositionX, anchorPositionY) => {
-	const relativePosition = getRelativePosition(anchorElement, relativeToElement);
+const getAnchorPoint = (anchorElement, parentElement, fixed, anchorPositionX, anchorPositionY) => {
+	const relativePosition = getRelativePosition(anchorElement, parentElement, fixed);
 	const [anchorElementX, anchorElementY] = [relativePosition.left, relativePosition.top];
 	const [anchorElementW, anchorElementH] = [anchorElement.offsetWidth, anchorElement.offsetHeight];
 
@@ -31,9 +39,9 @@ const getAnchorPoint = (anchorElement, relativeToElement, anchorPositionX, ancho
 		y: anchorElementY + anchorElementH * scaleY[anchorPositionY]
 	}
 }
-const checkAvailableSpace = (anchorElement, relativeToElement, sizeW, sizeH, anchorPositionX, anchorPositionY) => {
-	const {x, y} = getAnchorPoint(anchorElement, relativeToElement, anchorPositionX, anchorPositionY);
-	const [w, h] = [relativeToElement.offsetWidth, relativeToElement.offsetHeight];
+const checkAvailableSpace = (anchorElement, parentElement, fixed, sizeW, sizeH, anchorPositionX, anchorPositionY) => {
+	const {x, y} = getAnchorPoint(anchorElement, parentElement, fixed, anchorPositionX, anchorPositionY);
+	const [w, h] = fixed ? [window.innerWidth, window.innerHeight] : [parentElement.offsetWidth, parentElement.offsetHeight];
 	const scaleX = {
 		left: [0, 1],
 		center: [0.5, 0.5],
@@ -52,7 +60,7 @@ const checkAvailableSpace = (anchorElement, relativeToElement, sizeW, sizeH, anc
 		y: y1 >= 0 && y2 <= h
 	}
 }
-const getRevisedPosition = (anchorElement, relativeToElement, sizeW, sizeH, anchorPositionX, anchorPositionY) => {
+const getRevisedPosition = (anchorElement, parentElement, fixed, sizeW, sizeH, anchorPositionX, anchorPositionY) => {
 	const XList = [anchorPositionX];
 	if (anchorPositionX === 'left') { XList.push('right'); }
 	else if (anchorPositionX === 'right') { XList.push('left'); }
@@ -66,12 +74,12 @@ const getRevisedPosition = (anchorElement, relativeToElement, sizeW, sizeH, anch
 	let availableAnchorPositionX = null;
 	for (let x of XList) {
 		availableAnchorPositionX = x;
-		if (checkAvailableSpace(anchorElement, relativeToElement, sizeW, sizeH, x, anchorPositionY).x) { break; }
+		if (checkAvailableSpace(anchorElement, parentElement, fixed, sizeW, sizeH, x, anchorPositionY).x) { break; }
 	}
 	let availableAnchorPositionY = null;
 	for (let y of YList) {
 		availableAnchorPositionY = y;
-		if (checkAvailableSpace(anchorElement, relativeToElement, sizeW, sizeH, anchorPositionX, y).y) { break; }
+		if (checkAvailableSpace(anchorElement, parentElement, fixed, sizeW, sizeH, anchorPositionX, y).y) { break; }
 	}
 
 	return [availableAnchorPositionX, availableAnchorPositionY];
@@ -83,7 +91,8 @@ const Popper = forwardRef(function Popper(props, ref) {
 
 	const anchorElementRef = useRef(null);
 	anchorElementRef.current = props?.anchorElement ?? document.body;
-	const relativeToElement = props?.relativeToElement ?? document.body;
+	const parentElement = props?.parentElement ?? document.body;
+	const fixed = props?.fixed ?? false;
 
 	const [revisedAnchorPosition, setRevisedAnchorPosition] = useState(props.anchorPosition);
 
@@ -92,16 +101,16 @@ const Popper = forwardRef(function Popper(props, ref) {
 		const [sizeW, sizeH] = [container.offsetWidth, container.offsetHeight];
 
 		let [anchorPositionX, anchorPositionY] = ((props.anchorPosition ?? 'center') + ' center').split(' ');
-		[anchorPositionX, anchorPositionY] = getRevisedPosition(anchorElementRef.current, relativeToElement, sizeW, sizeH, anchorPositionX, anchorPositionY);
+		[anchorPositionX, anchorPositionY] = getRevisedPosition(anchorElementRef.current, parentElement, fixed, sizeW, sizeH, anchorPositionX, anchorPositionY);
 
 		container.style.left = container.style.right = container.style.top = container.style.bottom = null;
 
-		const {x, y} = getAnchorPoint(anchorElementRef.current, relativeToElement, anchorPositionX, anchorPositionY);
+		const {x, y} = getAnchorPoint(anchorElementRef.current, parentElement, fixed, anchorPositionX, anchorPositionY);
 		if (anchorPositionX == 'left') { container.style.left = x + 'px'; }
-		else if (anchorPositionX == 'right') { container.style.right = (relativeToElement.offsetWidth - x) + 'px'; }
+		else if (anchorPositionX == 'right') { container.style.right = (parentElement.offsetWidth - x) + 'px'; }
 		else { container.style.left = (x - sizeW / 2) + 'px'; }
 		if (anchorPositionY == 'top') { container.style.top = y + 'px'; }
-		else if (anchorPositionY == 'bottom') { container.style.bottom = (relativeToElement.offsetHeight - y) + 'px'; }
+		else if (anchorPositionY == 'bottom') { container.style.bottom = (parentElement.offsetHeight - y) + 'px'; }
 		else { container.style.top = (y - sizeH / 2) + 'px'; }
 
 		setRevisedAnchorPosition(`${anchorPositionX} ${anchorPositionY}`);
@@ -109,7 +118,7 @@ const Popper = forwardRef(function Popper(props, ref) {
 
 	useLayoutEffect(() => {
 		recalcPosition();
-	}, [props.anchorPosition, props.anchorElement, props.relativeToElement, props.noClick, props.state]);
+	}, [props.anchorPosition, props.anchorElement, props.parentElement, props.noClick, props.state]);
 
 	useEffect(() => {
 		window.addEventListener('resize', recalcPosition);
@@ -127,6 +136,7 @@ const Popper = forwardRef(function Popper(props, ref) {
 					props.className,
 					{
 						[css.noClick]: props.noClick,
+						[css.fixed]: props.fixed,
 					}
 				)}
 				style={{
@@ -136,7 +146,7 @@ const Popper = forwardRef(function Popper(props, ref) {
 			>
 				{props.children}
 			</div>
-		, relativeToElement)
+		, parentElement)
 	)
 });
 

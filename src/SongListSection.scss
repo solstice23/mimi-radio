@@ -16,6 +16,7 @@
 				position: fixed !important;
 				right: 20px;
 				top: 20px;
+				transition: opacity 0.5s ease;
 			}
 		}
 	}
@@ -28,7 +29,7 @@
 			height: 100%;
 			overflow-y: auto;
 			display: grid;
-			grid-template-columns: min(repeat(auto-fill, minmax(550px, 1fr)), 1fr);
+			//grid-template-columns: min(repeat(auto-fill, minmax(550px, 1fr)), 1fr);
 			/*@media screen and (max-width: 600px) {
 				grid-template-columns: 1fr;
 			}*/
@@ -159,4 +160,13 @@
 
 .song-filter-menu {
 	margin-top: 10px;
+}
+
+@media screen and (max-width: 950px) {
+	body.now-playing-expanded {
+		.song-filter-btn {
+			pointer-events: none;
+			opacity: 0;
+		}
+	}
 }
