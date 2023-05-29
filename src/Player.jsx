@@ -197,6 +197,7 @@ function URLPlayer() {
 			onPlay={(e) => {
 				console.log('play', e);
 				queueManager.setPlayState('playing');
+				window.dispatchEvent(new Event('video-play'));
 			}}
 			onPause={(e) => {
 				console.log('pause', e);
@@ -218,8 +219,8 @@ function URLPlayer() {
 					queueManager.setPlayState('unstarted');
 				} else if (queueManager.playState === 'buffering') {
 					queueManager.setPlayState('playing');
-					window.dispatchEvent(new Event('video-play'));
 				}
+				window.dispatchEvent(new Event('video-play'));
 			}}
 			onCanPlay={(e) => {
 				console.log('can play', e);
@@ -227,8 +228,8 @@ function URLPlayer() {
 					queueManager.setPlayState('unstarted');
 				} else if (queueManager.playState === 'buffering') {
 					queueManager.setPlayState('playing');
-					window.dispatchEvent(new Event('video-play'));
 				}
+				window.dispatchEvent(new Event('video-play'));
 			}}
 			onWaiting={(e) => {
 				console.log('waiting', e);

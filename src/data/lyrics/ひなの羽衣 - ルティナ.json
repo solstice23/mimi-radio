@@ -1,0 +1,229 @@
+[
+    {
+        "time": 0,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 24652,
+        "text": "感傷列車は今日も",
+        "cn": "感伤列车今日亦是",
+        "ro": "ka n sho u re ssha wa kyo u mo"
+    },
+    {
+        "time": 26250,
+        "text": "ゆく宛先もなく止まっている",
+        "cn": "漫无目的地停滞着",
+        "ro": "yu ku a te sa ki mo na ku to ma tte i ru"
+    },
+    {
+        "time": 28379,
+        "text": "揺らいでるさよなら",
+        "cn": "动摇的那声“再见”",
+        "ro": "yu ra i de ru sa yo na ra"
+    },
+    {
+        "time": 30242,
+        "text": "嗚呼なんにも言わずに遠目に見えた",
+        "cn": "啊啊 什么都说不出口 只得纵目远眺",
+        "ro": "a a na n ni mo i wa zu ni to o me ni mi e ta"
+    },
+    {
+        "time": 32628,
+        "text": "回想日記を回路へ",
+        "cn": "将回想日记投向回路",
+        "ro": "ka i so u ni kki wo ka i ro e"
+    },
+    {
+        "time": 34224,
+        "text": "分かんないままなら閉じてよ",
+        "cn": "还是一无所知的话 就合上吧",
+        "ro": "wa ka n na i ma ma na ra to ji te yo"
+    },
+    {
+        "time": 37360,
+        "text": "それだけで楽になれる気がした",
+        "cn": "唯独这样仿佛才能带来些许欢欣",
+        "ro": "so re da ke de ra ku ni na re ru ki ga shi ta"
+    },
+    {
+        "time": 40806,
+        "text": "ふたつ靡いた言葉の音",
+        "cn": "成双的 飘摇风中的言语之声",
+        "ro": "fu ta tsu na bi i ta ko to ba no o to"
+    },
+    {
+        "time": 44552,
+        "text": "紡いでく",
+        "cn": "我纺织着",
+        "ro": "tsu mu i de ku"
+    },
+    {
+        "time": 46141,
+        "text": "さらば境界線まで",
+        "cn": "再见了 直到边界线",
+        "ro": "sa ra ba kyo u ka i se n ma de"
+    },
+    {
+        "time": 48290,
+        "text": "嗚呼駆け出す 嗚呼駆け出す",
+        "cn": "啊啊 动身前进 动身前进",
+        "ro": "a a ka ke da su a a ka ke da su"
+    },
+    {
+        "time": 50418,
+        "text": "日々の先へ",
+        "cn": "向着时日的前方",
+        "ro": "hi bi no sa ki e"
+    },
+    {
+        "time": 52018,
+        "text": "ねぇバイバイそうやって",
+        "cn": "呐就这样道声拜拜",
+        "ro": "ne e ba i ba i so u ya tte"
+    },
+    {
+        "time": 54134,
+        "text": "何処かへ行ってしまうの",
+        "cn": "要去往何处呢",
+        "ro": "do ko ka e i tte shi ma u no"
+    },
+    {
+        "time": 56003,
+        "text": "夜明けを待ってる",
+        "cn": "我等待着夜明",
+        "ro": "yo a ke wo ma tte ru"
+    },
+    {
+        "time": 58118,
+        "text": "君が見える線の先へ",
+        "cn": "前往能看见你的 线的先端",
+        "ro": "ki mi ga mi e ru se n no sa ki e"
+    },
+    {
+        "time": 76447,
+        "text": "感情転嫁はどうも",
+        "cn": "感情转嫁无论如何",
+        "ro": "ka n jo u te n ka wa do u mo"
+    },
+    {
+        "time": 78325,
+        "text": "ゆく宛先もなく自分へ",
+        "cn": "都只向着那无处可去的我",
+        "ro": "yu ku a te sa ki mo na ku ji bu n'e"
+    },
+    {
+        "time": 80446,
+        "text": "決まってるルーティーンと",
+        "cn": "已经定好的日程表和",
+        "ro": "ki ma tte ru ruu te ii n to"
+    },
+    {
+        "time": 82317,
+        "text": "ねぇ寂しさふたつを僕らは持って",
+        "cn": "呢 那两份孤独 我们一并拿着",
+        "ro": "ne e sa bi shi sa fu ta tsu wo bo ku ra wa mo tte"
+    },
+    {
+        "time": 84701,
+        "text": "反省会を開いてる 嗚呼遊覧船の向こう側",
+        "cn": "开一场反省会 啊啊在观光船的对岸",
+        "ro": "ha n se i ka i wo hi ra i te ru a a yu u ra n se n no mu ko u ga wa"
+    },
+    {
+        "time": 90010,
+        "text": "願う咲いた花が枯れぬよう",
+        "cn": "但愿因祈祷而盛开的鲜花 不曾枯萎",
+        "ro": "ne ga u sa i ta ha na ga ka re nu yo u"
+    },
+    {
+        "time": 108602,
+        "text": "知ってゆく",
+        "cn": "我逐渐知晓",
+        "ro": "shi tte yu ku"
+    },
+    {
+        "time": 109938,
+        "text": "何も見えないとこでも",
+        "cn": "即便在不见一物之处",
+        "ro": "na ni mo mi e na i to ko de mo"
+    },
+    {
+        "time": 112590,
+        "text": "嗚呼願って 嗚呼願って",
+        "cn": "啊啊我祈愿着 我祈愿着",
+        "ro": "a a ne ga tte a a ne ga tte"
+    },
+    {
+        "time": 114194,
+        "text": "日々の夜明け",
+        "cn": "每天的黎明",
+        "ro": "hi bi no yo a ke"
+    },
+    {
+        "time": 116051,
+        "text": "ねぇgood lieそうやって",
+        "cn": "呐 就那样完美地撒个谎",
+        "ro": "ne e good lieso u ya tte"
+    },
+    {
+        "time": 118165,
+        "text": "傷つけないように君は笑うの",
+        "cn": "为了避免受伤 你笑着",
+        "ro": "ki zu tsu ke na i yo u ni ki mi wa wa ra u no"
+    },
+    {
+        "time": 121892,
+        "text": "遠くで始まる さぁ",
+        "cn": "在远处开始了 来吧",
+        "ro": "to o ku de ha ji ma ru sa a"
+    },
+    {
+        "time": 124816,
+        "text": "紡いでく",
+        "cn": "纺织着",
+        "ro": "tsu mu i de ku"
+    },
+    {
+        "time": 126139,
+        "text": "さらば境界線まで",
+        "cn": "再见了 直到边界线",
+        "ro": "sa ra ba kyo u ka i se n ma de"
+    },
+    {
+        "time": 128525,
+        "text": "嗚呼駆け出す 嗚呼駆け出す",
+        "cn": "啊啊 动身前进 动身前进",
+        "ro": "a a ka ke da su a a ka ke da su"
+    },
+    {
+        "time": 130389,
+        "text": "日々の先へ",
+        "cn": "向着时日的前方",
+        "ro": "hi bi no sa ki e"
+    },
+    {
+        "time": 132251,
+        "text": "ねぇバイバイそうやって",
+        "cn": "呢就这样道声拜拜",
+        "ro": "ne e ba i ba i so u ya tte"
+    },
+    {
+        "time": 134111,
+        "text": "何処かへ行ってしまうの",
+        "cn": "要去往何处呢",
+        "ro": "do ko ka e i tte shi ma u no"
+    },
+    {
+        "time": 135701,
+        "text": "夜明けを待ってる",
+        "cn": "我等待着夜明",
+        "ro": "yo a ke wo ma tte ru"
+    },
+    {
+        "time": 137863,
+        "text": "君が見える線の先へ",
+        "cn": "前往能看见你的 线的先端",
+        "ro": "ki mi ga mi e ru se n no sa ki e"
+    }
+]

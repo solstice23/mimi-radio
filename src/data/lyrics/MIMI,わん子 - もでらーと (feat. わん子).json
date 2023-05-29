@@ -1,0 +1,253 @@
+[
+    {
+        "time": 0,
+        "text": "大丈夫優しい言葉",
+        "cn": "没关系 温柔的话语",
+        "ro": "da i jo u bu ya sa shi i ko to ba"
+    },
+    {
+        "time": 3252,
+        "text": "寂しくなって朝を待つんだ",
+        "cn": "愈发感到寂寞 只待晨光降临",
+        "ro": "sa bi shi ku na tte a sa wo ma tsu n da"
+    },
+    {
+        "time": 7572,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 15060,
+        "text": "嫌いだったあの日の音楽",
+        "cn": "曾经十分讨厌的那一天的音乐",
+        "ro": "ki ra i da tta a no hi no o n ga ku"
+    },
+    {
+        "time": 18132,
+        "text": "今もポケットに入れてる",
+        "cn": "如今也被珍藏在了口袋里",
+        "ro": "i ma mo po ke tto ni i re te ru"
+    },
+    {
+        "time": 21492,
+        "text": "何も分かんないよ",
+        "cn": "已经什么都搞不懂了",
+        "ro": "na ni mo wa ka n na i yo"
+    },
+    {
+        "time": 23796,
+        "text": "嗚呼分かんなくて",
+        "cn": "啊我真的不懂啊",
+        "ro": "a a wa ka n na ku te"
+    },
+    {
+        "time": 25620,
+        "text": "独り海に融ける",
+        "cn": "只是独自融于大海",
+        "ro": "hi to ri u mi ni to ke ru"
+    },
+    {
+        "time": 28980,
+        "text": "このまま灰になって",
+        "cn": "就这样化作灰烬",
+        "ro": "ko no ma ma ha i ni na tte"
+    },
+    {
+        "time": 31668,
+        "text": "言わせないで",
+        "cn": "一言一语亦无法发出",
+        "ro": "i wa se na i de"
+    },
+    {
+        "time": 33684,
+        "text": "シアワセの意味教えないで！",
+        "cn": "请勿告诉我幸福的意义！",
+        "ro": "shi a wa se no i mi o shi e na i de!"
+    },
+    {
+        "time": 36564,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 36948,
+        "text": "言えないよねぇないよホントの事",
+        "cn": "不能说啊说不出口啊所谓的真实",
+        "ro": "i e na i yo ne e na i yo ho n to no ko to"
+    },
+    {
+        "time": 40500,
+        "text": "大人にはなれないなれるわけない",
+        "cn": "长大成人也是不可能的绝不可能",
+        "ro": "o to na ni wa na re na i na re ru wa ke na i"
+    },
+    {
+        "time": 44340,
+        "text": "足りないよねぇないよ輝く街",
+        "cn": "远远不够啊无处可寻呢繁华都市",
+        "ro": "ta ri na i yo ne e na i yo ka ga ya ku ma chi"
+    },
+    {
+        "time": 47988,
+        "text": "醒めないでこのまま揺られるだけ",
+        "cn": "无法醒来仅仅就这样荡漾着身影",
+        "ro": "sa me na i de ko no ma ma yu ra re ru da ke"
+    },
+    {
+        "time": 51636,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 51828,
+        "text": "ねぇ いつか君が教えてくれた",
+        "cn": "呐 曾几何时你告诉我的",
+        "ro": "ne e i tsu ka ki mi ga o shi e te ku re ta"
+    },
+    {
+        "time": 55764,
+        "text": "もでらーとくらいに生きて笑って見せて",
+        "cn": "以合适的速度活着然后展现笑容吧",
+        "ro": "mo de raa to ku ra i ni i ki te wa ra tte mi se te"
+    },
+    {
+        "time": 59700,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 74580,
+        "text": "嫌いだったあの日の私",
+        "cn": "曾经十分讨厌那一天的我",
+        "ro": "ki ra i da tta a no hi no wa ta shi"
+    },
+    {
+        "time": 77748,
+        "text": "今も街灯を見ている",
+        "cn": "如今也注视着路灯",
+        "ro": "i ma mo ga i to u wo mi te i ru"
+    },
+    {
+        "time": 81012,
+        "text": "間違わないように",
+        "cn": "为了不会犯错",
+        "ro": "ma chi ga wa na i yo u ni"
+    },
+    {
+        "time": 83220,
+        "text": "ふらつくように",
+        "cn": "仿佛失去魂魄一般游荡",
+        "ro": "fu ra tsu ku yo u ni"
+    },
+    {
+        "time": 85140,
+        "text": "正解探すの、ただ",
+        "cn": "仅仅只是，找寻着正解",
+        "ro": "se i ka i sa ga su no、ta da"
+    },
+    {
+        "time": 88308,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 88884,
+        "text": "今日も人生列車指定速度",
+        "cn": "今日人生列车依旧是指定速度",
+        "ro": "kyo u mo ji n se i re ssha shi te i so ku do"
+    },
+    {
+        "time": 90996,
+        "text": "一年先くらいのスピードで",
+        "cn": "以直达一年后左右的速度",
+        "ro": "i chi ne n sa ki ku ra i no su pii do de"
+    },
+    {
+        "time": 92916,
+        "text": "疲れたよバイバイバイ",
+        "cn": "筋疲力尽地道出告别",
+        "ro": "tsu ka re ta yo ba i ba i ba i"
+    },
+    {
+        "time": 94932,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 109428,
+        "text": "言えないよねぇないよ苦しいのに",
+        "cn": "不能说啊说不出口啊明明如此痛苦",
+        "ro": "i e na i yo ne e na i yo ku ru shi i no ni"
+    },
+    {
+        "time": 113076,
+        "text": "生きるため急いでもつれたまま",
+        "cn": "为了生活而加快脚步也只是一边倒",
+        "ro": "i ki ru ta me i so i de mo tsu re ta ma ma"
+    },
+    {
+        "time": 116820,
+        "text": "解けないよねぇないよ",
+        "cn": "解不开啊该怎么办",
+        "ro": "to ke na i yo ne e na i yo"
+    },
+    {
+        "time": 118932,
+        "text": "答えならもういいよ",
+        "cn": "即便有回答也算了吧",
+        "ro": "ko ta e na ra mo u i i yo"
+    },
+    {
+        "time": 123924,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 124308,
+        "text": "少しだけ止まって泣く時だけ",
+        "cn": "唯有哭泣之时也好稍微驻足吧",
+        "ro": "su ko shi da ke to ma tte na ku to ki da ke"
+    },
+    {
+        "time": 127956,
+        "text": "弱いけどその日を許せたんだ",
+        "cn": "虽然软弱但却能够宽恕那一天了",
+        "ro": "yo wa i ke do so no hi wo yu ru se ta n da"
+    },
+    {
+        "time": 131700,
+        "text": "褪せないで月夜を照らすほど",
+        "cn": "正如将不会褪色的月夜点亮",
+        "ro": "a se na i de tsu ki yo wo te ra su ho do"
+    },
+    {
+        "time": 135444,
+        "text": "抜け出した昨日に手を振れる最期",
+        "cn": "从昨日中脱出挥着手向它告别",
+        "ro": "nu ke da shi ta ki no u ni te wo fu re ru sa i go"
+    },
+    {
+        "time": 139572,
+        "text": "各停で征くそれでいいから",
+        "cn": "乘上慢车出发也没关系",
+        "ro": "ka ku te i de yu ku so re de i i ka ra"
+    },
+    {
+        "time": 143124,
+        "text": "なんも思うことないそれでいいから",
+        "cn": "脑袋已经空空也没关系",
+        "ro": "na n mo o mo u ko to na i so re de i i ka ra"
+    },
+    {
+        "time": 147156,
+        "text": "いつか君が教えてくれた",
+        "cn": "呐 曾几何时你告诉我的",
+        "ro": "i tsu ka ki mi ga o shi e te ku re ta"
+    },
+    {
+        "time": 150708,
+        "text": "もでらーとくらいに生きて笑ってまたね",
+        "cn": "以合适的速度活着然后笑着道别吧",
+        "ro": "mo de raa to ku ra i ni i ki te wa ra tte ma ta ne"
+    }
+]

@@ -15,6 +15,23 @@ import classNames from 'classnames';
 export function Controller(props) {
 	const queueManager = useContext(QueueContext);
 	const isPaused = queueManager.playState === 'paused' || queueManager.playState === 'ended' || queueManager.playState === 'unstarted' || queueManager.playState === 'cued';
+
+	const playPauseButtonRef = useRef(null);
+	const onSpaceDown = (e) => {
+		if (["INPUT", "TEXTAREA"].includes(e.target.tagName)) return;
+		if (e.target.getAttribute("contenteditable") !== null) return;
+		if (e.repeat) return;
+		if (e.code === 'Space') {
+			playPauseButtonRef.current?.click();
+		}
+	}
+	useEffect(() => {
+		window.addEventListener('keydown', onSpaceDown);
+		return () => {
+			window.removeEventListener('keydown', onSpaceDown);
+		}
+	}, []);
+
 	return (
 		<Card className="controller" ripple={false} layer={false}>
 			<ControllerBg/>
@@ -42,6 +59,7 @@ export function Controller(props) {
 					{
 						queueManager.currentSong &&
 						<FAB
+							ref={playPauseButtonRef}
 							className="play-pause-button"
 							title={isPaused ? "Play" : "Pause"}
 							color="primary"
