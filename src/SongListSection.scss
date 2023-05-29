@@ -156,6 +156,11 @@
 			pointer-events: none;
 		}
 	}
+	&.playing {
+		.song-list-inner{
+			padding-bottom: 210px;
+		}
+	}
 }
 
 .song-filter-menu {

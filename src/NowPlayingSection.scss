@@ -654,6 +654,11 @@ body.now-playing-expanded {
 		display: none;
 	}
 }
+body.lyrics-exclusive, body.video-exclusive {
+	.expand-button {
+		display: none;
+	}
+}
 @media screen and (max-width: 950px) {
 	.now-playing-section {
 		flex-direction: column-reverse;

@@ -43,7 +43,15 @@ export function SongListSection(props) {
 		});
 
 	return (
-		<div className="list-section">
+		<div className={
+			classNames(
+				'list-section',
+				{
+					'playing':  queueManager?.currentSong,
+				}
+			)
+		} 
+		>
 			<div className="list-section-header">
 				<SegmentedButtons
 					className="song-type-filter"

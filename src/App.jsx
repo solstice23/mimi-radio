@@ -6,21 +6,6 @@ import { NowPlayingSection } from './NowPlayingSection.jsx'
 import './App.scss'
 
 function App() {
-	const onScroll = () => {
-		//document.body.classList.toggle('now-playing-bottom', window.innerWidth <= 950);
-		console.log("fuck");
-		if (document.documentElement.scrollTop !== 0) {
-			document.documentElement.scrollTop = 0;
-		}
-	}
-	useEffect(() => {
-		document.documentElement.addEventListener('scroll', onScroll);
-		onScroll();
-		return () => {
-			document.documentElement.removeEventListener('scroll', onScroll);
-		};
-	}, []);
-
 	return (
 		<>
 			<Toolbar
