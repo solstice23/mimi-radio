@@ -1,6 +1,7 @@
 .segmentedButtons {
 	display: flex;
 	width: fit-content;
+	gap: 0;
 	.segmentedButton {
 		flex: 1;
 		flex-shrink: 0;

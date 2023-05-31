@@ -75,4 +75,12 @@
 			background-color: var(--md-sys-color-on-tertiary-container);
 		}
 	}
+
+	> svg {
+		height: 1em;
+		width: 1em;
+		stroke: currentcolor;
+		fill: currentcolor;
+		stroke-width: 0;
+	}
 }

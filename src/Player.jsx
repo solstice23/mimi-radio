@@ -194,6 +194,7 @@ function URLPlayer() {
 			src={queueManager.currentSong.videoURL}
 			autoPlay={queueManager.autoPlay}
 			controls={false}
+			playsInline={true}
 			onPlay={(e) => {
 				console.log('play', e);
 				queueManager.setPlayState('playing');
