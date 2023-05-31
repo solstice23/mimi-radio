@@ -676,7 +676,7 @@ body.lyrics-exclusive, body.video-exclusive {
 		z-index: 3;
 		&.not-playing {
 			top: 100vh;
-			pointer-events: none;
+			//pointer-events: none;
 		}
 		.controller {
 			transition: margin 0.5s ease, border-radius 0.5s ease;

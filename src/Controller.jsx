@@ -140,7 +140,7 @@ function ProgressBar() {
 			queueManager.currentTime.current = queueManager.iframeTarget.current.getCurrentTime();
 			queueManager.duration.current = queueManager.iframeTarget.current.getDuration();
 			setProgress(queueManager.currentTime.current / queueManager.duration.current * 100);
-		}, 50);
+		}, 20);
 		return () => clearInterval(interval);
 	}, []);
 
