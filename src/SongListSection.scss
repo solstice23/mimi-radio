@@ -156,9 +156,11 @@
 			pointer-events: none;
 		}
 	}
-	&.playing {
-		.song-list-inner{
-			padding-bottom: 210px;
+	@media screen and (max-width: 950px) {
+		&.playing {
+			.song-list-inner{
+				padding-bottom: 210px;
+			}
 		}
 	}
 }

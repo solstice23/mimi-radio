@@ -18,7 +18,7 @@ const WaveProgressBar = forwardRef(function WaveProgressBar(props, ref){
 	if (currentProgress !== currentProgress) currentProgress = 0;
 
 	const getPercentByEvent = (e) => {
-		const clientX = e.clientX ?? e.touches[0].clientX;
+		const clientX = e.clientX ?? e?.touches[0]?.clientX ?? e.changedTouches[0]?.clientX;
 		const rect = ref.current.getBoundingClientRect();
 		const x = clientX - (rect.left + 20);
 		const width = rect.right - rect.left - 40;

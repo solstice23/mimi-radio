@@ -104,6 +104,7 @@ function YoutubePlayer() {
 						autoplay: queueManager.autoPlay ? 1 : 0,
 						modestbranding: true,
 						controls: 0,
+						playsinline: 1,
 					}
 				}}
 				iframeClassName="youtube-player-iframe"

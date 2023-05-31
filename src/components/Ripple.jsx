@@ -86,19 +86,26 @@ export function useRipple(ref = null, options = {}) {
 	const onMouseDown = (e) => {
 		//console.log(e.target);
 		if (e.button >= 3) return;
-		if (e.target.closest('[ripple]') !== containerRef.current) return;
+		//if (e.target.closest('[ripple]') !== containerRef.current) return;
+		if (containerRef.current.hasAttribute('ripple-touching')) return;
+		addRipple(e, containerRef.current, options);
+		containerRef.current.removeAttribute('ripple-touching');
+	}
+	const touchStart = (e) => {
+		containerRef.current.setAttribute('ripple-touching', '');
 		addRipple(e, containerRef.current, options);
 	}
+
 
 	useEffect(() => {
 		if (!containerRef.current) return;
 		containerRef.current.addEventListener('mousedown', onMouseDown);
-		containerRef.current.addEventListener('touchstart', onMouseDown);
+		containerRef.current.addEventListener('touchstart', touchStart);
 		containerRef.current.setAttribute('ripple', '');
 		return () => {
 			if (!containerRef.current) return;
 			containerRef.current.removeEventListener('mousedown', onMouseDown);
-			containerRef.current.removeEventListener('touchstart', onMouseDown);
+			containerRef.current.removeEventListener('touchstart', touchStart);
 			containerRef.current.removeAttribute('ripple');
 		}
 	}, []);
