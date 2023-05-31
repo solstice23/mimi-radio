@@ -87,8 +87,9 @@ export function useRipple(ref = null, options = {}) {
 		//console.log(e.target);
 		if (e.button >= 3) return;
 		//if (e.target.closest('[ripple]') !== containerRef.current) return;
-		if (containerRef.current.hasAttribute('ripple-touching')) return;
-		addRipple(e, containerRef.current, options);
+		if (!containerRef.current.hasAttribute('ripple-touching')) {
+			addRipple(e, containerRef.current, options);
+		}
 		containerRef.current.removeAttribute('ripple-touching');
 	}
 	const touchStart = (e) => {
