@@ -86,13 +86,14 @@ export function useRipple(ref = null, options = {}) {
 	const onMouseDown = (e) => {
 		//console.log(e.target);
 		if (e.button >= 3) return;
-		//if (e.target.closest('[ripple]') !== containerRef.current) return;
+		if (e.target.closest('[ripple]') !== containerRef.current) return;
 		if (!containerRef.current.hasAttribute('ripple-touching')) {
 			addRipple(e, containerRef.current, options);
 		}
 		containerRef.current.removeAttribute('ripple-touching');
 	}
 	const touchStart = (e) => {
+		if (e.target.closest('[ripple]') !== containerRef.current) return;
 		containerRef.current.setAttribute('ripple-touching', '');
 		addRipple(e, containerRef.current, options);
 	}
