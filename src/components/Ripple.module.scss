@@ -10,7 +10,7 @@
 	border-radius: 50%;
 	position: absolute;
 	background-color: var(--ripple-color, var(--md-sys-color-on-surface));
-	filter: opacity(0.1);
+	filter: opacity(0.1) blur(var(--ripple-blur, 0px));
 	pointer-events: none;
 	transform: translate(-50%, -50%);
 	z-index: 999;

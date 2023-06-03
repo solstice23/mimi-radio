@@ -669,6 +669,7 @@ body.lyrics-exclusive, body.video-exclusive {
 		padding-left: 15px;
 		padding-right: 15px;
 		top: calc(100vh - 200px);
+		top: calc(100svh - 200px);
 		padding-bottom: 15px;
 		background: var(--md-sys-color-background);
 		height: calc(100% - 72px) !important;
@@ -676,6 +677,7 @@ body.lyrics-exclusive, body.video-exclusive {
 		z-index: 3;
 		&.not-playing {
 			top: 100vh;
+			top: 100svh;
 			//pointer-events: none;
 		}
 		.controller {

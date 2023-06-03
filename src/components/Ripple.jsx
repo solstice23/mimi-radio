@@ -16,6 +16,8 @@ function addRipple(e, target, options = {}) {
 	const rippleWrap = document.createElement('div');
 	rippleWrap.classList.add('ripple-wrap');
 	rippleWrap.classList.add(css.rippleWrap);
+	const blur = Math.min(Math.max(target.offsetWidth, target.offsetHeight) / 15, 12);
+	rippleWrap.style.setProperty('--ripple-blur', blur + 'px');
 
 	const ripple = document.createElement('span');
 	ripple.classList.add(css.ripple);
