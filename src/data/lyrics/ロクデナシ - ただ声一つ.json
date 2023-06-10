@@ -204,13 +204,13 @@
     {
         "time": 138000,
         "text": "",
-        "interlude": true,
-        "cn": "宣泄情绪总之那么简单",
-        "ro": "ha ki da su ki mo chi wa ka n ta n de"
+        "interlude": true
     },
     {
         "time": 138000,
-        "text": "吐き出す気持ちは簡単で"
+        "text": "吐き出す気持ちは簡単で",
+        "cn": "宣泄情绪总之那么简单",
+        "ro": "ha ki da su ki mo chi wa ka n ta n de"
     },
     {
         "time": 139000,
