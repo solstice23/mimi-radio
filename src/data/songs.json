@@ -1197,5 +1197,23 @@
         "highestQuality": "2023-05-18T00:00:00.000Z",
         "note": "可能有更新的高品质音源",
         "cover": "夢音ちゃの×MIMI - 季節にまどろむ.png"
+    },
+    {
+        "name": "妄想哀歌",
+        "artist": "MIMI",
+        "singer": "初音ミク,可不",
+        "translatedName": null,
+        "length": "3:00",
+        "type": "Standalone",
+        "hasLyrics": "Yes",
+        "releaseDate": "2023-06-11T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=ioW9iGDpQyw",
+        "desc": "/",
+        "staff": "Music MIMI @mimi_3mi\nillustration movie おいしいさめ @sutera_sea\nmix, mastering はるお @haluo_haluo",
+        "fileName": "MIMI - 妄想哀歌 (feat. 初音ミク＆可不).mp3",
+        "quality": "249K",
+        "highestQuality": "2023-06-11T00:00:00.000Z",
+        "note": "等待更新的高品质音源",
+        "cover": "MIMI - 妄想哀歌 (feat. 初音ミク＆可不).jpg"
     }
 ]
