@@ -10,7 +10,7 @@ import Menu from './components/Menu.jsx';
 import MenuItem, {MenuDivider} from './components/MenuItem.jsx';
 import Checkbox from './components/Checkbox.jsx';
 import NowPlayingIndicatorIcon from './components/NowPlayingIndicatorIcon.jsx';
-import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew } from 'react-icons/md';
+import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPianoOff } from 'react-icons/md';
 import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import './SongListSection.scss';
@@ -24,9 +24,11 @@ export function SongListSection(props) {
 	const [selectedTypes, setSelectedTypes] = useStateStorage(['standalone', 'collab'], 'song-type-filter');
 	const [sortCriteria, setSortCriteria] = useStateStorage('date', 'song-sort-criteria');
 	const [sortDirection, setSortDirection] = useStateStorage('asc', 'song-sort-direction');
+	const [hideInstrumentals, setHideInstrumentals] = useStateStorage(false, 'song-hide-instrumentals');
 
 	const filteredSongs = songs
 		.filter((song) => selectedTypes.includes(song.type.toLowerCase()))
+		.filter((song) => !(hideInstrumentals && !song.hasLyrics))
 		.sort((a, b) => {
 			return (() => {
 				if (sortCriteria === 'date') {
@@ -64,8 +66,12 @@ export function SongListSection(props) {
 					setSelected={setSelectedTypes}
 				/>
 				<SongFilter
+					sortCriteria={sortCriteria}
+					sortDirection={sortDirection}
+					hideInstrumentals={hideInstrumentals}
 					setSortCriteria={setSortCriteria}
 					setSortDirection={setSortDirection}
+					setHideInstrumentals={setHideInstrumentals}
 				/>
 			</div>
 			<Flipper className="song-list" flipKey={JSON.stringify(filteredSongs)}>
@@ -115,16 +121,6 @@ function SongFilter(props) {
 	const openBtnRef = useRef(null);
 	const menuRef = useRef(null);
 
-	const [sortCriteria, setSortCriteria] = useState('date');
-	useEffect(() => {
-		props.setSortCriteria(sortCriteria);
-	}, [sortCriteria]);
-
-	const [sortDirection, setSortDirection] = useState('asc');
-	useEffect(() => {
-		props.setSortDirection(sortDirection);
-	}, [sortDirection]);
-
 	const handleClickAway = (e) => {
 		if (open && !menuRef.current.contains(e.target) && !openBtnRef.current.contains(e.target)) {
 			setOpen(false);
@@ -163,9 +159,9 @@ function SongFilter(props) {
 					icon={<MdCalendarMonth/>}
 					checkbox
 					onChange={(e) => {
-						setSortCriteria('date');
+						props.setSortCriteria('date');
 					}}
-					checked={sortCriteria === 'date'}
+					checked={props.sortCriteria === 'date'}
 				>
 					Release Date
 				</MenuItem>
@@ -173,9 +169,9 @@ function SongFilter(props) {
 					icon={<MdSchedule/>}
 					checkbox
 					onChange={(e) => {
-						setSortCriteria('length');
+						props.setSortCriteria('length');
 					}}
-					checked={sortCriteria === 'length'}
+					checked={props.sortCriteria === 'length'}
 				>
 					Length
 				</MenuItem>
@@ -183,9 +179,9 @@ function SongFilter(props) {
 					icon={<MdSortByAlpha/>}
 					checkbox
 					onChange={(e) => {
-						setSortCriteria('name');
+						props.setSortCriteria('name');
 					}}
-					checked={sortCriteria === 'name'}
+					checked={props.sortCriteria === 'name'}
 				>
 					Name
 				</MenuItem>
@@ -194,15 +190,26 @@ function SongFilter(props) {
 					icon={<MdSwapVert/>}
 					checkbox
 					onChange={(e) => {
-						if (sortDirection === 'asc') {
-							setSortDirection('desc');
+						if (props.sortDirection === 'asc') {
+							props.setSortDirection('desc');
 						} else {
-							setSortDirection('asc');
+							props.setSortDirection('asc');
 						}
 					}}
-					checked={sortDirection === 'desc'}
+					checked={props.sortDirection === 'desc'}
 				>
 					Descending
+				</MenuItem>
+				<MenuDivider/>
+				<MenuItem
+					icon={<MdPianoOff/>}
+					checkbox
+					onChange={(e) => {
+						props.setHideInstrumentals(!props.hideInstrumentals);
+					}}
+					checked={props.hideInstrumentals}
+				>
+					Hide Instrumentals
 				</MenuItem>
 			</Menu>
 		</>

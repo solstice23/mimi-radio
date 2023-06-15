@@ -117,7 +117,7 @@ function QueueManager(props) {
 			setAutoPlay(true);
 		} else if (playModeRef.current === 'shuffle') {
 			const nextSong = shuffleNext();
-			playSong(nextSong);
+			playSong(nextSong, false);
 			setAutoPlay(true);
 		}
 	}
