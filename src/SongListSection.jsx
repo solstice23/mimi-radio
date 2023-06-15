@@ -1,4 +1,4 @@
-import { useEffect, useState, useReducer, useRef, useContext } from 'react';
+import { useEffect, useState, useReducer, useRef, useContext, useLayoutEffect } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit'
 import { getSongsData, formatLength, formatDate } from './utils.js'
 import Icon from './components/Icon.jsx'
@@ -43,6 +43,11 @@ export function SongListSection(props) {
 				return 0;
 			})() * (sortDirection === 'asc' ? 1 : -1);
 		});
+
+	useLayoutEffect(() => {
+		window.songCount = filteredSongs.length;
+		window.dispatchEvent(new Event('song-count-change', {detail: filteredSongs.length}));
+	}, [filteredSongs.length]);
 
 	return (
 		<div className={

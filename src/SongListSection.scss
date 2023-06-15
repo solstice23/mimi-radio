@@ -14,9 +14,11 @@
 			}
 			.song-filter-btn {
 				position: fixed !important;
-				right: 20px;
-				top: 20px;
+				z-index: 3;
+				right: 8px;
+				top: 12px;
 				transition: opacity 0.5s ease;
+				border: none;
 			}
 		}
 	}

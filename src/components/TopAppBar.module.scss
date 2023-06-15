@@ -1,0 +1,92 @@
+@import './global/elevation.scss';
+.topAppBar {
+	width: 100%;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	padding-left: 16px;
+	padding-right: 16px;
+	box-sizing: border-box;
+	background-color: var(--md-sys-color-background);
+	color: var(--md-sys-color-on-surface);
+	position: absolute;
+	position: sticky;
+    top: 0;
+	z-index: 2;
+	transition: background-color 0.2s ease, box-shadow 0.2s ease;
+	&.scrolled {
+		background-color: var(--md-sys-color-surface-container);
+		@include elevation(2);
+	}
+
+	.leftButtons {
+		margin-left: -8px;
+		margin-right: 16px;
+		:global {
+			.iconButton {
+				color: var(--md-sys-color-on-surface);
+			}
+		}
+	}
+	.title {
+		font-size: 22px;
+		flex: 1;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.rightButtons {
+		margin-left: 16px;
+		margin-right: -8px;
+		:global {
+			.iconButton {
+				color: var(--md-sys-color-on-surface-variant);
+			}
+		}
+	}
+
+	.leftButtons, .rightButtons {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		gap: 8px;
+		flex-shrink: 0;
+	}
+
+	&.center {
+		.title {
+			text-align: center;
+		}
+	}
+}
+
+.topAppBarHeadline {
+	color: var(--md-sys-color-on-surface);
+	padding-left: 16px;
+	padding-right: 16px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	box-sizing: border-box;
+	> span {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+
+	&.topAppBarHeadlineMedium {
+		height: 48px;
+		padding-bottom: 16px;
+		font-size: 24px;
+		line-height: 32px;
+	}
+	&.topAppBarHeadlineLarge {
+		height: 88px;
+		padding-bottom: 28px;
+		font-size: 28px;
+		line-height: 36px;
+	}
+}
