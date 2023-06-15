@@ -1,5 +1,5 @@
 function getInviewPosition(element, parentElement) {
-	const parentElementRect = parentElement === document.documentElement ? {
+	const parentElementRect = (parentElement === document.documentElement) ? {
 		top: 0,
 		left: 0
 	} : parentElement.getBoundingClientRect();
