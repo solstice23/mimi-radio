@@ -76,6 +76,7 @@ const songs = songsRaw.map((song) => {
 }).concat(shortsRaw.map((short) => {
 	short.length = short.length.split(':').map((value) => parseInt(value)).reduce((acc, time) => (60 * acc) + time);
 	short.hash = short.name + short.length;
+	if (typeof(short.releaseDate) === 'number' && short.releaseDate < 10000000000) short.releaseDate *= 1000;
 	short.releaseDate = new Date(short.releaseDate);
 	short.videoURL = `//mimi-radio-files.s23.moe/` + short.fileName;
 	return short;
