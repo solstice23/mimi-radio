@@ -1,4 +1,4 @@
-function getInviewPosition(element, parentElement) {
+function getInViewPosition(element, parentElement) {
 	const parentElementRect = (parentElement === document.documentElement) ? {
 		top: 0,
 		left: 0
@@ -11,4 +11,4 @@ function getInviewPosition(element, parentElement) {
 	}
 }
 
-export default getInviewPosition;
+export default getInViewPosition;

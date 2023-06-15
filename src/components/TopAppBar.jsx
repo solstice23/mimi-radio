@@ -3,7 +3,7 @@ import useScrolled from '../hooks/useScrolled.js';
 import classNames from 'classnames';
 import { forwardRef, useEffect, useLayoutEffect, useRef } from 'react';
 import getCloestScrollableParent from '../utils/getCloestScrollableParent.js';
-import getInviewPosition from '../utils/getInviewPosition.js';
+import getInViewPosition from '../utils/getInViewPosition.js';
 
 const TopAppBar = forwardRef(function({
 	leftButtons = null,
@@ -55,7 +55,7 @@ const TopAppBar = forwardRef(function({
 			if (!animationRef.current) {
 				return;
 			}
-			const bigTextTop = getInviewPosition(bigText, parent).top - 64;
+			const bigTextTop = getInViewPosition(bigText, parent).top - 64;
 			const bigTextHeight = bigText.offsetHeight;
 			const percentInView = Math.min(Math.max(0, (bigTextHeight + bigTextTop) / bigTextHeight), 1);
 			animationRef.current.currentTime = 1000 * (1 - percentInView);
