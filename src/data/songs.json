@@ -1216,5 +1216,23 @@
         "note": null,
         "cover": "MIMI - 妄想哀歌 (feat. 初音ミク＆可不).jpg",
         "lyrics": "MIMI - 妄想哀歌 (feat. 初音ミク＆可不).json"
+    },
+    {
+        "name": "サヨナラは言わないでさ",
+        "artist": "MIMI",
+        "singer": "可不",
+        "translatedName": null,
+        "length": "3:43",
+        "type": "Standalone",
+        "hasLyrics": "Yes",
+        "releaseDate": "2023-06-21T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=cGGlBYzZiJs",
+        "desc": "/",
+        "staff": "Music : MIMI @mimi_3mi\nIllustration : ドライフラワー @Driedflower6\nmix, mastering : はるお @haluo_haluo",
+        "fileName": "MIMI, 可不 - サヨナラは言わないでさ.mp3",
+        "quality": "259K",
+        "highestQuality": "2023-06-21T00:00:00.000Z",
+        "note": "可能有更新的高品质音源",
+        "cover": "MIMI, 可不 - サヨナラは言わないでさ.jpg"
     }
 ]
