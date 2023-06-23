@@ -1,0 +1,402 @@
+[
+    {
+        "time": 0,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 30179,
+        "text": "ずっとここで探してる",
+        "cn": "一直在此处不断地寻找",
+        "ro": "zu tto ko ko de sa ga shi te ru"
+    },
+    {
+        "time": 32618,
+        "text": "もうこれ以上苦しまない方法を",
+        "cn": "不必再如此痛苦下去的方法",
+        "ro": "mo u ko re i jo u ku ru shi ma na i ho u ho u wo"
+    },
+    {
+        "time": 36334,
+        "text": "ってこれで何度目かな",
+        "cn": "可是这已经是多少次了",
+        "ro": "tte ko re de na n do me ka na"
+    },
+    {
+        "time": 38068,
+        "text": "疲れたから夜に包まる",
+        "cn": "累得不行把自己裹在夜里",
+        "ro": "tsu ka re ta ka ra yo ru ni ku ru ma ru"
+    },
+    {
+        "time": 41553,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 41606,
+        "text": "ごめんなさい僕は強く",
+        "cn": "对不起啊我实在",
+        "ro": "go me n na sa i bo ku wa tsu yo ku"
+    },
+    {
+        "time": 44359,
+        "text": "なれないんだ できれば",
+        "cn": "没办法变得坚强 只是祈祷",
+        "ro": "na re na i n da de ki re ba"
+    },
+    {
+        "time": 47176,
+        "text": "明日が来ないように祈る",
+        "cn": "可以的话希望明天不要到来",
+        "ro": "a shi ta ga ko na i yo u ni i no ru"
+    },
+    {
+        "time": 49670,
+        "text": "それだけ",
+        "cn": "仅此而已",
+        "ro": "so re da ke"
+    },
+    {
+        "time": 51442,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 51975,
+        "text": "どうしてもさ",
+        "cn": "无论怎样啊",
+        "ro": "do u shi te mo sa"
+    },
+    {
+        "time": 53114,
+        "text": "泣いちゃうくらいさ",
+        "cn": "都仿佛要哭出来一样",
+        "ro": "na i cha u ku ra i sa"
+    },
+    {
+        "time": 54499,
+        "text": "寂しさの中に溺れてしまう",
+        "cn": "太过沉溺在寂寞感之中",
+        "ro": "sa bi shi sa no na ka ni o bo re te shi ma u"
+    },
+    {
+        "time": 57393,
+        "text": "正直なさ感情ばかりさ",
+        "cn": "真真切切的那些感情啊",
+        "ro": "sho u ji ki na sa ka n jo u ba ka ri sa"
+    },
+    {
+        "time": 59940,
+        "text": "棘のように心を刺すの",
+        "cn": "如荆棘般刺痛着我的心",
+        "ro": "to ge no yo u ni ko ko ro wo sa su no"
+    },
+    {
+        "time": 63025,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 63131,
+        "text": "もう何もさ言わんでくれよ",
+        "cn": "无论什么话都不要再说了",
+        "ro": "mo u na ni mo sa i wa n de ku re yo"
+    },
+    {
+        "time": 65265,
+        "text": "夜に染まり泳ぐ水平線",
+        "cn": "染上夜色浮动着的水平线",
+        "ro": "yo ru ni so ma ri o yo gu su i he i se n"
+    },
+    {
+        "time": 68341,
+        "text": "嗚呼僕は何も言えない",
+        "cn": "啊啊我什么都说不出口",
+        "ro": "a a bo ku wa na ni mo i e na i"
+    },
+    {
+        "time": 72657,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 73297,
+        "text": "ただそっとかざしている",
+        "cn": "只是轻轻把手挥舞着",
+        "ro": "ta da so tto ka za shi te i ru"
+    },
+    {
+        "time": 76204,
+        "text": "光のその向こうに",
+        "cn": "向着光明的另一边",
+        "ro": "hi ka ri no so no mu ko u ni"
+    },
+    {
+        "time": 78646,
+        "text": "あるか分からないけどさ",
+        "cn": "虽然不知道是否存在",
+        "ro": "a ru ka wa ka ra na i ke do sa"
+    },
+    {
+        "time": 81694,
+        "text": "愛を知ってみたいんだ",
+        "cn": "真想体会什么是爱啊",
+        "ro": "a i wo shi tte mi ta i n da"
+    },
+    {
+        "time": 83996,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 84057,
+        "text": "少しだけ生きていたい",
+        "cn": "稍微有点想继续活下去",
+        "ro": "su ko shi da ke i ki te i ta i"
+    },
+    {
+        "time": 87139,
+        "text": "って思えるまで今日だけ",
+        "cn": "直到这样想为止今天就",
+        "ro": "tte o mo e ru ma de kyo u da ke"
+    },
+    {
+        "time": 89480,
+        "text": "サヨナラは言わないでさ",
+        "cn": "先不要和世界说再见啊",
+        "ro": "sa yo na ra wa i wa na i de sa"
+    },
+    {
+        "time": 92463,
+        "text": "吸ってはいてそれだけで良い",
+        "cn": "吸气 呼气 这样就足够了",
+        "ro": "su tte wa i te so re da ke de yo i"
+    },
+    {
+        "time": 96607,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 117399,
+        "text": "そうやっては何回目",
+        "cn": "这个样子已经多少次",
+        "ro": "so u ya tte wa na n ka i me"
+    },
+    {
+        "time": 119943,
+        "text": "ここでそろそろ終わりにしようって思う",
+        "cn": "想着到这里差不多该迎来终结了",
+        "ro": "ko ko de so ro so ro o wa ri ni shi yo u tte o mo u"
+    },
+    {
+        "time": 123633,
+        "text": "くらいの人生に",
+        "cn": "要为这样的人生赋予价值",
+        "ro": "ku ra i no ji n se i ni"
+    },
+    {
+        "time": 125335,
+        "text": "価値をつける 誰が 誰が？",
+        "cn": "谁能来 帮帮我？",
+        "ro": "ka chi wo tsu ke ru da re ga da re ga?"
+    },
+    {
+        "time": 128253,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 128385,
+        "text": "ねぇ、変わらず雨降った",
+        "cn": "呐，一如既往地下起了雨",
+        "ro": "ne e、ka wa ra zu a me fu tta"
+    },
+    {
+        "time": 130792,
+        "text": "心に傘を差そう 濡れぬ様に",
+        "cn": "在心里撑起伞吧 别让它淋湿",
+        "ro": "ko ko ro ni ka sa wo sa so u nu re nu yo u ni"
+    },
+    {
+        "time": 134394,
+        "text": "いつの間にか今日が晴れる時まで",
+        "cn": "直到今天不知何时天晴为止",
+        "ro": "i tsu no ma ni ka kyo u ga ha re ru to ki ma de"
+    },
+    {
+        "time": 138956,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 139199,
+        "text": "辛いくらいさ当たり前になってさ",
+        "cn": "痛苦反倒是变得理所当然一般",
+        "ro": "tsu ra i ku ra i sa a ta ri ma e ni na tte sa"
+    },
+    {
+        "time": 141778,
+        "text": "何も分からなくなったせいで",
+        "cn": "因为已经什么都搞不明白了",
+        "ro": "na ni mo wa ka ra na ku na tta se i de"
+    },
+    {
+        "time": 144699,
+        "text": "温もりとかさ優しさにさ",
+        "cn": "对温暖什么的啊还有温柔啊",
+        "ro": "nu ku mo ri to ka sa ya sa shi sa ni sa"
+    },
+    {
+        "time": 147082,
+        "text": "ありがとう言えずに涙だけ",
+        "cn": "连谢谢也说不出只是泪流不止",
+        "ro": "a ri ga to u i e zu ni na mi da da ke"
+    },
+    {
+        "time": 149973,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 150144,
+        "text": "こんな世界で弱くてごめんね",
+        "cn": "在这样的世界如此软弱真对不起",
+        "ro": "ko n na se ka i de yo wa ku te go me n ne"
+    },
+    {
+        "time": 152564,
+        "text": "それでも抱きしめられるのなら",
+        "cn": "即便如此也有人会抱紧我的话",
+        "ro": "so re de mo da ki shi me ra re ru no na ra"
+    },
+    {
+        "time": 155614,
+        "text": "最後くらい笑えるように",
+        "cn": "为了至少在最后能露出笑容",
+        "ro": "sa i go ku ra i wa ra e ru yo u ni"
+    },
+    {
+        "time": 159871,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 160211,
+        "text": "教えてよ上手な歩き方",
+        "cn": "请教教我正确的前进方法",
+        "ro": "o shi e te yo jo u zu na a ru ki ka ta"
+    },
+    {
+        "time": 163847,
+        "text": "みんなとおんなじ歩き方",
+        "cn": "和大家都一样的前进方法",
+        "ro": "mi n na to o n na ji a ru ki ka ta"
+    },
+    {
+        "time": 166546,
+        "text": "独りでつまづいた時の",
+        "cn": "在一个人摔倒了的时候",
+        "ro": "hi to ri de tsu ma zu i ta to ki no"
+    },
+    {
+        "time": 168707,
+        "text": "その傷口の治し方",
+        "cn": "能治好那种伤口的方法",
+        "ro": "so no ki zu gu chi no na o shi ka ta"
+    },
+    {
+        "time": 171885,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 171902,
+        "text": "言えないことばかりで",
+        "cn": "尽是些说不出口的事情",
+        "ro": "i e na i ko to ba ka ri de"
+    },
+    {
+        "time": 174352,
+        "text": "分かってくれるのは夜だけで",
+        "cn": "能明白我的只有夜晚而已",
+        "ro": "wa ka tte ku re ru no wa yo ru da ke de"
+    },
+    {
+        "time": 177058,
+        "text": "だから今日が明けないでって",
+        "cn": "所以今天啊请不要破晓",
+        "ro": "da ka ra kyo u ga a ke na i de tte"
+    },
+    {
+        "time": 181152,
+        "text": "願っている",
+        "cn": "如此祈祷着",
+        "ro": "ne ga tte i ru"
+    },
+    {
+        "time": 183997,
+        "text": "それだけだよ",
+        "cn": "只是这样而已",
+        "ro": "so re da ke da yo"
+    },
+    {
+        "time": 186309,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 191141,
+        "text": "そっとかざしている",
+        "cn": "轻轻把手挥舞着",
+        "ro": "so tto ka za shi te i ru"
+    },
+    {
+        "time": 193588,
+        "text": "光のその向こうに",
+        "cn": "向着光明的另一边",
+        "ro": "hi ka ri no so no mu ko u ni"
+    },
+    {
+        "time": 195961,
+        "text": "あるか分からないけどさ",
+        "cn": "虽然不知道是否存在",
+        "ro": "a ru ka wa ka ra na i ke do sa"
+    },
+    {
+        "time": 198867,
+        "text": "愛を知ってみたいんだ",
+        "cn": "真想体会什么是爱啊",
+        "ro": "a i wo shi tte mi ta i n da"
+    },
+    {
+        "time": 201092,
+        "text": "",
+        "interlude": true
+    },
+    {
+        "time": 201369,
+        "text": "少しだけ生きていたい",
+        "cn": "稍微有点想继续活下去",
+        "ro": "su ko shi da ke i ki te i ta i"
+    },
+    {
+        "time": 204312,
+        "text": "って思えるまで今日だけ",
+        "cn": "直到这样想为止今天就",
+        "ro": "tte o mo e ru ma de kyo u da ke"
+    },
+    {
+        "time": 206883,
+        "text": "サヨナラは言わないでさ",
+        "cn": "先不要和世界说再见啊",
+        "ro": "sa yo na ra wa i wa na i de sa"
+    },
+    {
+        "time": 209782,
+        "text": "吸ってはいてそれだけで良い",
+        "cn": "吸气 呼气 这样就足够了",
+        "ro": "su tte wa i te so re da ke de yo i"
+    }
+]
