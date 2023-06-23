@@ -20,6 +20,7 @@ export function Controller(props) {
 	const onSpaceDown = (e) => {
 		if (["INPUT", "TEXTAREA"].includes(e.target.tagName)) return;
 		if (e.target.getAttribute("contenteditable") !== null) return;
+		if (e.target.classList.contains("play-pause-button")) return;
 		if (e.repeat) return;
 		if (e.code === 'Space') {
 			playPauseButtonRef.current?.click();
