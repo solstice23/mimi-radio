@@ -97,6 +97,12 @@
 						align-items: center;
 						gap: 0.8em;
 						opacity: .6;
+						.song-instrumental-tag {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							font-size: 105%;
+						}
 					}
 				}
 				.song-actions {
