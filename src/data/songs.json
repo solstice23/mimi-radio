@@ -589,8 +589,8 @@
         "link": "https://www.youtube.com/watch?v=8skrutHDrEw",
         "desc": "/",
         "staff": "Vocal_いゔどっと　https://twitter.com/_763_​\nMusic_MIMI https://twitter.com/mimi_3mi\nIllust_あき https://twitter.com/Aki_a0623\nMovie_① https://twitter.com/yasai0827",
-        "fileName": "いゔどっと - 月日記.mp3",
-        "quality": "320K",
+        "fileName": "いゔどっと - 月日記.flac",
+        "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
         "cover": "いゔどっと - 月日記.jpg",
@@ -702,12 +702,12 @@
         "link": "https://www.youtube.com/watch?v=ZjK3la923VY",
         "desc": "🎪「わたしマニュアル」\nつらい時でも自分を肯定できるように、好きでいれるようにって願いを込めて歌ったよ！\nあなたの心に届きますように",
         "staff": "▼Movie\nDirection：koshi-kun　https://twitter.com/koshi_kun\nTypography：ZUMA　https://twitter.com/Z_typmoe\n▼Illustration\nゆつもえ　https://twitter.com/yutsumoe",
-        "fileName": "NINA(VALIS),MIMI - わたしマニュアル.mp3",
-        "quality": "320K",
+        "fileName": "NINA - VALIS - わたしマニュアル.flac",
+        "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
-        "cover": "NINA(VALIS),MIMI - わたしマニュアル.jpg",
-        "lyrics": "NINA(VALIS),MIMI - わたしマニュアル.json"
+        "cover": "NINA - VALIS - わたしマニュアル.jpg",
+        "lyrics": "NINA - VALIS - わたしマニュアル.json"
     },
     {
         "name": "えすけーぷ",
@@ -1118,8 +1118,8 @@
         "link": "https://www.youtube.com/watch?v=XveFDEbTo0E",
         "desc": "WI'P 第 2 弾「ツキミチシルベ feat. おれんじ君, たこちゃん, MIMI」\n音源はこちらからチェック → https://wip.lnk.to/S9RNdCff",
         "staff": "Vocal : おれんじ君 @orenzi  たこちゃん\nWords, Music & Arrangement : MIMI @MIMI...official \nRec & Mix Engineer : Yuta Ohtake\nMastering Engineer : Raiga Yamazaki\nMusic Video\nDirector : NANON CREATIVE https://twitter.com/nanonoff\nIllustrator : Gurin. https://twitter.com/GurinGurin28\nProducer : Manami Nakagawa",
-        "fileName": "WI'P - ツキミチシルベ feat. おれんじ君, たこちゃん, MIMI.mp3",
-        "quality": "320K",
+        "fileName": "WI'P - ツキミチシルベ feat. おれんじ君, たこちゃん, MIMI.flac",
+        "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
         "cover": "WI'P - ツキミチシルベ feat. おれんじ君, たこちゃん, MIMI.jpg"
@@ -1254,5 +1254,24 @@
         "note": null,
         "cover": "MIMI - What Call This Day ？ (feat. にんじん).jpg",
         "lyrics": "MIMI - What Call This Day ？ (feat. にんじん).json"
+    },
+    {
+        "name": "息をするだけ",
+        "artist": "MIMI",
+        "singer": "可不",
+        "translatedName": "只是保持着呼吸",
+        "length": "2:16",
+        "type": "Standalone",
+        "hasLyrics": "Yes",
+        "releaseDate": "2022-07-23T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=ArqagB9P1Qs",
+        "desc": "毎日頑張るあなたへ\n今夜は暖かくして、おやすみなさい。🌙",
+        "staff": "Music/MIMI @mimi_3mi\nillustration/ao @aokarimero\nmix,mastering/佐藤主税 @studioonett",
+        "fileName": "MIMI,可不 - 息をするだけ (feat. 可不).flac",
+        "quality": "Lossless",
+        "highestQuality": "Yes",
+        "note": null,
+        "cover": "MIMI,可不 - 息をするだけ (feat. 可不).jpg",
+        "lyrics": "MIMI,可不 - 息をするだけ (feat. 可不).json"
     }
 ]
