@@ -185,3 +185,25 @@
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+.missing-lyrics {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+}
+
+.lyrics-langs:not(.lyrics-lang-complete) {
+    //background: var(--md-sys-color-tertiary-container);
+    //color: var(--md-sys-color-tertiary);
+
+	background-color: color-mix(in srgb, var(--md-sys-color-error-container) 40%, transparent 50%);
+    color: var(--md-sys-color-error);
+}

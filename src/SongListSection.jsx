@@ -10,7 +10,7 @@ import Menu from './components/Menu.jsx';
 import MenuItem, {MenuDivider} from './components/MenuItem.jsx';
 import Checkbox from './components/Checkbox.jsx';
 import NowPlayingIndicatorIcon from './components/NowPlayingIndicatorIcon.jsx';
-import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPiano, MdPianoOff } from 'react-icons/md';
+import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPiano, MdPianoOff, MdOutlineInfo } from 'react-icons/md';
 import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import './SongListSection.scss';
@@ -25,6 +25,7 @@ export function SongListSection(props) {
 	const [sortCriteria, setSortCriteria] = useStateStorage('date', 'song-sort-criteria');
 	const [sortDirection, setSortDirection] = useStateStorage('asc', 'song-sort-direction');
 	const [hideInstrumentals, setHideInstrumentals] = useStateStorage(false, 'song-hide-instrumentals');
+	const [showExtraInfo, setShowExtraInfo] = useStateStorage(false, 'song-show-extra-info');
 
 	const filteredSongs = songs
 		.filter((song) => selectedTypes.includes(song.type.toLowerCase()))
@@ -74,9 +75,11 @@ export function SongListSection(props) {
 					sortCriteria={sortCriteria}
 					sortDirection={sortDirection}
 					hideInstrumentals={hideInstrumentals}
+					showExtraInfo={showExtraInfo}
 					setSortCriteria={setSortCriteria}
 					setSortDirection={setSortDirection}
 					setHideInstrumentals={setHideInstrumentals}
+					setShowExtraInfo={setShowExtraInfo}
 				/>
 			</div>
 			<Flipper className="song-list" flipKey={JSON.stringify(filteredSongs)}>
@@ -111,6 +114,7 @@ export function SongListSection(props) {
 									onClick={() => {
 										queueManager.setQueueAndIndex(filteredSongs, index);
 									}}
+									showExtraInfo={showExtraInfo}
 								/>
 							</div>
 						</Flipped>
@@ -216,6 +220,17 @@ function SongFilter(props) {
 				>
 					Hide Instrumentals
 				</MenuItem>
+				<MenuDivider/>
+				<MenuItem
+					icon={<MdOutlineInfo/>}
+					checkbox
+					onChange={(e) => {
+						props.setShowExtraInfo(!props.showExtraInfo);
+					}}
+					checked={props.showExtraInfo}
+				>
+					Editor Mode
+				</MenuItem>
 			</Menu>
 		</>
 	)
@@ -272,6 +287,14 @@ function Song(props) {
 					<div className="song-date">{formatDate(props.song.releaseDate)}</div>
 					<div className="song-length">{formatLength(props.song.length)}</div>
 					{ !props.song.hasLyrics && <div className="song-instrumental-tag" title="Instrumental"><MdPiano/></div> }
+					{
+						props.showExtraInfo && <>
+							{ props.song.hasLyrics && !props.song.lyrics && <Tag className="missing-lyrics">Missing Lyrics</Tag> }	
+							{ !(props.song.hasLyrics && !props.song.lyrics) && props.song.lyricsLangs && 
+								<Tag className={classNames('lyrics-langs', {'lyrics-lang-complete': props.song.lyricsLangs.length == 3})}>{props.song.lyricsLangs.join(', ')}</Tag> 
+							}	
+						</>
+					}
 				</div>
 			</div>
 			<div className="song-actions">
