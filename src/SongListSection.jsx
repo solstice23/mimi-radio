@@ -10,7 +10,7 @@ import Menu from './components/Menu.jsx';
 import MenuItem, {MenuDivider} from './components/MenuItem.jsx';
 import Checkbox from './components/Checkbox.jsx';
 import NowPlayingIndicatorIcon from './components/NowPlayingIndicatorIcon.jsx';
-import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPiano, MdPianoOff, MdOutlineInfo } from 'react-icons/md';
+import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPiano, MdPianoOff, MdOutlineInfo, MdGridView, MdViewList, MdPlayArrow } from 'react-icons/md';
 import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import './SongListSection.scss';
@@ -22,6 +22,7 @@ export function SongListSection(props) {
 	const queueManager = useContext(QueueContext);
 
 	const [selectedTypes, setSelectedTypes] = useStateStorage(['standalone', 'collab'], 'song-type-filter');
+	const [listStyle, setListStyle] = useStateStorage('grid', 'song-list-style');
 	const [sortCriteria, setSortCriteria] = useStateStorage('date', 'song-sort-criteria');
 	const [sortDirection, setSortDirection] = useStateStorage('asc', 'song-sort-direction');
 	const [hideInstrumentals, setHideInstrumentals] = useStateStorage(false, 'song-hide-instrumentals');
@@ -51,77 +52,111 @@ export function SongListSection(props) {
 	}, [filteredSongs.length]);
 
 	return (
-		<div className={
-			classNames(
-				'list-section',
-				{
-					'playing':  queueManager?.currentSong,
-				}
-			)
-		} 
-		>
-			<div className="list-section-header">
-				<SegmentedButtons
-					className="song-type-filter"
-					buttons={[
-						{label: 'Standalone', value: 'standalone', selected: selectedTypes.includes('standalone')},
-						{label: 'Collab', value: 'collab', selected: selectedTypes.includes('collab')},
-						{label: 'Short', value: 'short', selected: selectedTypes.includes('short')},
-					]}
-					multiple={true}
-					setSelected={setSelectedTypes}
-				/>
-				<SongFilter
-					sortCriteria={sortCriteria}
-					sortDirection={sortDirection}
-					hideInstrumentals={hideInstrumentals}
-					showExtraInfo={showExtraInfo}
-					setSortCriteria={setSortCriteria}
-					setSortDirection={setSortDirection}
-					setHideInstrumentals={setHideInstrumentals}
-					setShowExtraInfo={setShowExtraInfo}
-				/>
-			</div>
-			<Flipper className="song-list" flipKey={JSON.stringify(filteredSongs)}>
-				<div className="song-list-inner">
-					{filteredSongs.map((song, index) => (
-						<Flipped
-							key={song.hash}
-							flipId={song.hash}
-							onAppear={(el, index) => {
-								el.animate([
-									{ opacity: 0 },
-									{ opacity: 1 }
-								], {
-									duration: 150,
-									easing: 'ease-out'
-								}).onfinish = () => el.style = '';
-							}}
-							onExit={(el, index, removeElement) => {
-								el.animate([
-									{ opacity: 1 },
-									{ opacity: 0 }
-								], {
-									duration: 150,
-									easing: 'ease-out'
-								}).onfinish = () => removeElement();
+		<>
+			<div className={
+				classNames(
+					'list-section',
+					{
+						'playing':  queueManager?.currentSong,
+					},
+					`${listStyle}-view`
+				)
+			} 
+			>
+				<div className="list-section-header">
+					<SegmentedButtons
+						className="song-type-filter"
+						buttons={[
+							{label: 'Standalone', value: 'standalone', selected: selectedTypes.includes('standalone')},
+							{label: 'Collab', value: 'collab', selected: selectedTypes.includes('collab')},
+							{label: 'Short', value: 'short', selected: selectedTypes.includes('short')},
+						]}
+						multiple={true}
+						setSelected={setSelectedTypes}
+					/>
+					<div className="list-header-buttons">
+						<IconButton
+							className="list-style-switch-btn"
+							title="List Style"
+							type='standard'
+							onClick={(e) => {
+								if (listStyle === 'grid') {
+									setListStyle('list');
+								} else {
+									setListStyle('grid');
+								}
 							}}
 						>
-							<div>
-								<Song
-									song={song}
-									playing={queueManager.currentSong?.hash === song.hash}
-									onClick={() => {
-										queueManager.setQueueAndIndex(filteredSongs, index);
-									}}
-									showExtraInfo={showExtraInfo}
-								/>
-							</div>
-						</Flipped>
-					))}
+							{
+								listStyle === 'grid' ? <MdGridView/> : <MdViewList/>
+							}
+						</IconButton>
+						<SongFilter
+							sortCriteria={sortCriteria}
+							sortDirection={sortDirection}
+							hideInstrumentals={hideInstrumentals}
+							showExtraInfo={showExtraInfo}
+							setSortCriteria={setSortCriteria}
+							setSortDirection={setSortDirection}
+							setHideInstrumentals={setHideInstrumentals}
+							setShowExtraInfo={setShowExtraInfo}
+						/>
+					</div>
 				</div>
-			</Flipper>
-		</div>
+				<Flipper className="song-list" flipKey={JSON.stringify(filteredSongs)}>
+					<div className="song-list-inner">
+						{filteredSongs.map((song, index) => (
+							<Flipped
+								key={song.hash}
+								flipId={song.hash}
+								onAppear={(el, index) => {
+									el.animate([
+										{ opacity: 0 },
+										{ opacity: 1 }
+									], {
+										duration: 150,
+										easing: 'ease-out'
+									}).onfinish = () => el.style = '';
+								}}
+								onExit={(el, index, removeElement) => {
+									el.animate([
+										{ opacity: 1 },
+										{ opacity: 0 }
+									], {
+										duration: 150,
+										easing: 'ease-out'
+									}).onfinish = () => removeElement();
+								}}
+							>
+								<div>
+									<Song
+										song={song}
+										playing={queueManager.currentSong?.hash === song.hash}
+										onClick={() => {
+											queueManager.setQueueAndIndex(filteredSongs, index);
+										}}
+										showExtraInfo={showExtraInfo}
+										listStyle={listStyle}
+									/>
+								</div>
+							</Flipped>
+						))}
+					</div>
+				</Flipper>
+			</div>
+			<SongFilter
+				sortCriteria={sortCriteria}
+				sortDirection={sortDirection}
+				hideInstrumentals={hideInstrumentals}
+				showExtraInfo={showExtraInfo}
+				setSortCriteria={setSortCriteria}
+				setSortDirection={setSortDirection}
+				setHideInstrumentals={setHideInstrumentals}
+				setShowExtraInfo={setShowExtraInfo}
+
+				forMobile={true}
+			/>
+		</>
 	)
 }
 
@@ -147,7 +182,7 @@ function SongFilter(props) {
 		<>
 			<IconButton
 				ref={openBtnRef}
-				className="song-filter-btn"
+				className={classNames("song-filter-btn", {"for-mobile": props.forMobile})}
 				title="Sort"
 				type={open ? 'tonal' : 'outlined'}
 				selected={open}
@@ -300,7 +335,7 @@ function Song(props) {
 			<div className="song-actions">
 				{
 					props.song.link &&
-					<a href={props.song.link} target="_blank" rel="noopener noreferrer" style={{borderRadius: '50%'}}>
+					<a href={props.song.link} target="_blank" rel="noopener noreferrer" className="open-in-youtube" style={{borderRadius: '50%'}}>
 						<IconButton
 							className="auto-hide"
 							title="Open in YouTube"
@@ -312,14 +347,15 @@ function Song(props) {
 				{
 					!props.playing ?
 						<IconButton
+							className="play-icon"
 							title="Play"
 							onClick={onClick}
 						>
-							<MdPlayCircleOutline/>
+							{ props.listStyle === 'grid' ? <MdPlayArrow/> : <MdPlayCircleOutline/> }
 						</IconButton>
 					:
 						<IconButton
-							className="playing-icon"
+							className="play-icon playing-icon"
 							title="Playing"
 						>
 							<NowPlayingIndicatorIcon paused={queueManager.playState === 'paused' || queueManager.playState === 'ended' || queueManager.playState === 'unstarted' || queueManager.playState === 'cued'} />

@@ -8,17 +8,18 @@
 		justify-content: space-between;
 		gap: 20px;
 		align-items: center;
+		.list-header-buttons {
+			display: flex;
+			flex-direction: row;
+			gap: 10px;
+		}
 		@media screen and (max-width: 550px) {
+			gap: 0;
 			.song-type-filter {
 				width: 100%;
 			}
-			.song-filter-btn {
-				position: fixed !important;
-				z-index: 3;
-				right: 8px;
-				top: 12px;
-				transition: opacity 0.5s ease;
-				border: none;
+			.song-filter-btn:not(.for-mobile) {
+				display: none;
 			}
 		}
 	}
@@ -172,6 +173,106 @@
 		}
 	}
 }
+.song-filter-btn.for-mobile {
+	display: none;
+}
+@media screen and (max-width: 550px) {
+	.song-filter-btn.for-mobile {
+		display: flex;
+		position: fixed !important;
+		z-index: 3;
+		right: 8px;
+		top: 12px;
+		transition: opacity 0.5s ease;
+		border: none;
+	}
+}
+
+
+.list-section {
+	container-type: size;
+	container-name: list-section;
+}
+.list-style-switch-btn {
+	display: none;
+}
+@media screen and (min-width: 551px) {
+	@container list-section (min-width: 540px) {
+		.list-style-switch-btn {
+			display: flex;
+		}
+		.list-section.grid-view .song-list .song-list-inner{
+			grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+			.song {
+				flex-direction: column;
+				width: 100%;
+				height: unset;
+				/*aspect-ratio: 1/1.2;*/
+				.song-cover {
+					width: 100%;
+					height: unset;
+					margin-right: 0;
+					aspect-ratio: 1/1;
+				}
+				.song-info {
+					width: 100%;
+					padding: 15px 15px;
+				}
+				.song-actions {
+					position: absolute;
+					width: 100%;
+					aspect-ratio: 1/1;
+					align-items: flex-end;
+					justify-content: flex-end;
+					margin: 0;
+					padding: 10px;
+					gap: 10px;
+					opacity: 0;
+					transition: opacity 0.2s ease;
+					.play-icon {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						overflow: hidden;
+						cursor: pointer;
+						user-select: none;
+						border: none;
+						outline: none !important;
+						position: relative;
+						padding: 0;
+						background-color: var(--md-sys-color-primary-container);
+						color: var(--md-sys-color-on-primary-container);
+						height: 56px;
+						width: 56px;
+						border-radius: 24px;
+						font-size: 24px;
+						&.playing-icon {
+							opacity: 0;
+						}
+					}
+					.open-in-youtube {
+						position: absolute;
+						bottom: -52px;
+						right: 6px;
+						opacity: 1;
+					}
+				}
+				&:hover {
+					.song-info .song-title {
+						padding-right: 24px;
+					}
+					.song-actions {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
 
 .song-filter-menu {
 	margin-top: 10px;
