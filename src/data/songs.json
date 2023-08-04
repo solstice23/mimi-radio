@@ -201,7 +201,13 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
-        "cover": "MIMI - フローレミ.jpg"
+        "cover": "MIMI - フローレミ.jpg",
+        "lyrics": "MIMI - フローレミ.json",
+        "lyricsLangs": [
+            "ja",
+            "cn",
+            "ro"
+        ]
     },
     {
         "name": "何もない様な",
