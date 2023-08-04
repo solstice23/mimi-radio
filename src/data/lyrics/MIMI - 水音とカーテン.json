@@ -2,186 +2,223 @@
     {
         "time": 0,
         "text": "息が蒼く染まり",
-        "cn": "今天的呼吸逐渐被染上蓝色"
+        "cn": "今天的呼吸逐渐被染上蓝色",
+        "ro": "i ki ga a o ku so ma ri"
     },
     {
         "time": 3122,
         "text": "音は今日も潤み",
-        "cn": "今天的声音被水沾湿"
+        "cn": "今天的声音被水沾湿",
+        "ro": "o to wa kyo u mo u ru mi"
     },
     {
         "time": 5776,
         "text": "雫を閉じ込めた",
-        "cn": "陷落的水珠"
+        "cn": "陷落的水珠",
+        "ro": "shi zu ku wo to ji ko me ta"
     },
     {
         "time": 8428,
         "text": "部屋の中の夜に",
-        "cn": "在晚上的房间之中"
+        "cn": "在晚上的房间之中",
+        "ro": "he ya no na ka no yo ru ni"
     },
     {
         "time": 10822,
         "text": "どこかで見たようなさ",
-        "cn": "我似乎曾经在哪里见过呢"
+        "cn": "我似乎曾经在哪里见过呢",
+        "ro": "do ko ka de mi na yo u na sa"
     },
     {
         "time": 13742,
         "text": "いつかの景色にさ",
-        "cn": "为了观看那时的风景"
+        "cn": "为了观看那时的风景",
+        "ro": "i tsu ka no ke shi ki ni sa"
     },
     {
         "time": 16136,
         "text": "空を混ぜて歩いた",
-        "cn": "我们穿梭过混沌的天空"
+        "cn": "我们穿梭过混沌的天空",
+        "ro": "so ra wo ma ze te a ru i ta"
     },
     {
         "time": 18796,
         "text": "旅の午後の想像歌",
-        "cn": "心中构想着新歌，为下午的旅行而唱"
+        "cn": "心中构想着新歌，为下午的旅行而唱",
+        "ro": "ta bi no go go no so u zo u ka"
     },
     {
         "time": 21451,
         "text": "終電の向こう側で目を瞑る",
-        "cn": "在末班车的最后一节车厢中沉思"
+        "cn": "在末班车的最后一节车厢中沉思",
+        "ro": "shu u te n no mu ko u ga wa de me wo tsu bu ru"
     },
     {
         "time": 26233,
         "text": "ほら切なさを旋律に描いたら",
-        "cn": "看，若绘出一段悲伤的旋律"
+        "cn": "看，若绘出一段悲伤的旋律",
+        "ro": "ho ra se tsu na sa wo se n ri tsu ni e ga i ta ra"
     },
     {
         "time": 31284,
         "text": "紡ぐ様な言葉の中",
-        "cn": "那在空中盘旋飘转的话语中"
+        "cn": "那在空中盘旋飘转的话语中",
+        "ro": "tsu mu gu yo u na ko to ba no na ka"
     },
     {
         "time": 34212,
         "text": "零れそうな想いをさ",
-        "cn": "蕴藏着即将喷薄而出的思想"
+        "cn": "蕴藏着即将喷薄而出的思想",
+        "ro": "ko bo re so u na o mo i wo sa"
     },
     {
         "time": 36321,
         "text": "透き通る世界に隠す度に",
-        "cn": "却每一次都被藏匿在透明的世界中"
+        "cn": "却每一次都被藏匿在透明的世界中",
+        "ro": "su ki to o ru se ka i ni ka ku su ta bi ni"
     },
     {
         "time": 39249,
         "text": "底が溶けだして",
-        "cn": "底部渐渐融化"
+        "cn": "底部渐渐融化",
+        "ro": "so ko ga to ke da shi te"
     },
     {
         "time": 41648,
         "text": "乾く様な感情だって",
-        "cn": "情感渐渐干涸"
+        "cn": "情感渐渐干涸",
+        "ro": "ka wa ku yo u na ka n jo u da tte"
     },
     {
         "time": 44554,
         "text": "何処かにいつも流れてさ",
-        "cn": "但却总是在某处飘荡"
+        "cn": "但却总是在某处飘荡",
+        "ro": "do ko ka i tsu mo na ga re te sa"
     },
     {
         "time": 46694,
         "text": "「遠くへ行かないで」色に乗せて",
-        "cn": "「别走啊」那一抹色彩"
+        "cn": "「别走啊」那一抹色彩",
+        "ro": "「to o ku e i ka na i de」i ro ni no se te"
     },
     {
         "time": 49609,
         "text": "何故か願ってる",
-        "cn": "不知为何，我仍希望"
+        "cn": "不知为何，我仍希望",
+        "ro": "na ze ka ne ga tte ru"
     },
     {
         "time": 83365,
         "text": "今日が蒼く潤み",
-        "cn": "今天是蔚蓝而又湿润的"
+        "cn": "今天是蔚蓝而又湿润的",
+        "ro": "kyo u ga a o ku u ru mi"
     },
     {
         "time": 85755,
         "text": "空は明日も泣いて",
-        "cn": "明天的天空将会哭泣"
+        "cn": "明天的天空将会哭泣",
+        "ro": "so ra wa a shi ta mo na i te"
     },
     {
         "time": 88144,
         "text": "水色が遊んでる",
-        "cn": "那一抹浅蓝仍在演奏着"
+        "cn": "那一抹浅蓝仍在演奏着",
+        "ro": "mi zu i ro ga a so n de ru"
     },
     {
         "time": 91065,
         "text": "部屋の中の隅っこで",
-        "cn": "在那房间的角落之中"
+        "cn": "在那房间的角落之中",
+        "ro": "he ya no na ka no su mi kko te"
     },
     {
         "time": 93466,
         "text": "独り夜を唄ってる",
-        "cn": "一个人唱着夜之歌"
+        "cn": "一个人唱着夜之歌",
+        "ro": "hi to ri yo ru wo u ta tte ru"
     },
     {
         "time": 96372,
         "text": "浮かぶ道を追いかけた",
-        "cn": "行进在浮动的道路上"
+        "cn": "行进在浮动的道路上",
+        "ro": "u ka bu mi chi wo o i ka ke ta"
     },
     {
         "time": 98767,
         "text": "夢の中の向こうで",
-        "cn": "奔跑在逐梦的道路上"
+        "cn": "奔跑在逐梦的道路上",
+        "ro": "yu me no na ka no mu ko u de"
     },
     {
         "time": 101167,
         "text": "特別を描いてる",
-        "cn": "绘出特别之物"
+        "cn": "绘出特别之物",
+        "ro": "to ku be tsu wo e ga i te ru"
     },
     {
         "time": 103818,
         "text": "透明な雨落ちる言葉へさ",
-        "cn": "对着绵绵细雨自言自语"
+        "cn": "对着绵绵细雨自言自语",
+        "ro": "to u me i na a me o chi ru ko to ba e sa"
     },
     {
         "time": 108870,
         "text": "その寂しさを旋律に乗せるの",
-        "cn": "将孤独置于旋律之中"
+        "cn": "将孤独置于旋律之中",
+        "ro": "so no sa bi shi sa wo se n ri tsu ni no se ru no"
     },
     {
         "time": 113657,
         "text": "沈む様な世界の中",
-        "cn": "在这似将沉沦的世界"
+        "cn": "在这似将沉沦的世界",
+        "ro": "shi zu mu yo u na se ka i no na ka"
     },
     {
         "time": 116568,
         "text": "灯ともり消えた時間がさ",
-        "cn": "熄灭灯光之时"
+        "cn": "熄灭灯光之时",
+        "ro": "a ka ri ki e ta ji ka n ga sa"
     },
     {
         "time": 118953,
         "text": "全てを包んで弾ける度",
-        "cn": "整个世界被黑暗包裹"
+        "cn": "整个世界被黑暗包裹",
+        "ro": "su be te wo tsu tsu n de hi ke ru ta bi"
     },
     {
         "time": 121888,
         "text": "明日が笑うんだ",
-        "cn": "愿明天能充满欢笑"
+        "cn": "愿明天能充满欢笑",
+        "ro": "a shi ta ga wa ra u n da"
     },
     {
         "time": 124003,
         "text": "終点の向こうでほら微かに",
-        "cn": "在线路的末尾，你将看到那，微弱的"
+        "cn": "在线路的末尾，你将看到那，微弱的",
+        "ro": "shu u te n no mu ko u de ho ra ka su ka ni"
     },
     {
         "time": 127190,
         "text": "きっと何時も隠してる",
-        "cn": "我确信它们仍在隐藏"
+        "cn": "我确信它们仍在隐藏",
+        "ro": "ki tto i tsu mo ka ku shi te ru"
     },
     {
         "time": 129328,
         "text": "揺らぐただ今日を愛してたいな",
-        "cn": "我渴望只爱这一天，但却摇摇欲坠"
+        "cn": "我渴望只爱这一天，但却摇摇欲坠",
+        "ro": "yu ra gu ta da kyo u wo a i shi te ta i na"
     },
     {
         "time": 132238,
         "text": "何故か願ってる",
-        "cn": "出于什么原因呢？"
+        "cn": "出于什么原因呢？",
+        "ro": "na ze ka ne ga tte ru"
     },
     {
         "time": 134640,
         "text": "Uh-Ah-",
-        "cn": "Uh~Ah~"
+        "cn": "Uh~Ah~",
+        "ro": "Uh-Ah-"
     }
 ]

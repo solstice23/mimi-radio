@@ -7,22 +7,26 @@
     {
         "time": 8486,
         "text": "確かなことだけは今日がさ",
-        "cn": "能确定的事情只有啊"
+        "cn": "能确定的事情只有啊",
+        "ro": "tashika na koto dake wa kyou ga sa"
     },
     {
         "time": 10928,
         "text": "少し寂しいことだけさ",
-        "cn": "今天感觉有点寂寞啊"
+        "cn": "今天感觉有点寂寞啊",
+        "ro": "sukoshi samishii koto dake sa"
     },
     {
         "time": 12917,
         "text": "変わらない空にサヨナラ",
-        "cn": "对一成不变的天空说再见"
+        "cn": "对一成不变的天空说再见",
+        "ro": "kawaranai sora ni sayonara"
     },
     {
         "time": 15010,
         "text": "乾いた音だけが転がるの",
-        "cn": "却只有干涩的声音滚动"
+        "cn": "却只有干涩的声音滚动",
+        "ro": "kawaita oto dake ga korogaru no"
     },
     {
         "time": 17100,
@@ -32,22 +36,26 @@
     {
         "time": 17280,
         "text": "終わり方だけは気を付けよう",
-        "cn": "只关心怎么迎接终结吧"
+        "cn": "只关心怎么迎接终结吧",
+        "ro": "owarikata dake wa ki wo tsukeyou"
     },
     {
         "time": 19147,
         "text": "って思ってたのに涙がさ",
-        "cn": "明明这样想眼泪却还是"
+        "cn": "明明这样想眼泪却还是",
+        "ro": "tte omotteta no ni namida ga sa"
     },
     {
         "time": 21250,
         "text": "止まらないから今だけは",
-        "cn": "流个不停所以至少现在"
+        "cn": "流个不停所以至少现在",
+        "ro": "tomaranai kara ima dake wa"
     },
     {
         "time": 23235,
         "text": "夢の始まりを見せてよ",
-        "cn": "让我看看美梦的开始吧"
+        "cn": "让我看看美梦的开始吧",
+        "ro": "yume no hajimari wo misete yo"
     },
     {
         "time": 25359,
@@ -57,12 +65,14 @@
     {
         "time": 25626,
         "text": "進行形の連続です",
-        "cn": "无论何时都是进行时"
+        "cn": "无论何时都是进行时",
+        "ro": "shinkoukei no renzoku desu"
     },
     {
         "time": 27588,
         "text": "この人生なんて名付けようか",
-        "cn": "给这样的人生取个名字吧"
+        "cn": "给这样的人生取个名字吧",
+        "ro": "kono jinsei nante nazukeyou ka"
     },
     {
         "time": 29684,
@@ -72,22 +82,26 @@
     {
         "time": 29869,
         "text": "ああ愛して今日くらい",
-        "cn": "啊啊去爱吧至少今天"
+        "cn": "啊啊去爱吧至少今天",
+        "ro": "aa aishite kyou kurai"
     },
     {
         "time": 31627,
         "text": "幸せの意味も知らないけどさ",
-        "cn": "虽然连幸福的含义也不明白"
+        "cn": "虽然连幸福的含义也不明白",
+        "ro": "shiawase no imi mo shiranai kedo sa"
     },
     {
         "time": 33861,
         "text": "妄想ばかりの現世に",
-        "cn": "对这净是妄想的现世"
+        "cn": "对这净是妄想的现世",
+        "ro": "mousou bakari no gense ni"
     },
     {
         "time": 35699,
         "text": "精一杯抗っているんだ",
-        "cn": "正在竭尽全力地反抗着啊"
+        "cn": "正在竭尽全力地反抗着啊",
+        "ro": "seiippai aragatteirun da"
     },
     {
         "time": 37765,
@@ -97,22 +111,26 @@
     {
         "time": 37961,
         "text": "ただああ愛して最後に",
-        "cn": "只管啊啊去爱吧在最后"
+        "cn": "只管啊啊去爱吧在最后",
+        "ro": "tada aa aishite saigo ni"
     },
     {
         "time": 39821,
         "text": "知る言葉は素敵なものですか",
-        "cn": "知晓的话语会是美好的吗"
+        "cn": "知晓的话语会是美好的吗",
+        "ro": "shiru kotoba wa suteki na mono desu ka"
     },
     {
         "time": 41992,
         "text": "想像してるの夜がさ",
-        "cn": "在我的想象里夜晚啊"
+        "cn": "在我的想象里夜晚啊",
+        "ro": "souzou shiteru no yoru ga sa"
     },
     {
         "time": 44098,
         "text": "このまま僕の隣で wow",
-        "cn": "就这样一直陪在我身边wow"
+        "cn": "就这样一直陪在我身边wow",
+        "ro": "kono mama boku no tonari de wow"
     },
     {
         "time": 46257,
@@ -122,22 +140,26 @@
     {
         "time": 46481,
         "text": "いつからいつからこんなこと",
-        "cn": "从何时起从何时起我就一直"
+        "cn": "从何时起从何时起我就一直",
+        "ro": "itsu kara itsu kara konna koto"
     },
     {
         "time": 48172,
         "text": "考え続けているのってさ",
-        "cn": "努力思考着这样的事情啊"
+        "cn": "努力思考着这样的事情啊",
+        "ro": "kangae tsuzuketeiru no tte sa"
     },
     {
         "time": 50419,
         "text": "答えは答えはないからさ",
-        "cn": "答案却是答案却是不存在的啊"
+        "cn": "答案却是答案却是不存在的啊",
+        "ro": "kotae wa kotae wa nai kara sa"
     },
     {
         "time": 52236,
         "text": "眠る眠る眠る バイバイ",
-        "cn": "沉睡着沉睡着沉睡着 拜拜"
+        "cn": "沉睡着沉睡着沉睡着 拜拜",
+        "ro": "nemuru nemuru nemuru baibai"
     },
     {
         "time": 55216,
@@ -147,22 +169,26 @@
     {
         "time": 71219,
         "text": "見えないものばかりだけ",
-        "cn": "总是只有看不见的东西"
+        "cn": "总是只有看不见的东西",
+        "ro": "mienai mono bakari dake"
     },
     {
         "time": 72946,
         "text": "目を細めて見つけようとする",
-        "cn": "才眯起双眼试图将其发现"
+        "cn": "才眯起双眼试图将其发现",
+        "ro": "me wo hosomete mitsukeyou to suru"
     },
     {
         "time": 75045,
         "text": "足りないものばかりだけ",
-        "cn": "总是只有所缺乏的东西"
+        "cn": "总是只有所缺乏的东西",
+        "ro": "tarinai mono bakari dake"
     },
     {
         "time": 77159,
         "text": "寄せ集めて必死になってる",
-        "cn": "才拼命地把它们收集起来"
+        "cn": "才拼命地把它们收集起来",
+        "ro": "yoseatsumete hisshi ni natteru"
     },
     {
         "time": 79229,
@@ -172,22 +198,26 @@
     {
         "time": 79404,
         "text": "まぁ今日は今日はそれでいいじゃん",
-        "cn": "嘛今天今天就这样也挺好"
+        "cn": "嘛今天今天就这样也挺好",
+        "ro": "maa kyou wa kyou wa sore de ii jan"
     },
     {
         "time": 81258,
         "text": "曖の昧の存在証明",
-        "cn": "暧的昧的存在证明"
+        "cn": "暧的昧的存在证明",
+        "ro": "ai no mai no sonzai shoumei"
     },
     {
         "time": 83593,
         "text": "どうかどうかどうかほっといて",
-        "cn": "不要不要不要再管我了"
+        "cn": "不要不要不要再管我了",
+        "ro": "douka douka douka hottoite"
     },
     {
         "time": 85344,
         "text": "それだけでいいから",
-        "cn": "只要这样就好了啊"
+        "cn": "只要这样就好了啊",
+        "ro": "sore dake de ii kara"
     },
     {
         "time": 87444,
@@ -197,12 +227,14 @@
     {
         "time": 87867,
         "text": "劣等生の脳内は",
-        "cn": "我这坏学生的脑袋"
+        "cn": "我这坏学生的脑袋",
+        "ro": "rettousei no nounai wa"
     },
     {
         "time": 89491,
         "text": "少しの寂しさで埋まってんだ",
-        "cn": "已经被星星点点的寂寞填满了啊"
+        "cn": "已经被星星点点的寂寞填满了啊",
+        "ro": "sukoshi no samishisa de umatten da"
     },
     {
         "time": 91760,
@@ -212,22 +244,26 @@
     {
         "time": 91918,
         "text": "ああ愛して今日くらい",
-        "cn": "啊啊去爱吧至少今天"
+        "cn": "啊啊去爱吧至少今天",
+        "ro": "aa aishite kyou kurai"
     },
     {
         "time": 93671,
         "text": "幸せの意味も知らないけどさ",
-        "cn": "虽然连幸福的含义也不明白"
+        "cn": "虽然连幸福的含义也不明白",
+        "ro": "shiawase no imi mo shiranai kedo sa"
     },
     {
         "time": 95816,
         "text": "妄想ばかりの現世に",
-        "cn": "对这净是妄想的现世"
+        "cn": "对这净是妄想的现世",
+        "ro": "mousou bakari no gense ni"
     },
     {
         "time": 97826,
         "text": "精一杯抗っているんだ",
-        "cn": "正在竭尽全力地反抗着啊"
+        "cn": "正在竭尽全力地反抗着啊",
+        "ro": "seiippai aragatteirun da"
     },
     {
         "time": 99850,
@@ -237,22 +273,26 @@
     {
         "time": 100002,
         "text": "ただああ愛して最後に",
-        "cn": "只管啊啊去爱吧在最后"
+        "cn": "只管啊啊去爱吧在最后",
+        "ro": "tada aa aishite saigo ni"
     },
     {
         "time": 101911,
         "text": "知る言葉は素敵なものですか",
-        "cn": "知晓的话语会是美好的吗"
+        "cn": "知晓的话语会是美好的吗",
+        "ro": "shiru kotoba wa suteki na mono desu ka"
     },
     {
         "time": 104044,
         "text": "想像してるの夜がさ",
-        "cn": "在我的想象里夜晚啊"
+        "cn": "在我的想象里夜晚啊",
+        "ro": "souzou shiteru no yoru ga sa"
     },
     {
         "time": 106033,
         "text": "このまま僕の隣で wow",
-        "cn": "就这样一直陪在我身边wow"
+        "cn": "就这样一直陪在我身边wow",
+        "ro": "kono mama boku no tonari de wow"
     },
     {
         "time": 108406,
@@ -262,22 +302,26 @@
     {
         "time": 108550,
         "text": "どんなにどんなにこんなこと",
-        "cn": "无论怎样无论怎样一直不断"
+        "cn": "无论怎样无论怎样一直不断",
+        "ro": "donna ni donna ni konna koto"
     },
     {
         "time": 110310,
         "text": "考え続けていてもってさ",
-        "cn": "努力思考着这样的事情啊"
+        "cn": "努力思考着这样的事情啊",
+        "ro": "kangae tsuzuketeite motte sa"
     },
     {
         "time": 112484,
         "text": "答えは答えはないからさ",
-        "cn": "答案都是答案都是不存在的啊"
+        "cn": "答案都是答案都是不存在的啊",
+        "ro": "kotae wa kotae wa nai kara sa"
     },
     {
         "time": 114367,
         "text": "眠る眠る眠る バイバイ",
-        "cn": "沉睡着沉睡着沉睡着 拜拜"
+        "cn": "沉睡着沉睡着沉睡着 拜拜",
+        "ro": "nemuru nemuru nemuru baibai"
     },
     {
         "time": 117337,
@@ -287,12 +331,14 @@
     {
         "time": 133285,
         "text": "嗚呼何も分かんないよ",
-        "cn": "啊啊我什么都搞不明白了"
+        "cn": "啊啊我什么都搞不明白了",
+        "ro": "aa nanimo wakannai yo"
     },
     {
         "time": 135057,
         "text": "もう一度だけ夢を見せて",
-        "cn": "再一次就好让我做一场梦吧"
+        "cn": "再一次就好让我做一场梦吧",
+        "ro": "mou ichido dake yume wo misete"
     },
     {
         "time": 137297,
@@ -302,22 +348,26 @@
     {
         "time": 137493,
         "text": "最終僕らは今日もさ",
-        "cn": "最终我们就算今天也在"
+        "cn": "最终我们就算今天也在",
+        "ro": "saishuu bokura wa kyou mo sa"
     },
     {
         "time": 139127,
         "text": "弱さを隠して歩き続ける",
-        "cn": "隐藏着软弱不断地前进"
+        "cn": "隐藏着软弱不断地前进",
+        "ro": "yowasa wo kakushite aruki tsuzukeru"
     },
     {
         "time": 141316,
         "text": "透明なままで明日もさ",
-        "cn": "明天也会继续保持透明"
+        "cn": "明天也会继续保持透明",
+        "ro": "toumei na mama de asu mo sa"
     },
     {
         "time": 143317,
         "text": "感情を隠して歩き続ける",
-        "cn": "隐藏着感情不断地前进"
+        "cn": "隐藏着感情不断地前进",
+        "ro": "kanjou wo kakushite aruki tsuzukeru"
     },
     {
         "time": 145344,
@@ -327,22 +377,26 @@
     {
         "time": 145462,
         "text": "ただああ愛して最後に",
-        "cn": "只管啊啊去爱吧在最后"
+        "cn": "只管啊啊去爱吧在最后",
+        "ro": "tada aa aishite saigo ni"
     },
     {
         "time": 147350,
         "text": "知る言葉は素敵なものですか",
-        "cn": "知晓的话语会是美好的吗"
+        "cn": "知晓的话语会是美好的吗",
+        "ro": "shiru kotoba wa suteki na mono desu ka"
     },
     {
         "time": 149612,
         "text": "想像してるの夜がさ",
-        "cn": "在我的想象里夜晚啊"
+        "cn": "在我的想象里夜晚啊",
+        "ro": "souzou shiteru no yoru ga sa"
     },
     {
         "time": 151559,
         "text": "このまま僕の隣で wow",
-        "cn": "就这样一直陪在我身边wow"
+        "cn": "就这样一直陪在我身边wow",
+        "ro": "kono mama boku no tonari de wow"
     },
     {
         "time": 153975,
@@ -352,22 +406,26 @@
     {
         "time": 154082,
         "text": "いつからいつからこんなこと",
-        "cn": "从何时起从何时起我就一直"
+        "cn": "从何时起从何时起我就一直",
+        "ro": "itsu kara itsu kara konna koto"
     },
     {
         "time": 155741,
         "text": "考え続けているのってさ",
-        "cn": "努力思考着这样的事情啊"
+        "cn": "努力思考着这样的事情啊",
+        "ro": "kangae tsuzuketeiru no tte sa"
     },
     {
         "time": 157977,
         "text": "答えは答えはないからさ",
-        "cn": "答案却是答案却是不存在的啊"
+        "cn": "答案却是答案却是不存在的啊",
+        "ro": "kotae wa kotae wa nai kara sa"
     },
     {
         "time": 160064,
         "text": "変わらないままで",
-        "cn": "依旧没有任何变化"
+        "cn": "依旧没有任何变化",
+        "ro": "kawaranai mama de"
     },
     {
         "time": 162214,
@@ -377,21 +435,25 @@
     {
         "time": 162286,
         "text": "少しだけ笑えますように",
-        "cn": "希望至少能露出一点笑容"
+        "cn": "希望至少能露出一点笑容",
+        "ro": "sukoshi dake waraemasu you ni"
     },
     {
         "time": 164013,
         "text": "妄想の奥にきっとある",
-        "cn": "在妄想深处一定能找到"
+        "cn": "在妄想深处一定能找到",
+        "ro": "mousou no oku ni kitto aru"
     },
     {
         "time": 166287,
         "text": "最後は最後は空白に",
-        "cn": "最后就最后就化作空白"
+        "cn": "最后就最后就化作空白",
+        "ro": "saigo wa saigo wa kuuhaku ni"
     },
     {
         "time": 168224,
         "text": "眠る眠る眠る バイバイ",
-        "cn": "沉睡着沉睡着沉睡着 拜拜"
+        "cn": "沉睡着沉睡着沉睡着 拜拜",
+        "ro": "nemuru nemuru nemuru baibai"
     }
 ]

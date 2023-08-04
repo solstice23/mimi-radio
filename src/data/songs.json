@@ -15,6 +15,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - ラピスラズリ.jpg"
     },
     {
@@ -33,6 +34,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - 透明夏 (feat. 初音ミク).jpg",
         "lyrics": "MIMI - 透明夏 (feat. 初音ミク).json",
         "lyricsLangs": [
@@ -56,6 +58,7 @@
         "quality": "124K",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - parabola.png"
     },
     {
@@ -74,6 +77,7 @@
         "quality": "124K",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - ミライリフレクト.png"
     },
     {
@@ -92,6 +96,7 @@
         "quality": "132K",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - NOREEN.png"
     },
     {
@@ -110,11 +115,13 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - 水音とカーテン.jpg",
         "lyrics": "MIMI - 水音とカーテン.json",
         "lyricsLangs": [
             "ja",
-            "cn"
+            "cn",
+            "ro"
         ]
     },
     {
@@ -133,6 +140,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - モーメント.jpg",
         "lyrics": "MIMI - モーメント.json",
         "lyricsLangs": [
@@ -155,6 +163,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - マシュマリー.jpg",
         "lyrics": "MIMI - マシュマリー.json",
         "lyricsLangs": [
@@ -178,6 +187,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - 哀の隙間.jpg",
         "lyrics": "MIMI - 哀の隙間.json",
         "lyricsLangs": [
@@ -201,6 +211,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - フローレミ.jpg",
         "lyrics": "MIMI - フローレミ.json",
         "lyricsLangs": [
@@ -225,6 +236,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - 何もない様な.jpg",
         "lyrics": "MIMI - 何もない様な.json",
         "lyricsLangs": [
@@ -249,6 +261,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - 静寂に咲く.jpg",
         "lyrics": "MIMI - 静寂に咲く.json",
         "lyricsLangs": [
@@ -273,6 +286,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - カラバコにアイ.jpg",
         "lyrics": "MIMI - カラバコにアイ.json",
         "lyricsLangs": [
@@ -295,7 +309,14 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
-        "cover": "MIMI - 夜明け前に飛び乗って.jpg"
+        "hidden": null,
+        "cover": "MIMI - 夜明け前に飛び乗って.jpg",
+        "lyrics": "MIMI - 夜明け前に飛び乗って.json",
+        "lyricsLangs": [
+            "ja",
+            "cn",
+            "ro"
+        ]
     },
     {
         "name": "Cold Waltz - in G Minor",
@@ -313,6 +334,7 @@
         "quality": "117K",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - Cold Waltz - in G Minor.png"
     },
     {
@@ -331,6 +353,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "LSCM,MIMI - そして夜と灯る (feat. MIMI).jpg",
         "lyrics": "LSCM,MIMI - そして夜と灯る (feat. MIMI).json",
         "lyricsLangs": [
@@ -355,6 +378,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - ルルージュ.jpg",
         "lyrics": "MIMI - ルルージュ.json",
         "lyricsLangs": [
@@ -379,6 +403,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - ゆめまぼろし.jpg",
         "lyrics": "MIMI - ゆめまぼろし.json",
         "lyricsLangs": [
@@ -402,6 +427,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - SorrowChat.jpg",
         "lyrics": "MIMI - SorrowChat.json",
         "lyricsLangs": [
@@ -425,6 +451,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "May'n - 人生進行形.jpg",
         "lyrics": "May'n - 人生進行形.json",
         "lyricsLangs": [
@@ -448,6 +475,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - Pale.jpg",
         "lyrics": "MIMI - Pale.json",
         "lyricsLangs": [
@@ -471,6 +499,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "LSCM,佳館杏ノ助,MIMI - てんぐ夜かぐら (feat. 佳館杏ノ助 & MIMI).jpg"
     },
     {
@@ -489,6 +518,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,わん子 - もでらーと (feat. わん子).jpg",
         "lyrics": "MIMI,わん子 - もでらーと (feat. わん子).json",
         "lyricsLangs": [
@@ -513,6 +543,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - よるつむぎ.jpg",
         "lyrics": "MIMI - よるつむぎ.json",
         "lyricsLangs": [
@@ -536,6 +567,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - いっせーのーで.jpg",
         "lyrics": "MIMI,可不 - いっせーのーで.json",
         "lyricsLangs": [
@@ -559,6 +591,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "Rain Drops - シャロウ.jpg",
         "lyrics": "Rain Drops - シャロウ.json",
         "lyricsLangs": [
@@ -582,6 +615,7 @@
         "quality": "128K",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - LyriC.jpg"
     },
     {
@@ -600,7 +634,14 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
-        "cover": "MIMI,森先化歩,花譜,夜河世界,ヰ世界情緒 - あわく心模様.jpg"
+        "hidden": null,
+        "cover": "MIMI,森先化歩,花譜,夜河世界,ヰ世界情緒 - あわく心模様.jpg",
+        "lyrics": "MIMI,森先化歩,花譜,夜河世界,ヰ世界情緒 - あわく心模様.json",
+        "lyricsLangs": [
+            "ja",
+            "cn",
+            "ro"
+        ]
     },
     {
         "name": "もーいいかい",
@@ -618,6 +659,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - もーいいかい.jpg",
         "lyrics": "MIMI - もーいいかい.json",
         "lyricsLangs": [
@@ -641,6 +683,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "ロクデナシ - ただ声一つ.jpg",
         "lyrics": "ロクデナシ - ただ声一つ.json",
         "lyricsLangs": [
@@ -665,6 +708,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "花譜 feat. 理芽 - まほう(MIMI Remix).jpg"
     },
     {
@@ -683,6 +727,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "いゔどっと - 月日記.jpg",
         "lyrics": "いゔどっと - 月日記.json",
         "lyricsLangs": [
@@ -707,6 +752,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": "旧音源",
+        "hidden": null,
         "cover": "MIMI,可不 - くうになる (feat. 可不).jpg",
         "lyrics": "MIMI,可不 - くうになる (feat. 可不).json",
         "lyricsLangs": [
@@ -730,6 +776,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - だきしめるまで。.jpg",
         "lyrics": "MIMI,可不 - だきしめるまで。.json",
         "lyricsLangs": [
@@ -753,6 +800,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "存流 - まってるよ.jpg",
         "lyrics": "存流 - まってるよ.json",
         "lyricsLangs": [
@@ -777,30 +825,13 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - ぎゅって.jpg",
         "lyrics": "MIMI - ぎゅって.json",
         "lyricsLangs": [
             "ja",
             "cn"
         ]
-    },
-    {
-        "name": "いっせーのーで",
-        "artist": "MIMI",
-        "singer": "花谱, 可不",
-        "translatedName": "一二三",
-        "length": "2:43",
-        "type": "Collab",
-        "hasLyrics": "Yes",
-        "releaseDate": "2022-04-30T00:00:00.000Z",
-        "link": "https://www.youtube.com/watch?v=YZSvwaoREdQ",
-        "desc": "MIMI 氏による「いっせーのーで」を花譜と音楽的同位体\"可不(KAFU)\"でデュエットしました。",
-        "staff": "歌唱：花譜 feat. 可不(KAFU)\n作詞・作曲・編曲：MIMI\nイラスト：木澄 玲生（@kisumirei41）",
-        "fileName": "花譜 feat. 可不(KAFU) - いっせーのーで.mp3",
-        "quality": "320K",
-        "highestQuality": "Yes",
-        "note": null,
-        "cover": "花譜 feat. 可不(KAFU) - いっせーのーで.png"
     },
     {
         "name": "わたしマニュアル",
@@ -818,6 +849,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "NINA - VALIS - わたしマニュアル.jpg",
         "lyrics": "NINA - VALIS - わたしマニュアル.json",
         "lyricsLangs": [
@@ -842,6 +874,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,星界 - えすけーぷ.jpg",
         "lyrics": "MIMI,星界 - えすけーぷ.json",
         "lyricsLangs": [
@@ -866,6 +899,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "ロクデナシ - 知らないままで.jpg",
         "lyrics": "ロクデナシ - 知らないままで.json",
         "lyricsLangs": [
@@ -890,6 +924,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - ヒミツ.jpg",
         "lyrics": "MIMI,可不 - ヒミツ.json",
         "lyricsLangs": [
@@ -913,6 +948,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,初音ミク - 風鈴歌.jpg",
         "lyrics": "MIMI,初音ミク - 風鈴歌.json",
         "lyricsLangs": [
@@ -937,6 +973,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "ひなの羽衣 - ルティナ.jpg",
         "lyrics": "ひなの羽衣 - ルティナ.json",
         "lyricsLangs": [
@@ -961,6 +998,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,わん子 - みにまむ (feat. わん子).jpg",
         "lyrics": "MIMI,わん子 - みにまむ (feat. わん子).json",
         "lyricsLangs": [
@@ -984,6 +1022,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - あのね (feat. 可不).jpg",
         "lyrics": "MIMI,可不 - あのね (feat. 可不).json",
         "lyricsLangs": [
@@ -1008,6 +1047,7 @@
         "quality": "128K",
         "highestQuality": "Unconfirmed",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,裏命 - ぽけっと・愛の歌.jpg",
         "lyrics": "MIMI,裏命 - ぽけっと・愛の歌.json",
         "lyricsLangs": [
@@ -1031,6 +1071,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI, 可不 - 愛するように (feat. 可不).jpg",
         "lyrics": "MIMI, 可不 - 愛するように (feat. 可不).json",
         "lyricsLangs": [
@@ -1054,6 +1095,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - ハナタバ.jpg",
         "lyrics": "MIMI,可不 - ハナタバ.json",
         "lyricsLangs": [
@@ -1078,6 +1120,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "konoco,こばしり。 - Bullets.jpg",
         "lyrics": "konoco,こばしり。 - Bullets.json",
         "lyricsLangs": [
@@ -1102,6 +1145,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - ポシェット (feat. 可不).jpg",
         "lyrics": "MIMI,可不 - ポシェット (feat. 可不).json",
         "lyricsLangs": [
@@ -1126,6 +1170,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,初音ミク - 夜のあいろに (feat. 初音ミク).jpg",
         "lyrics": "MIMI,初音ミク - 夜のあいろに (feat. 初音ミク).json",
         "lyricsLangs": [
@@ -1150,6 +1195,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - 今はいいんだよ。 (feat. 可不).jpg",
         "lyrics": "MIMI,可不 - 今はいいんだよ。 (feat. 可不).json",
         "lyricsLangs": [
@@ -1174,6 +1220,7 @@
         "quality": "320K",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI feat. 可不 - オマジナイ (long ver.).jpg"
     },
     {
@@ -1192,6 +1239,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI feat. 初音ミク - GLACIES.jpg",
         "lyrics": "MIMI feat. 初音ミク - GLACIES.json",
         "lyricsLangs": [
@@ -1216,6 +1264,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,初音ミク - ロココ (feat. 初音ミク).jpg",
         "lyrics": "MIMI,初音ミク - ロココ (feat. 初音ミク).json",
         "lyricsLangs": [
@@ -1239,6 +1288,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "むﾄ - silence.jpg",
         "lyrics": "むﾄ - silence.json",
         "lyricsLangs": [
@@ -1263,6 +1313,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "konoco - ひだまりの彩度.jpg",
         "lyrics": "konoco - ひだまりの彩度.json",
         "lyricsLangs": [
@@ -1287,6 +1338,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,ロクデナシ - 愛が灯る.jpg",
         "lyrics": "MIMI,ロクデナシ - 愛が灯る.json",
         "lyricsLangs": [
@@ -1311,6 +1363,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,初音ミク - GLACIES (feat. 初音ミク).jpg",
         "lyrics": "MIMI,初音ミク - GLACIES (feat. 初音ミク).json",
         "lyricsLangs": [
@@ -1335,6 +1388,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "WI'P - ツキミチシルベ feat. おれんじ君, たこちゃん, MIMI.jpg"
     },
     {
@@ -1353,6 +1407,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "ESHIKARA,MIMI,可不 - ふわり (feat. MIMI,可不,初音ミク).jpg",
         "lyrics": "ESHIKARA,MIMI,可不 - ふわり (feat. MIMI,可不,初音ミク).json",
         "lyricsLangs": [
@@ -1377,6 +1432,7 @@
         "quality": "132K",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "『 わたしマニュアル (Original Arrange Ver.) 』／ MIMI feat. 可不.jpg"
     },
     {
@@ -1395,6 +1451,7 @@
         "quality": "249K",
         "highestQuality": "2023-05-18T00:00:00.000Z",
         "note": "可能有更新的高品质音源",
+        "hidden": null,
         "cover": "seiza, MIMI, 初音ミク- 流星症候群.jpg",
         "lyrics": "seiza, MIMI, 初音ミク- 流星症候群.json",
         "lyricsLangs": [
@@ -1417,6 +1474,7 @@
         "quality": "258K",
         "highestQuality": "2023-05-18T00:00:00.000Z",
         "note": "可能有更新的高品质音源",
+        "hidden": null,
         "cover": "夢音ちゃの×MIMI - 季節にまどろむ.png"
     },
     {
@@ -1435,11 +1493,13 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - 妄想哀歌 (feat. 初音ミク＆可不).jpg",
         "lyrics": "MIMI - 妄想哀歌 (feat. 初音ミク＆可不).json",
         "lyricsLangs": [
             "ja",
-            "cn"
+            "cn",
+            "ro"
         ]
     },
     {
@@ -1458,6 +1518,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI, 可不 - サヨナラは言わないでさ.jpg",
         "lyrics": "MIMI, 可不 - サヨナラは言わないでさ.json",
         "lyricsLangs": [
@@ -1482,6 +1543,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI - What Call This Day ？ (feat. にんじん).jpg",
         "lyrics": "MIMI - What Call This Day ？ (feat. にんじん).json",
         "lyricsLangs": [
@@ -1505,6 +1567,7 @@
         "quality": "Lossless",
         "highestQuality": "Yes",
         "note": null,
+        "hidden": null,
         "cover": "MIMI,可不 - 息をするだけ (feat. 可不).jpg",
         "lyrics": "MIMI,可不 - 息をするだけ (feat. 可不).json",
         "lyricsLangs": [
