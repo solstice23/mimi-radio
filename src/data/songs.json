@@ -1580,7 +1580,7 @@
         "name": "コウフク貯金",
         "artist": "MIMI",
         "singer": "初音ミク",
-        "translatedName": null,
+        "translatedName": "幸福储蓄",
         "length": "2:49",
         "type": "Standalone",
         "hasLyrics": "Yes",
@@ -1593,6 +1593,12 @@
         "highestQuality": "Yes",
         "note": null,
         "hidden": null,
-        "cover": "MIMI,初音ミク - コウフク貯金 (feat. 初音ミク).jpg"
+        "cover": "MIMI,初音ミク - コウフク貯金 (feat. 初音ミク).jpg",
+        "lyrics": "MIMI,初音ミク - コウフク貯金 (feat. 初音ミク).json",
+        "lyricsLangs": [
+            "ja",
+            "cn",
+            "ro"
+        ]
     }
 ]
