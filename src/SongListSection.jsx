@@ -1,6 +1,6 @@
 import { useEffect, useState, useReducer, useRef, useContext, useLayoutEffect } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit'
-import { getSongsData, formatLength, formatDate } from './utils.js'
+import { getSongsData, formatLength, formatDate, getAssetUrl } from './utils.js'
 import Icon from './components/Icon.jsx'
 import SegmentedButtons from './components/SegmentedButtons.jsx'
 import Card from './components/Card.jsx';
@@ -15,6 +15,7 @@ import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import './SongListSection.scss';
 import useStateStorage from './hooks/useStateStorage.js';
+import LazyImg from './components/LazyImg.jsx';
 
 const songs = getSongsData();
 
@@ -291,11 +292,16 @@ function Song(props) {
 			}
 			onDoubleClick={onClick}
 		>
-			<div
+			{/*<div
 				className="song-cover" 
 				style={{
-					backgroundImage: `url(${new URL(`./data/covers/${props.song.cover}`, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29')})`
+					backgroundImage: `url(${getAssetUrl(`./data/covers/${props.song.cover}`)})`,
 				}}
+			/>*/}
+			<LazyImg
+				className="song-cover"
+				src={getAssetUrl(`./data/covers/${props.song.cover}`)}
+				alt={props.song.name}
 			/>
 			<div className="song-info">
 				<div className="song-title">

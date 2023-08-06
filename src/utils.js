@@ -125,3 +125,7 @@ export const shuffle = (list) => {
 	}
 	return newList;
 }
+
+export function getAssetUrl(path) {
+	return new URL(path, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29');
+}

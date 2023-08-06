@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@material/material-color-utilities": "^0.2.6",
+    "camelcase": "^7.0.1",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
+    "react-blurhash": "^0.3.0",
     "react-click-away-listener": "^2.2.3",
     "react-dom": "^18.2.0",
     "react-flip-toolkit": "^7.1.0",
@@ -28,8 +30,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "sass": "^1.62.1",
-    "sharp": "^0.32.1",
+    "sharp": "^0.32.4",
     "vite": "^4.3.2",
+    "vite-plugin-blurhash": "^0.2.0",
     "vite-plugin-image-optimizer": "^1.1.5"
   }
 }

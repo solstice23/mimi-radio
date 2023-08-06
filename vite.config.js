@@ -1,3 +1,4 @@
+import { blurHash } from 'vite-plugin-blurhash'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
@@ -6,6 +7,11 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
 	plugins: [
 		react(),
+		blurHash({
+			imageDir: '/src/data/covers',
+			mapPath: '/blurhash-map.json'
+			//mapPath: undefined
+		}),
 		ViteImageOptimizer({
   			test: /\.(jpe?g|png|gif|tiff|webp|avif)$/i,
 			png: {
