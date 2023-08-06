@@ -39,7 +39,7 @@ const LazyImg = forwardRef(function LazyImg(props, ref) {
 	}, []);
 
 	
-if (!getSlug(rawSrc)) console.log(blurHashMap, getSlug(rawSrc));
+if (!blurHashMap[getSlug(rawSrc)]) console.log(blurHashMap, getSlug(rawSrc));
 
 	return <div
 		className={classNames(
