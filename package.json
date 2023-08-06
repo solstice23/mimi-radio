@@ -32,7 +32,7 @@
     "sass": "^1.62.1",
     "sharp": "^0.32.4",
     "vite": "^4.3.2",
-    "vite-plugin-blurhash": "^0.2.0",
+    "vite-plugin-blurhash": "github:solstice23/vite-plugin-blurhash",
     "vite-plugin-image-optimizer": "^1.1.5"
   }
 }
