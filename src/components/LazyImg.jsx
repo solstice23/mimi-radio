@@ -26,6 +26,7 @@ const LazyImg = forwardRef(function LazyImg(props, ref) {
 
 	const blurHash = props.blurHash ?? true;
 	const src = props.src;
+	const rawSrc = props.rawSrc;
 
 	useLayoutEffect(() => {
 		const img = ref.current;
@@ -36,7 +37,6 @@ const LazyImg = forwardRef(function LazyImg(props, ref) {
 			containerRef.current.classList.add(css.loaded);
 		}
 	}, []);
-
 
 	return <div
 		className={classNames(
@@ -52,14 +52,14 @@ const LazyImg = forwardRef(function LazyImg(props, ref) {
 			className={css.img}
 			style={props.style}
 			alt={props.alt}
-			src={props.src}
+			src={src}
 			width={props.width}
 			height={props.height}
 		/>
 		{
-			blurHash && blurHashMap[getSlug(src)] &&
+			blurHash && blurHashMap[getSlug(rawSrc)] &&
 			<BlurhashCanvas
-				hash={blurHashMap[getSlug(src)]}
+				hash={blurHashMap[getSlug(rawSrc)]}
 				className={css.blurHash}
 			/>
 		}

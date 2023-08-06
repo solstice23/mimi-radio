@@ -301,6 +301,7 @@ function Song(props) {
 			<LazyImg
 				className="song-cover"
 				src={new URL(`./data/covers/${props.song.cover}`, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29')}
+				rawSrc={props.song.cover}
 				alt={props.song.name}
 			/>
 			<div className="song-info">
