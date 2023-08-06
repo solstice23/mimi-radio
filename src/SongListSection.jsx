@@ -1,6 +1,6 @@
 import { useEffect, useState, useReducer, useRef, useContext, useLayoutEffect } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit'
-import { getSongsData, formatLength, formatDate, getAssetUrl } from './utils.js'
+import { getSongsData, formatLength, formatDate, fixAssetUrl } from './utils.js'
 import Icon from './components/Icon.jsx'
 import SegmentedButtons from './components/SegmentedButtons.jsx'
 import Card from './components/Card.jsx';
@@ -295,12 +295,12 @@ function Song(props) {
 			{/*<div
 				className="song-cover" 
 				style={{
-					backgroundImage: `url(${getAssetUrl(`./data/covers/${props.song.cover}`)})`,
+					backgroundImage: `url(${fixAssetUrl(new URL(`./data/covers/${props.song.cover}`, import.meta.url).href)})`,
 				}}
 			/>*/}
 			<LazyImg
 				className="song-cover"
-				src={getAssetUrl(`./data/covers/${props.song.cover}`)}
+				src={new URL(`./data/covers/${props.song.cover}`, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29')}
 				alt={props.song.name}
 			/>
 			<div className="song-info">
