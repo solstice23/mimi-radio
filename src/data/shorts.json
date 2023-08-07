@@ -904,5 +904,22 @@
         "fileName": "tiktok_7249008212798655745.mp4",
         "note": null,
         "cover": "shorts/tiktok_7249008212798655745.png"
+    },
+    {
+        "name": "花舞",
+        "artist": "MIMI",
+        "singer": "初音ミク",
+        "translatedName": null,
+        "length": "1:40",
+        "type": "Short",
+        "hasLyrics": "Yes",
+        "isMix": "No",
+        "isRearranged": "No",
+        "releaseDate": 1658157019,
+        "link": "https://www.tiktok.com/@3mimi_3mimi/video/7121730142648716545",
+        "desc": "花舞 feat. 初音ミク",
+        "fileName": "tiktok_7121730142648716545.mp4",
+        "note": null,
+        "cover": "shorts/tiktok_7121730142648716545.png"
     }
 ]
