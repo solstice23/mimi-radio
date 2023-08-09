@@ -12,7 +12,7 @@ for (const key in blurHashMapRaw) {
 
 const getSlug = (src) => {
 	src = decodeURIComponent(src);
-	// the behavior of vite-plugin-blurhash is different in dev and prod
+	// the behaviors of vite-plugin-blurhash are different in dev and prod
 	if (import.meta.env.PROD) {
 		src = src.replace(/\//g, '.');
 	} else {

@@ -81,11 +81,15 @@ export function SongListSection(props) {
 							title="List Style"
 							type='standard'
 							onClick={(e) => {
-								if (listStyle === 'grid') {
-									setListStyle('list');
-								} else {
-									setListStyle('grid');
-								}
+								const transition = () => {
+									if (listStyle === 'grid') {
+										setListStyle('list');
+									} else {
+										setListStyle('grid');
+									}
+								};
+								if (document.startViewTransition) document.startViewTransition(transition); // don't know if this always works because of the async state update
+								else transition();
 							}}
 						>
 							{

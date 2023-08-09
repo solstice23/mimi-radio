@@ -1,9 +1,11 @@
 import classNames from 'classnames';
 import Popper from './Popper.jsx';
 import css from './Menu.module.scss';
+import './Menu.animations.scss';
 import { forwardRef, useEffect, useRef } from 'react';
 
 const Menu = forwardRef(function Menu(props, ref) {
+
 	if (ref === null) ref = useRef();
 	return (
 		<Popper
@@ -19,7 +21,8 @@ const Menu = forwardRef(function Menu(props, ref) {
 					css.menu,
 					props.className,
 					{
-						[css.hide]: !(props.open ?? true)
+						[css.hide]: !(props.open ?? true),
+						[css.animation]: props.animation ?? true,
 					}
 				)}
 				onClick={e => {

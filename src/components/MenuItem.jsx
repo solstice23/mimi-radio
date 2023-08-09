@@ -27,6 +27,7 @@ const MenuItem = forwardRef(function MenuItem(props, ref) {
 			ref={ref} 
 			className={classNames(
 				css.menuItem,
+				'menu-item',
 				props.className
 			)}
 			onClick={onClick}
@@ -48,6 +49,11 @@ export default MenuItem;
 
 export function MenuDivider(props) {
 	return (
-		<div className={css.divider}></div>
+		<div className={
+			classNames(
+				css.divider,
+				'menu-divider',
+			)
+		}></div>
 	)
 }
