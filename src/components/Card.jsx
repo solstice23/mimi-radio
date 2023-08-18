@@ -22,6 +22,8 @@ function Card(props) {
 			)}
 			onClick={props.onClick}
 			onDoubleClick={props.onDoubleClick}
+			onContextMenu={props.onContextMenu}
+			hash={props.hash}
 		>
 			{props.children}
 		</div>

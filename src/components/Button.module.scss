@@ -1,0 +1,158 @@
+@import './global/elevation.scss';
+
+.Button {
+	height: 40px;
+	padding-left: 24px;
+	padding-right: 24px;
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	user-select: none;
+	transition: box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+	box-sizing: border-box;
+	border: none;
+	background-color: transparent;
+	.icon {
+		font-size: 18px;
+		width: 18px;
+		height: 18px;
+		margin-left: -8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		inset: 0;
+		opacity: 0;
+		transition: opacity 0.2s ease, background-color 0.2s ease;
+		pointer-events: none;
+	}
+	&:hover::before {
+		opacity: 0.08;
+	}
+	&:active::before {
+		opacity: 0.12;
+	}
+	&:focus-visible::before {
+		opacity: 0.12;
+	}
+
+
+	&.elevated {
+		background-color: var(--md-sys-color-surface-container-low);
+		@include elevation(1);
+		color: var(--md-sys-color-primary);
+		--ripple-color: var(--md-sys-color-primary);
+		&::before {
+			background-color: var(--md-sys-color-primary);
+		}
+		
+		&:hover {
+			@include elevation(2);
+		}
+		&:active {
+			@include elevation(1);
+		}
+		&:focus-visible {
+			@include elevation(1);
+		}
+		&.disabled {
+			background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+			color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+		}
+	}
+
+	&.filled {
+		background-color: var(--md-sys-color-primary);
+		color: var(--md-sys-color-on-primary);
+		--ripple-color: var(--md-sys-color-on-primary);
+		&::before {
+			background-color: var(--md-sys-color-on-primary);
+		}
+		
+		&:hover {
+			@include elevation(1);
+		}
+		&:active {
+			@include elevation(0);
+		}
+		&:focus-visible {
+			@include elevation(0);
+		}
+		&.disabled {
+			background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+			color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+		}
+	}
+
+
+	&.tonal {
+		background-color: var(--md-sys-color-secondary-container);
+		color: var(--md-sys-color-on-secondary-container);
+		--ripple-color: var(--md-sys-color-on-secondary-container);
+		&::before {
+			background-color: var(--md-sys-color-on-secondary-container);
+		}
+		
+		&:hover {
+			@include elevation(1);
+		}
+		&:active {
+			@include elevation(0);
+		}
+		&:focus-visible {
+			@include elevation(0);
+		}
+		&.disabled {
+			background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+			color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+		}
+	}
+
+
+	&.outlined {
+		border: 1px solid var(--md-sys-color-outline);
+		color: var(--md-sys-color-primary);
+		--ripple-color: var(--md-sys-color-primary);
+		&::before {
+			background-color: var(--md-sys-color-primary);
+		}
+		
+		&.disabled {
+			color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+			border-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+		}
+	}
+
+
+	&.text {
+		background-color: transparent;
+		color: var(--md-sys-color-primary);
+		--ripple-color: var(--md-sys-color-primary);
+		&::before {
+			background-color: var(--md-sys-color-primary);
+		}
+		
+		&.disabled {
+			color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+		}
+	}
+
+	
+	&.disabled {
+		pointer-events: none;
+	}
+}

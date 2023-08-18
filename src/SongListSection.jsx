@@ -17,6 +17,9 @@ import './SongListSection.scss';
 import useStateStorage from './hooks/useStateStorage.js';
 import LazyImg from './components/LazyImg.jsx';
 
+import base64 from 'base-64';
+import utf8 from 'utf8';
+
 const songs = getSongsData();
 
 export function SongListSection(props) {
@@ -295,6 +298,11 @@ function Song(props) {
 				)
 			}
 			onDoubleClick={onClick}
+			onContextMenu={(e) => {
+				e.preventDefault();
+				window.location.hash = `detail-${base64.encode(utf8.encode(props.song.hash))}`;
+			}}
+			hash={props.song.hash}
 		>
 			{/*<div
 				className="song-cover" 
