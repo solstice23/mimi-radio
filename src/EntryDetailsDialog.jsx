@@ -2,19 +2,17 @@ import './EntryDetailsDialog.scss';
 
 import Dialog from './components/Dialog.jsx';
 
-import { getSongsData, formatLength, formatDate, fixAssetUrl } from './utils.js'
+import { getSongsData, formatLength, formatDate } from './utils.js'
 
 const songs = getSongsData();
 
-import { MdDesignServices, MdMic, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPiano, MdPianoOff, MdOutlineInfo, MdGridView, MdViewList, MdPlayArrow, MdTranslate, MdGroups, MdCategory } from 'react-icons/md';
+import { MdDesignServices, MdMic, MdSchedule, MdCalendarMonth, MdOutlineInfo, MdTranslate, MdGroups, MdCategory } from 'react-icons/md';
 
-import { MdKeyboardArrowUp } from 'react-icons/md';
 import { useRipple } from './components/Ripple';
 
 import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import { useContext, useEffect, useState, useRef, useLayoutEffect } from 'react';
-import Tag from './components/Tag';
 
 import base64 from 'base-64';
 import utf8 from 'utf8';
