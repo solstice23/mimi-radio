@@ -1600,5 +1600,29 @@
             "cn",
             "ro"
         ]
+    },
+    {
+        "name": "Without Knowing",
+        "artist": "MIMI",
+        "singer": "アカラカイ",
+        "translatedName": null,
+        "length": "3:07",
+        "type": "Collab",
+        "hasLyrics": "Yes",
+        "releaseDate": "2023-08-19T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=a6MToaE1p9Y",
+        "desc": null,
+        "staff": null,
+        "fileName": "MIMI,アカラカイ - Without Knowing (feat. アカラカイ).flac",
+        "quality": "Lossless",
+        "highestQuality": "Yes",
+        "note": null,
+        "hidden": null,
+        "cover": "MIMI,アカラカイ - Without Knowing (feat. アカラカイ).jpg",
+        "lyrics": "MIMI,アカラカイ - Without Knowing (feat. アカラカイ).json",
+        "lyricsLangs": [
+            "ja",
+            "ro"
+        ]
     }
 ]
