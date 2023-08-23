@@ -2,21 +2,25 @@
     {
         "time": 608,
         "text": "ねぇ今日くらい言えること",
+        "cn": "呐 至少今天 能够说出口的事",
         "ro": "ne e kyo u ku ra i i e ru ko to"
     },
     {
         "time": 3345,
         "text": "少し伝えてもいいかな",
+        "cn": "可以允许我传达出些许吗",
         "ro": "su ko shi tsu ta e te mo i i ka na"
     },
     {
         "time": 5861,
         "text": "泣いちゃう君を隠して",
+        "cn": "藏起默默流泪的你",
         "ro": "na i cha u ki mi wo ka ku shi te"
     },
     {
         "time": 8376,
         "text": "歩き続けていたんだね",
+        "cn": "一步步向前迈去",
         "ro": "a ru ki tsu zu ke te i ta n da ne"
     },
     {
@@ -27,21 +31,25 @@
     {
         "time": 10947,
         "text": "知らず知らずのうちに",
+        "cn": "不知不觉间",
         "ro": "shi ra zu shi ra zu no u chi ni"
     },
     {
         "time": 13363,
         "text": "大人になってく今日が",
+        "cn": "就已长大成人的今日",
         "ro": "o to na ni na tte ku kyo u ga"
     },
     {
         "time": 15869,
         "text": "つらいから今だけ",
+        "cn": "却是如此步履维艰",
         "ro": "tsu ra i ka ra i ma da ke"
     },
     {
         "time": 18409,
         "text": "ここで歌い続けてよう",
+        "cn": "所以至少现在 就在这里不断唱下去吧",
         "ro": "ko ko de u ta i tsu zu ke te yo u"
     },
     {
@@ -52,21 +60,25 @@
     {
         "time": 31273,
         "text": "ダメだな嗚呼ダメだな",
+        "cn": "不行啊 不行啊",
         "ro": "da me da na a a da me da na"
     },
     {
         "time": 33642,
         "text": "今日もそうやって生きるの",
+        "cn": "今天也要这般活下去吗",
         "ro": "kyo u mo so u ya tte i ki ru no"
     },
     {
         "time": 36210,
         "text": "誰かの灯る炎",
+        "cn": "不知谁人点燃的火光",
         "ro": "da re ka no to mo ru ho no o"
     },
     {
         "time": 38644,
         "text": "優しい孤独で光るの",
+        "cn": "正散发出温柔却又孤寂的光",
         "ro": "ya sa shi i ko do ku de hi ka ru no"
     },
     {
@@ -77,21 +89,25 @@
     {
         "time": 41250,
         "text": "相も変わらず現世が",
+        "cn": "这个世界仍是一成不变",
         "ro": "so u mo ka wa ra zu ge n se ga"
     },
     {
         "time": 43774,
         "text": "心残りばかりだから",
+        "cn": "唯有遗憾充斥于此",
         "ro": "ko ko ro no ko ri ba ka ri da ka ra"
     },
     {
         "time": 46132,
         "text": "遠くなるばかりだね",
+        "cn": "因此总有什么在不断远去",
         "ro": "to o ku na ru ba ka ri da ne"
     },
     {
         "time": 48552,
         "text": "そこに追いつける保証は？",
+        "cn": "而又凭什么保证 一定能够追上去呢",
         "ro": "so ko ni o i tsu ke ru ho sho u wa?"
     },
     {
@@ -102,11 +118,13 @@
     {
         "time": 51089,
         "text": "一つだけ",
+        "cn": "仅此一句",
         "ro": "hi to tsu da ke"
     },
     {
         "time": 52175,
         "text": "言葉が宙を舞うの",
+        "cn": "仅此一句话语漂浮于空",
         "ro": "ko to ba ga chu u wo ma u no"
     },
     {
@@ -117,21 +135,25 @@
     {
         "time": 55583,
         "text": "ねぇ愛して って言わせて",
+        "cn": "呐 请允许我将爱说出口",
         "ro": "ne e a i shi te tte i wa se te"
     },
     {
         "time": 58352,
         "text": "透明な感情のまま",
+        "cn": "心中始终怀抱着透明的感情",
         "ro": "to u me i na ka n jo u no ma ma"
     },
     {
         "time": 60878,
         "text": "ねぇ愛のないこの世界",
+        "cn": "呐 在这爱意已然消逝的世界上",
         "ro": "ne e a i no na i ko no se ka i"
     },
     {
         "time": 63393,
         "text": "で煌めいた夜の奥",
+        "cn": "夜空深处 仍是星光点点",
         "ro": "de ki ra me i ta yo ru no o ku"
     },
     {
@@ -142,21 +164,25 @@
     {
         "time": 66218,
         "text": "最後に幸せ",
+        "cn": "直到最后",
         "ro": "sa i go ni shi a wa se"
     },
     {
         "time": 68340,
         "text": "って思えるまで僕らは",
+        "cn": "能够认定自己的幸福为止",
         "ro": "tte o mo e ru ma de bo ku ra wa"
     },
     {
         "time": 70892,
         "text": "何もかも捨ててさ",
+        "cn": "我们会将一切舍弃",
         "ro": "na ni mo ka mo su te te sa"
     },
     {
         "time": 73355,
         "text": "今はここに居ようよ",
+        "cn": "现在就先停留于此吧",
         "ro": "i ma wa ko ko ni i yo u yo"
     },
     {
@@ -167,21 +193,25 @@
     {
         "time": 76077,
         "text": "今日くらい言えること",
+        "cn": "至少今天 能够说出口的事情",
         "ro": "kyo u ku ra i i e ru ko to"
     },
     {
         "time": 78434,
         "text": "少し伝えてもいいかな",
+        "cn": "可以允许我传达出些许吗",
         "ro": "su ko shi tsu ta e te mo i i ka na"
     },
     {
         "time": 80897,
         "text": "泣いちゃう君を隠して",
+        "cn": "藏起默默流泪的你",
         "ro": "na i cha u ki mi wo ka ku shi te"
     },
     {
         "time": 83410,
         "text": "歩き続けていたんだね",
+        "cn": "一步步向前迈去",
         "ro": "a ru ki tsu zu ke te i ta n da ne"
     },
     {
@@ -192,21 +222,25 @@
     {
         "time": 85800,
         "text": "知らず知らずのうちに",
+        "cn": "不知不觉间",
         "ro": "shi ra zu shi ra zu no u chi ni"
     },
     {
         "time": 88387,
         "text": "大人になってく今日が",
+        "cn": "就已长大成人的今日",
         "ro": "o to na ni na tte ku kyo u ga"
     },
     {
         "time": 90836,
         "text": "つらいから今だけ",
+        "cn": "却是如此步履维艰",
         "ro": "tsu ra i ka ra i ma da ke"
     },
     {
         "time": 93407,
         "text": "ここで歌い続けてよう",
+        "cn": "所以至少现在 就在这里不断唱下去吧",
         "ro": "ko ko de u ta i tsu zu ke te yo u"
     },
     {
@@ -217,21 +251,25 @@
     {
         "time": 106297,
         "text": "日常って何だろう",
+        "cn": "日常究竟是什么呢",
         "ro": "ni chi jo u tte na ni da ro u"
     },
     {
         "time": 108643,
         "text": "覚めない夢の奥だろう",
+        "cn": "是永恒梦境的深处吗",
         "ro": "sa me na i yu me no o ku da ro u"
     },
     {
         "time": 111167,
         "text": "あの日の嗚呼誰かの",
+        "cn": "那一日 不知谁人",
         "ro": "a no hi no a a da re ka no"
     },
     {
         "time": 113681,
         "text": "言葉に出せない症状",
+        "cn": "患上了再也无法说出心中所想的病症",
         "ro": "ko to ba ni da se na i sho u jo u"
     },
     {
@@ -242,21 +280,25 @@
     {
         "time": 116191,
         "text": "なんも分からないから",
+        "cn": "因为我一无所知",
         "ro": "na n mo wa ka ra na i ka ra"
     },
     {
         "time": 118607,
         "text": "僕はきっと子供だろう",
+        "cn": "所以我一定还没有长大吧",
         "ro": "bo ku wa ki tto ko do mo da ro u"
     },
     {
         "time": 121098,
         "text": "ずっと探してるんだ",
+        "cn": "一直以来都寻找着",
         "ro": "zu tto sa ga shi te ru n da"
     },
     {
         "time": 123585,
         "text": "微熱に揺らいだ願いを",
+        "cn": "摇曳在微微温热中的愿景",
         "ro": "bi ne tsu ni yu ra i da ne ga i wo"
     },
     {
@@ -267,21 +309,25 @@
     {
         "time": 126197,
         "text": "儚く散ったのそうやって",
+        "cn": "就这样不留一丝痕迹地散去了",
         "ro": "ha ka na ku chi tta no so u ya tte"
     },
     {
         "time": 128729,
         "text": "憂鬱悪い子夜行性",
+        "cn": "满心忧愁的坏孩子总是有夜行性",
         "ro": "yu u u tsu wa ru i ko ya ko u se i"
     },
     {
         "time": 130914,
         "text": "でもホントはホントは知りたいの",
+        "cn": "但是真的真的很想知道",
         "ro": "de mo ho n to wa ho n to wa shi ri ta i no"
     },
     {
         "time": 133401,
         "text": "それの意味を",
+        "cn": "它究竟有什么意义啊",
         "ro": "so re no i mi wo"
     },
     {
@@ -292,21 +338,25 @@
     {
         "time": 135596,
         "text": "ねぇ愛してっ て言わせて",
+        "cn": "呐 请允许我将爱说出口",
         "ro": "ne e a i shi te tsu te i wa se te"
     },
     {
         "time": 138414,
         "text": "透明な感情のまま",
+        "cn": "心中始终怀抱着透明的感情",
         "ro": "to u me i na ka n jo u no ma ma"
     },
     {
         "time": 140910,
         "text": "ねぇ愛のないこの世界",
+        "cn": "呐 在这爱意已然消逝的世界上",
         "ro": "ne e a i no na i ko no se ka i"
     },
     {
         "time": 143412,
         "text": "で煌めいた夜の奥",
+        "cn": "夜空深处 仍是星光点点",
         "ro": "de ki ra me i ta yo ru no o ku"
     },
     {
@@ -317,21 +367,25 @@
     {
         "time": 146158,
         "text": "最後に幸せ",
+        "cn": "直到最后",
         "ro": "sa i go ni shi a wa se"
     },
     {
         "time": 148418,
         "text": "って思えるまで僕らは",
+        "cn": "能够认定自己的幸福为止",
         "ro": "tte o mo e ru ma de bo ku ra wa"
     },
     {
         "time": 150849,
         "text": "何もかも捨ててさ",
+        "cn": "我们会将一切舍弃",
         "ro": "na ni mo ka mo su te te sa"
     },
     {
         "time": 153375,
         "text": "今はここに居ようよ",
+        "cn": "现在就先停留于此吧",
         "ro": "i ma wa ko ko ni i yo u yo"
     },
     {
@@ -342,21 +396,25 @@
     {
         "time": 156185,
         "text": "今日くらい言えること",
+        "cn": "至少今天 能够说出口的事情",
         "ro": "kyo u ku ra i i e ru ko to"
     },
     {
         "time": 158347,
         "text": "少し伝えてもいいかな",
+        "cn": "可以允许我传达出些许吗",
         "ro": "su ko shi tsu ta e te mo i i ka na"
     },
     {
         "time": 160878,
         "text": "泣いちゃう君を隠して",
+        "cn": "藏起默默流泪的你",
         "ro": "na i cha u ki mi wo ka ku shi te"
     },
     {
         "time": 163332,
         "text": "歩き続けていたんだね",
+        "cn": "一步步地向前迈去",
         "ro": "a ru ki tsu zu ke te i ta n da ne"
     },
     {
@@ -367,21 +425,25 @@
     {
         "time": 165929,
         "text": "知らず知らずのうちに",
+        "cn": "不知不觉间",
         "ro": "shi ra zu shi ra zu no u chi ni"
     },
     {
         "time": 168431,
         "text": "大人になってく今日が",
+        "cn": "就已长大成人的今日",
         "ro": "o to na ni na tte ku kyo u ga"
     },
     {
         "time": 170845,
         "text": "つらいから今だけ",
+        "cn": "却是如此步履维艰",
         "ro": "tsu ra i ka ra i ma da ke"
     },
     {
         "time": 173315,
         "text": "ここで歌い続けてよう",
+        "cn": "所以至少现在 就在这里不断唱下去吧",
         "ro": "ko ko de u ta i tsu zu ke te yo u"
     }
 ]
