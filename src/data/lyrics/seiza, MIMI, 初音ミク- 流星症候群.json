@@ -1,7 +1,9 @@
 [
     {
         "time": 15,
-        "text": "シューティングスターシンドローム"
+        "text": "シューティングスターシンドローム",
+        "cn": "流星症候群",
+        "ro": "syu-tingu suta- shindoro-mu"
     },
     {
         "time": 6873,
@@ -10,27 +12,39 @@
     },
     {
         "time": 17977,
-        "text": "限りある情熱を絶やさないようにと"
+        "text": "限りある情熱を絶やさないようにと",
+        "cn": "我为了不让有限的热情中断",
+        "ro": "kagiri a ru jyounetsu wo tayasana i yo u ni to"
     },
     {
         "time": 21464,
-        "text": "身を燃やして"
+        "text": "身を燃やして",
+        "cn": "而燃烧著身躯",
+        "ro": "mi wo moyashi te"
     },
     {
         "time": 23708,
-        "text": "無心でただ火を焚べ続けた"
+        "text": "無心でただ火を焚べ続けた",
+        "cn": "我只是一心一意地持续焚烧著",
+        "ro": "mushin de ta da hi wo kube tsuzuke ta"
     },
     {
         "time": 28715,
-        "text": "たとえば時には大事な約束を"
+        "text": "たとえば時には大事な約束を",
+        "cn": "即使偶尔我与他人定下了重要的约定",
+        "ro": "ta to e ba toki ni wa daiji na yakusoku wo"
     },
     {
         "time": 32425,
-        "text": "時には大切な誰かを"
+        "text": "時には大切な誰かを",
+        "cn": "偶尔是我所珍惜的人",
+        "ro": "toki ni wa taisetsu na dare ka wo"
     },
     {
         "time": 35172,
-        "text": "孤独の影が伸びていく"
+        "text": "孤独の影が伸びていく",
+        "cn": "孤独之影也还是会不断延伸",
+        "ro": "kodoku no kage ga nobi te i ku"
     },
     {
         "time": 39844,
@@ -39,11 +53,15 @@
     },
     {
         "time": 40096,
-        "text": "歳を重ねて少しずつ賢くなったのに"
+        "text": "歳を重ねて少しずつ賢くなったのに",
+        "cn": "随著年龄增长 我变得稍微有些聪明",
+        "ro": "toshi wo kasane te sukoshi zu tsu kashikoku natta no ni"
     },
     {
         "time": 46790,
-        "text": "正解なんてひとつもわからないまま"
+        "text": "正解なんてひとつもわからないまま",
+        "cn": "但却依旧不明白任何一道解答",
+        "ro": "seikai na n te hi to tsu mo wa ka ra na i ma ma"
     },
     {
         "time": 51714,
@@ -52,35 +70,51 @@
     },
     {
         "time": 52634,
-        "text": "シューティングスターシンドローム"
+        "text": "シューティングスターシンドローム",
+        "cn": "流星症候群",
+        "ro": "syu-tingu suta- shindoro-mu"
     },
     {
         "time": 56272,
-        "text": "いつからだろう"
+        "text": "いつからだろう",
+        "cn": "是从什么时候开始的呢",
+        "ro": "i tsu ka ra da ro u"
     },
     {
         "time": 58816,
-        "text": "諦めないことでしか"
+        "text": "諦めないことでしか",
+        "cn": "我只能靠放弃",
+        "ro": "akirame na i ko to de shi ka"
     },
     {
         "time": 60813,
-        "text": "心を保てなくて"
+        "text": "心を保てなくて",
+        "cn": "来保全我的心灵",
+        "ro": "kokoro wo tamote na ku te"
     },
     {
         "time": 63844,
-        "text": "どこでついたかわからない"
+        "text": "どこでついたかわからない",
+        "cn": "我不明白是怎么造成的",
+        "ro": "do ko de tsu i ta ka wa ka ra na i"
     },
     {
         "time": 66442,
-        "text": "傷と溜め息が増えていく"
+        "text": "傷と溜め息が増えていく",
+        "cn": "伤口与叹息不断地增加著",
+        "ro": "kizu to tame iki ga fue te i ku"
     },
     {
         "time": 69305,
-        "text": "巨大なこの星の片隅から"
+        "text": "巨大なこの星の片隅から",
+        "cn": "流星在这巨大行星的角落",
+        "ro": "kyodai na ko no hoshi no kata sumi ka ra"
     },
     {
         "time": 73680,
-        "text": "流星は歌う"
+        "text": "流星は歌う",
+        "cn": "高声歌唱",
+        "ro": "ryuusei wa utau"
     },
     {
         "time": 75332,
@@ -89,27 +123,39 @@
     },
     {
         "time": 85448,
-        "text": "世界で新星が見つけられるその度"
+        "text": "世界で新星が見つけられるその度",
+        "cn": "每当世界上发现一个新星时",
+        "ro": "sekai de shinsei ga mitsuke ra re ru so no tabi"
     },
     {
         "time": 89250,
-        "text": "苦しくなる"
+        "text": "苦しくなる",
+        "cn": "我便会变得痛苦",
+        "ro": "kurushi ku na ru"
     },
     {
         "time": 91378,
-        "text": "無心でただ火を焚べ続けて"
+        "text": "無心でただ火を焚べ続けて",
+        "cn": "我只是一心一意地持续焚烧著",
+        "ro": "mushin de ta da hi wo kube tsuzuke te"
     },
     {
         "time": 97016,
-        "text": "ようやく手にしたと思えた灯りが"
+        "text": "ようやく手にしたと思えた灯りが",
+        "cn": "因为我终于得到的光芒",
+        "ro": "yo u ya ku te ni shi ta to omoe ta akari ga"
     },
     {
         "time": 100199,
-        "text": "容易く見えなくなるほどに"
+        "text": "容易く見えなくなるほどに",
+        "cn": "是如此地耀眼",
+        "ro": "tayasuku mie na ku na ru ho do ni"
     },
     {
         "time": 103207,
-        "text": "眩しく輝いているから"
+        "text": "眩しく輝いているから",
+        "cn": "以至于我无法容易看见",
+        "ro": "mabushi ku kagayaite i ru ka ra"
     },
     {
         "time": 107621,
@@ -118,11 +164,15 @@
     },
     {
         "time": 107865,
-        "text": "薬の数を増やしても治まらない痛み"
+        "text": "薬の数を増やしても治まらない痛み",
+        "cn": "即使增加了药的剂量也不会治好的痛苦",
+        "ro": "kusuri no kazu wo futashi te mo naorana i itami"
     },
     {
         "time": 114715,
-        "text": "夢から引き摺り起こそうと胸を駆け巡る"
+        "text": "夢から引き摺り起こそうと胸を駆け巡る",
+        "cn": "每当我打算脱离梦境时 它便会在我的胸口里到处奔走",
+        "ro": "yume ka ra hiki zuri okosou to mune wo kake meguru"
     },
     {
         "time": 119513,
@@ -131,27 +181,39 @@
     },
     {
         "time": 120344,
-        "text": "シューティングスターシンドローム"
+        "text": "シューティングスターシンドローム",
+        "cn": "流星症候群",
+        "ro": "syu-tingu suta- shindoro-mu"
     },
     {
         "time": 124323,
-        "text": "星が廻るその速度に"
+        "text": "星が廻るその速度に",
+        "cn": "我像是无法追赶",
+        "ro": "hoshi ga mawaru so no sokudo ni"
     },
     {
         "time": 127943,
-        "text": "追いつけないくらい"
+        "text": "追いつけないくらい",
+        "cn": "星星旋转的那个速度一样",
+        "ro": "oi tsu ke na i ku ra i"
     },
     {
         "time": 130185,
-        "text": "夢中だった"
+        "text": "夢中だった",
+        "cn": "无比著迷",
+        "ro": "mucyuu datta"
     },
     {
         "time": 131655,
-        "text": "誰のためでもないくせに"
+        "text": "誰のためでもないくせに",
+        "cn": "明明这并不是为了其他人",
+        "ro": "dare no ta me de mo na i ku se ni"
     },
     {
         "time": 134343,
-        "text": "誰かに褒めて欲しかった"
+        "text": "誰かに褒めて欲しかった",
+        "cn": "但我却想被他人称赞",
+        "ro": "dare ka ni home te hoshi katta"
     },
     {
         "time": 137018,
@@ -160,7 +222,9 @@
     },
     {
         "time": 137295,
-        "text": "全て終わりにすれば楽になれるのに"
+        "text": "全て終わりにすれば楽になれるのに",
+        "cn": "要是让一切结束的话我便会变得轻松的啊",
+        "ro": "subete owari ni su re ba raku ni na re ru no ni"
     },
     {
         "time": 142331,
@@ -169,35 +233,51 @@
     },
     {
         "time": 142885,
-        "text": "シューティングスターシンドローム"
+        "text": "シューティングスターシンドローム",
+        "cn": "流星症候群",
+        "ro": "syu-tingu suta- shindoro-mu"
     },
     {
         "time": 146632,
-        "text": "それでもまだ"
+        "text": "それでもまだ",
+        "cn": "即使如此我胸口的火焰",
+        "ro": "so re de mo ma da"
     },
     {
         "time": 149255,
-        "text": "消えてくれないこの胸の火"
+        "text": "消えてくれないこの胸の火",
+        "cn": "也依旧不会熄灭",
+        "ro": "kie te ku re na i ko no mune no hi"
     },
     {
         "time": 152724,
-        "text": "守り抜いて"
+        "text": "守り抜いて",
+        "cn": "坚守住吧",
+        "ro": "mamori nuite"
     },
     {
         "time": 154181,
-        "text": "冷めないままの夏のような"
+        "text": "冷めないままの夏のような",
+        "cn": "就像不会冷却的夏天一样",
+        "ro": "same na i ma ma no natsu no yo u na"
     },
     {
         "time": 156888,
-        "text": "この身を焦がすほどの夢"
+        "text": "この身を焦がすほどの夢",
+        "cn": "因恋慕而焦虑的梦想",
+        "ro": "ko no mi wo kogasu ho do no yume"
     },
     {
         "time": 159744,
-        "text": "巨大なこの星の真ん中"
+        "text": "巨大なこの星の真ん中",
+        "cn": "流星在这巨大行星的正中间",
+        "ro": "kyodai na ko no hoshi no mannaka"
     },
     {
         "time": 163992,
-        "text": "流星は歌う"
+        "text": "流星は歌う",
+        "cn": "高声歌唱",
+        "ro": "ryuusei wa utau"
     },
     {
         "time": 165744,
@@ -206,7 +286,9 @@
     },
     {
         "time": 175219,
-        "text": "流星症候群"
+        "text": "流星症候群",
+        "cn": "流星症候群",
+        "ro": "syu-tingu suta- shindoro-mu"
     },
     {
         "time": 176841,
