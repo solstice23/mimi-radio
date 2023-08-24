@@ -22,9 +22,12 @@ export function Lyrics(props) {
 
 	const containerRef = useRef(null);
 
+	const cacheRef = useRef({});
+
 	useEffect(() => {
 		async function loadLyrics() {
-			const json = await fetch(queueManager.currentSong.lyrics).then(res => res.json());
+			const json = cacheRef.current[queueManager.currentSong.lyrics] ?? await fetch(queueManager.currentSong.lyrics).then(res => res.json());
+			cacheRef.current[queueManager.currentSong.lyrics] = json;
 			setLyrics(json);
 			setLoading(false);
 			setCurrentLine(0);
