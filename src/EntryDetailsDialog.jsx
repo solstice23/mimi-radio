@@ -14,6 +14,8 @@ import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import { useContext, useEffect, useState, useRef, useLayoutEffect } from 'react';
 
+import LazyImg from './components/LazyImg.jsx';
+
 import base64 from 'base-64';
 import utf8 from 'utf8';
 
@@ -49,6 +51,7 @@ export function EntryDetailsDialog() {
 	const queueManager = useContext(QueueContext);
 
 	const ref = useRef();
+	const coverRef = useRef();
 
 	const [meta, setMeta] = useState(initialSongMeta);
 	const [open, setOpen] = useState(!!initialSongMeta);
@@ -83,26 +86,37 @@ export function EntryDetailsDialog() {
 			return;
 		}
 		ref.current.classList.add('no-scale-animation');
+		document.body.setAttribute("now-view-transition", "entry-detail-dialog");
 		if (open) {
 			itemInList.style.setProperty('view-transition-name', 'entry-details-dialog');
 			ref.current.style.removeProperty('view-transition-name');
+			itemInList.querySelector('.song-cover').style.setProperty('view-transition-name', 'entry-details-dialog-cover');
+			coverRef.current.style.removeProperty('view-transition-name');
 			document.startViewTransition(() => {
 				itemInList.style.removeProperty('view-transition-name');
 				ref.current.style.setProperty('view-transition-name', 'entry-details-dialog');
+				itemInList.querySelector('.song-cover').style.removeProperty('view-transition-name');
+				coverRef.current.style.setProperty('view-transition-name', 'entry-details-dialog-cover');
 			}).finished.then(() => {
 				document.querySelectorAll('.song-list .song[style*=view-transition-name]').forEach(el => {
 					el.style.removeProperty('view-transition-name');
+					el.querySelector('.song-cover').style.removeProperty('view-transition-name');
 				});
 			});
 		} else {
 			ref.current.style.setProperty('view-transition-name', 'entry-details-dialog');
 			itemInList.style.removeProperty('view-transition-name');
+			coverRef.current.style.setProperty('view-transition-name', 'entry-details-dialog-cover');
+			itemInList.querySelector('.song-cover').style.removeProperty('view-transition-name');
 			document.startViewTransition(() => {
 				ref.current.style.removeProperty('view-transition-name');
 				itemInList.style.setProperty('view-transition-name', 'entry-details-dialog');
+				coverRef.current.style.removeProperty('view-transition-name');
+				itemInList.querySelector('.song-cover').style.setProperty('view-transition-name', 'entry-details-dialog-cover');
 			}).finished.then(() => {
 				document.querySelectorAll('.song-list .song[style*=view-transition-name]').forEach(el => {
 					el.style.removeProperty('view-transition-name');
+					el.querySelector('.song-cover').style.removeProperty('view-transition-name');
 				});
 			});
 		}
@@ -113,7 +127,18 @@ export function EntryDetailsDialog() {
 		<Dialog
 			innerRef={ref}
 			className='details-dialog'
-			title={meta?.name ?? 'Loading...'}
+			title={meta?.name ?
+				<div className='details-dialog-header'>
+					<LazyImg
+						className="cover"
+						src={new URL(`./data/covers/${meta.cover}`, import.meta.url).href.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29')}
+						rawSrc={meta.cover}
+						alt={meta.name}
+						containerRef={coverRef}
+					/>
+					<div className="name">{meta.name}</div>
+				</div>
+				: 'Loading...'}
 			closeOnClickOutside={true}
 			positiveButton="Close"
 			onClose={() => {

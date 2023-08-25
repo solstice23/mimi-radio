@@ -26,7 +26,7 @@ const getSlug = (src) => {
 const LazyImg = forwardRef(function LazyImg(props, ref) {
 	if (ref === null) ref = useRef();
 
-	const containerRef = useRef();
+	const containerRef = props.containerRef ?? useRef();
 
 	const blurHash = props.blurHash ?? true;
 	const src = props.src;

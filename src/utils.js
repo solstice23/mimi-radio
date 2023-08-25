@@ -39,7 +39,7 @@ const mdTokens = [
 	['outline-variant', 'neutralVariant', 80, 30],
 	['shadow', 'neutral', 0, 0, true],
 	['surface-tint-color', 'primary', 40, 80],
-	['scrim', 'neutral', 0, 0]
+	['scrim', 'neutral', 0, 0, true]
 ]
 export function applyNewMdTokens(theme, dark = false) {
 	//console.log(theme);

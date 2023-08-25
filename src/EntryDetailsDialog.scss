@@ -1,4 +1,43 @@
 .details-dialog {
+	.details-dialog-header {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		gap: 16px;
+		.cover {
+			aspect-ratio: 1 / 1;
+			width: 48px;
+			height: 48px;
+			border-radius:10px;
+		}
+
+		&.big {
+			margin-left: -24px;
+			margin-right: -24px;
+			margin-top: -24px;
+			width: calc(100% + 48px);
+			aspect-ratio: 1/1;
+			position: relative;
+			.cover {
+				width: 100%;
+				height: unset;
+				aspect-ratio: 1/1;
+				border-radius: 24px 24px 0 0;
+				display: block;
+			}
+			.name {
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				right: 0px;
+				padding: 24px;
+				font-size: 125%;
+				background: linear-gradient(0deg, #0006 20%, #0000 100%);
+			}
+		}
+	}
+
 	.list-item {
 		overflow: hidden;
 		position: relative;
@@ -63,6 +102,12 @@
 
 ::view-transition-old(entry-details-dialog),
 ::view-transition-new(entry-details-dialog) {
+	mix-blend-mode: plus-lighter;
+	height: 100%;
+	overflow: clip;
+}
+::view-transition-old(entry-details-dialog-cover),
+::view-transition-new(entry-details-dialog-cover) {
 	mix-blend-mode: plus-lighter;
 	height: 100%;
 	overflow: clip;
