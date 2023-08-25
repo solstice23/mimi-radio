@@ -1627,5 +1627,24 @@
             "cn",
             "ro"
         ]
+    },
+    {
+        "name": "フィオーレ",
+        "artist": "MIMI",
+        "singer": "初音ミク,可不",
+        "translatedName": null,
+        "length": "3:23",
+        "type": "Standalone",
+        "hasLyrics": "Yes",
+        "releaseDate": "2023-08-25T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=xgNeFTCzpgo",
+        "desc": "/",
+        "staff": "Music MIMI @mimi_3mi\nillustration＆movie 憂い @4ka_urei\nmix,mastering はるお @haluo_haluo",
+        "fileName": "MIMI - フィオーレ (feat. 初音ミク＆可不).mp3",
+        "quality": "320K",
+        "highestQuality": "No",
+        "note": null,
+        "hidden": null,
+        "cover": "MIMI - フィオーレ (feat. 初音ミク＆可不).jpg"
     }
 ]
