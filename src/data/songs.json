@@ -1645,6 +1645,11 @@
         "highestQuality": "No",
         "note": null,
         "hidden": null,
-        "cover": "MIMI - フィオーレ (feat. 初音ミク＆可不).jpg"
+        "cover": "MIMI - フィオーレ (feat. 初音ミク＆可不).jpg",
+        "lyrics": "MIMI - フィオーレ (feat. 初音ミク＆可不).json",
+        "lyricsLangs": [
+            "ja",
+            "ro"
+        ]
     }
 ]
