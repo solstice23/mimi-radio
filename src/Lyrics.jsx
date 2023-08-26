@@ -17,6 +17,7 @@ export function Lyrics(props) {
 	const [currentLine, currentLineRef, setCurrentLine] = useRefState(0);
 	const lastCurrentLineRef = useRef(0);
 
+	const [enableEn, setEnableEn] = useStateStorage(navigator.languages.includes('en-US'), 'lyrics-en');
 	const [enableCn, setEnableCn] = useStateStorage(navigator.languages.includes('zh-CN'), 'lyrics-cn');
 	const [enableRo, setEnableRo] = useStateStorage(false, 'lyrics-ro');
 
@@ -118,7 +119,7 @@ export function Lyrics(props) {
 
 	useEffect(() => {
 		recalculate();
-	}, [currentLine, enableCn, enableRo]);
+	}, [currentLine, enableCn, enableRo, enableEn]);
 
 	useLayoutEffect(() => {
 		if (!containerRef.current) return;
@@ -147,6 +148,7 @@ export function Lyrics(props) {
 									line={line}
 									enableCn={enableCn}
 									enableRo={enableRo}
+									enableEn={enableEn}
 									attrs={lineAttrs[index]}
 									currentLine={currentLine}
 								/>
@@ -209,6 +211,15 @@ export function Lyrics(props) {
 				lyrics && (lyrics.some(line => line.cn) || lyrics.some(line => line.ro)) &&
 				<div className="lyrics-switch">
 					{
+						lyrics.some(line => line.en) &&
+						<Checkbox
+							checked={enableEn}
+							onChange={e => setEnableEn(e)}
+							label="English"
+						>
+						</Checkbox>
+					}
+					{
 						lyrics.some(line => line.cn) &&
 						<Checkbox
 							checked={enableCn}
@@ -259,6 +270,12 @@ function Line(props) {
 				props.line.text &&
 				<div className="lyrics-line-origin">
 					{ props.line.text }
+				</div>
+			}
+			{
+				props.enableEn && props.line.en &&
+				<div className="lyrics-line-en">
+					{ props.line.en }
 				</div>
 			}
 			{
