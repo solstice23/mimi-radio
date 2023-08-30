@@ -1,3 +1,5 @@
+@import './global/elevation.scss';
+
 .menu {
 	display: block;
 	background-color: var(--md-sys-color-surface-container);
@@ -6,11 +8,18 @@
 	max-width: 280px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-    box-shadow: 0 1px 2px 1px rgba(var(--md-sys-color-shadow-rgb), 0.1), 0 3px 8px 3px rgba(var(--md-sys-color-shadow-rgb), 0.05);
+    //box-shadow: 0 1px 2px 1px rgba(var(--md-sys-color-shadow-rgb), 0.1), 0 3px 8px 3px rgba(var(--md-sys-color-shadow-rgb), 0.05);
+	@include elevation(2);
 	transition: opacity 0.2s ease, transform 0.2s ease;
 	transform-origin: var(--anchor-position, center top);
 	max-height: calc(50vh - 32px);
 	overflow-y: auto;
+
+	&.fullWidth {
+		width: var(--anchor-element-width);
+		max-width: unset;
+		min-width: unset;
+	}
 
 	&.hide {
 		pointer-events: none;
@@ -43,6 +52,6 @@
 		background-color: transparent;
 	}
 	&::-webkit-scrollbar-thumb {
-		background-color: var(--md-sys-color-surface-bright);
+		background-color: var(--md-sys-color-surface-variant);
 	}
 }

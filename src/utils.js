@@ -3,7 +3,7 @@ import { Hct } from "@material/material-color-utilities";
 
 const mdTokens = [
 //	['token', 'palette', 'light_tone', 'dark_tone'],
-	['primary', 'primary', 40, 80],
+	['primary', 'primary', 40, 80, true],
 	['primary-container', 'primary', 90, 30],
 	['on-primary', 'primary', 100, 20],
 	['on-primary-container', 'primary', 10, 90],
@@ -131,4 +131,12 @@ export const shuffle = (list) => {
 
 export function fixAssetUrl(url) {
 	return url.replace(/'/g, '%27').replace(/\(/g, '%28').replace(/\)/g, '%29');
+}
+
+export function formatLyricTimestamp(time) {
+	const ms = time % 1000;
+	time = Math.floor(time / 1000);
+	const s = time % 60;
+	const m = Math.floor(time / 60);
+	return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}.${ms.toString().padStart(3, '0')}`;
 }

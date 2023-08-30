@@ -1,4 +1,15 @@
 .details-dialog {
+	.dialog {
+		min-width: min(100% - 48px, 450px) !important;
+		.tabs {
+			margin-left: -24px;
+			margin-right: -24px;
+			.tab-content {
+				padding-left: 24px;
+				padding-right: 24px;
+			}
+		}
+	}
 	.details-dialog-header {
 		display: flex;
 		flex-direction: row;
@@ -96,6 +107,42 @@
 
 	.no-scale-animation {
 		transform: none !important;
+	}
+
+
+	.lyrics {
+		.lyrics-control {
+			display: flex;
+			flex-direction: row;
+			gap: 12px;
+			flex-wrap: nowrap;
+			margin-bottom: 15px;
+			align-items: center;
+			justify-content: center;
+			.translation-selector {
+				flex: 1;
+			}
+		}
+		.lyrics-content {
+			font-size: 16px;
+			line-height: 1.5;
+			.line {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				gap: 0.6em;
+				.time-stamp {
+					font-family: monospace;
+				}
+				&.interlude {
+					opacity: .5;
+					line-height: 1.8;
+					.lyrics-text::before {
+						content: '\266B';
+					}
+				}
+			}
+		}
 	}
 }
 

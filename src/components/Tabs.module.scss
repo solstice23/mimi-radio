@@ -1,0 +1,135 @@
+.tabs {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	.tabBar {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		height: 48px;
+		position: relative;
+		.tab {
+			flex: 1;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			cursor: pointer;
+			user-select: none;
+			transition: color .3s ease;
+			//border-radius: 1000px;
+			.tabInner {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.tabLabel {
+					text-align: center;
+				}
+				.tabIcon {
+					font-size: 24px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				display: block;
+				inset: 0;
+				opacity: 0;
+				transition: opacity 0.2s ease, background-color 0.2s ease;
+				pointer-events: none;
+				background-color: var(--md-sys-color-on-surface);
+			}
+			&:hover::before {
+				opacity: 0.08;
+			}
+			&:active::before {
+				opacity: 0.12;
+			}
+			&:focus-visible::before {
+				opacity: 0.12;
+			}
+			&.current {
+				color: var(--md-sys-color-primary);
+				--ripple-color: var(--md-sys-color-primary);
+				&::before {
+					background-color: var(--md-sys-color-primary);
+				}
+				
+			}
+		}
+		.indicator {
+			display: block;
+			height: 3px;
+			background-color: var(--md-sys-color-primary);
+			position: absolute;
+			bottom: 0;
+			transform: translateX(-50%);
+			width: var(--current-tab-inner-width);
+			left: calc(100% / var(--tabs-count) * (var(--current-tab) + 0.5));
+			border-radius: 100px 100px 0 0;
+			//transition: width .3s cubic-bezier(0.25, 2.38, 0.58, 1), left .3s ease;
+			transition: width 0.3s cubic-bezier(0, 2.13, 0.28, 1.17), left 0.3s ease;
+		}
+	}
+	.tabContents {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		.tabContent {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			left: calc((var(--tab-id, 0) - var(--current-tab, 0)) * 100%);
+			transition: left .25s ease;
+
+			&::-webkit-scrollbar {
+				width: 6px;
+				height: 8px;
+				background-color: transparent;
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: var(--md-sys-color-surface-variant);
+			}
+		}
+	}
+
+	&.secondary {
+		.tabBar .indicator {
+			width: calc(100% / var(--tabs-count));
+			border-radius: 0;
+			height: 2px;
+			transition: width 0.3s ease, left 0.3s ease;
+		}
+	}
+
+	
+	&.withIcon {
+		.tabBar{
+			height: 64px;
+		}
+	}
+
+	&.dynamicHeight {
+		.tabContents {
+			transition: height .25s ease;
+		}
+	}
+	&:not(.dynamicHeight) {
+		.tabContents {
+			flex: 1;
+			.tabContent {
+				height: 100%;
+				overflow-y: auto;
+			}
+		}
+	}
+}

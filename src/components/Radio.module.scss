@@ -1,0 +1,95 @@
+.radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2em;
+    --ripple-blur: 0;
+	.circleContainer {
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		overflow: hidden;
+		border-radius: 1000px;
+		position: relative;
+		--ripple-color: var(--md-sys-color-primary);
+
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			inset: 0;
+			background-color: var(--md-sys-color-on-surface-variant);
+			opacity: 0;
+			transition: opacity 0.2s ease, background-color 0.2s ease;
+		}
+		&:hover::before {
+			opacity: 0.08;
+		}
+		&:active::before {
+			opacity: 0.12;
+		}
+		&.checked::before {
+			background-color: var(--md-sys-color-primary);
+		}
+
+		.circle {
+			width: 20px;
+			height: 20px;
+			border-radius: 1000px;
+			border: 2px solid var(--md-sys-color-on-surface-variant);
+			box-sizing: border-box;
+			position: relative;
+			transition: border-color 0.2s ease;
+			&.selected {
+				border: 2px solid var(--md-sys-color-primary);
+			}
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(0.6);
+				border-radius: 1000px;
+				background-color: var(--md-sys-color-on-surface-variant);
+				opacity: 0;
+				transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease;
+			}
+			&.selected::before {
+				opacity: 1;
+				transform: translate(-50%, -50%) scale(1);
+				background-color: var(--md-sys-color-primary);
+			}
+		}
+	}
+	.label {
+		cursor: pointer;
+    	user-select: none;
+	}
+
+
+	
+	&.disabled {
+		pointer-events: none;
+		.circleContainer {
+			.circle {
+				border-color: var(--md-sys-color-on-surface);
+				opacity: 0.38;
+				&.checked {
+					border-color: transparent;
+					background-color: var(--md-sys-color-on-surface);
+				}
+				&:not(.checked) {
+					&::before {
+						background-color: var(--md-sys-color-on-surface);
+					}
+				}
+			}
+		}
+	}
+}

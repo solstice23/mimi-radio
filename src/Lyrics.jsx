@@ -24,7 +24,7 @@ export function Lyrics(props) {
 
 	const containerRef = useRef(null);
 
-	const cacheRef = useRef({});
+	//const cacheRef = useRef({});
 
 	/*useEffect(() => {
 		async function loadLyrics() {
@@ -47,7 +47,6 @@ export function Lyrics(props) {
 	const [lyrics, loadingState] = useAsyncCachedFetch(lyricsUrl);
 
 	const loading = loadingState === 'pending';
-	console.log(loadingState);
 	const lyricsRef = useRef(lyrics);
 	useLayoutEffect(() => {
 		lyricsRef.current = lyrics;
@@ -220,7 +219,7 @@ export function Lyrics(props) {
 				<MdCloseFullscreen/>
 			</IconButton>
 			{
-				lyrics && (lyrics.some(line => line.cn) || lyrics.some(line => line.ro)) &&
+				lyrics && (lyrics.some(line => line.en) || lyrics.some(line => line.cn) || lyrics.some(line => line.ro)) &&
 				<div className="lyrics-switch">
 					{
 						lyrics.some(line => line.en) &&

@@ -13,6 +13,20 @@ const Dialog = forwardRef(function Dialog(props, ref) {
 
 	const hasButton = props.positiveButton || props.negativeButton || props.neutralButton;
 
+	useEffect(() => {
+		if ((props?.closeOnEsc ?? true) && open) {
+			const listener = (e) => {
+				if (e.key === 'Escape') {
+					props.onClose?.();
+				}
+			};
+			document.addEventListener('keydown', listener);
+			return () => {
+				document.removeEventListener('keydown', listener);
+			}
+		}
+	}, [props.closeOnEsc, props.open]);
+
 	return (
 		createPortal(
 			<div ref={ref}
@@ -34,7 +48,15 @@ const Dialog = forwardRef(function Dialog(props, ref) {
 					'zIndex': props.zIndex ?? 1000,
 				}}
 			>
-				<div className={css.dialog} ref={props?.innerRef}>
+				<div
+					className={
+						classNames(
+							css.dialog,
+							'dialog'
+						)
+					}
+					ref={props?.innerRef}
+				>
 					{
 						props.icon && <div className={css.icon}>
 							{props.icon}

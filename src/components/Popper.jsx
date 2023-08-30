@@ -141,6 +141,9 @@ const Popper = forwardRef(function Popper(props, ref) {
 				)}
 				style={{
 					'--anchor-position': revisedAnchorPosition,
+					'--anchor-element-width': `${anchorElementRef.current?.offsetWidth}px`,
+					'--anchor-element-height': `${anchorElementRef.current?.offsetHeight}px`,
+					'--z-index': props.zIndex ?? 10,
 					...(props.style ?? {}),
 				}}
 			>

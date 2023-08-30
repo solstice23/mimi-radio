@@ -15,6 +15,7 @@ const Menu = forwardRef(function Menu(props, ref) {
 			fixed={props.fixed}
 			noClick={!(props.open ?? true)}
 			ref={ref}
+			zIndex={props.zIndex ?? 1000}
 		>
 			<div 
 				className={classNames(
@@ -23,6 +24,7 @@ const Menu = forwardRef(function Menu(props, ref) {
 					{
 						[css.hide]: !(props.open ?? true),
 						[css.animation]: props.animation ?? true,
+						[css.fullWidth]: props.fullWidth ?? false,
 					}
 				)}
 				onClick={e => {

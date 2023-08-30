@@ -1,0 +1,39 @@
+.select {
+	cursor: pointer;
+	.input {
+		pointer-events: none;
+		user-select: none;
+	}
+	.dropdownIcon {
+		position: absolute;
+		pointer-events: none;
+		right: 8px;
+		fill: var(--md-sys-color-on-surface-variant);
+		transform: rotate(0deg);
+		transition: transform 0.2s ease;
+	}
+	&.outlined {
+		.dropdownIcon {
+			top: 22px;
+		}
+		&.noLabel {
+			.dropdownIcon {
+				top: 12px;
+			}
+		}
+	}
+	&.filled {
+		.dropdownIcon {
+			top: 20px;
+		}
+		&.noLabel {
+			.dropdownIcon {
+				top: 10px;
+			}
+		}
+	}
+
+	&.active .dropdownIcon {
+		transform: rotate(180deg);
+	}
+}

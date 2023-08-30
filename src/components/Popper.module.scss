@@ -1,6 +1,6 @@
 .popper {
 	position: absolute;
-	z-index: 10;
+	z-index: var(--z-index, 10);
 	&.noClick {
 		pointer-events: none;
 	}
