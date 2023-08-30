@@ -139,6 +139,8 @@
 				opacity: .4;
 				transform-origin: center;
 				transition: transform .5s ease, opacity .5s ease, color .5s ease;
+				max-width: calc(100% - 20px);
+				text-wrap: balance;
 				&.interlude {
 					height: 0.25em;
 					&:before {
