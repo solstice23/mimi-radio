@@ -8,12 +8,13 @@ import classNames from 'classnames';
 import useRefState from './hooks/useRefState.js';
 import useStateStorage from './hooks/useStateStorage.js';
 import Checkbox from './components/Checkbox.jsx';
+import useAsyncCachedFetch from './hooks/useAsyncCachedFetch.js';
 
 export function Lyrics(props) {
 	const queueManager = useContext(QueueContext);
 
-	const [lyrics, lyricsRef, setLyrics] = useRefState(null);
-	const [loading, loadingRef, setLoading] = useRefState(false);
+	//const [lyrics, lyricsRef, setLyrics] = useRefState(null);
+	//const [loading, loadingRef, setLoading] = useRefState(false);
 	const [currentLine, currentLineRef, setCurrentLine] = useRefState(0);
 	const lastCurrentLineRef = useRef(0);
 
@@ -25,7 +26,7 @@ export function Lyrics(props) {
 
 	const cacheRef = useRef({});
 
-	useEffect(() => {
+	/*useEffect(() => {
 		async function loadLyrics() {
 			const json = cacheRef.current[queueManager.currentSong.lyrics] ?? await fetch(queueManager.currentSong.lyrics).then(res => res.json());
 			cacheRef.current[queueManager.currentSong.lyrics] = json;
@@ -41,7 +42,18 @@ export function Lyrics(props) {
 		} else {
 			setLyrics(null);
 		}
-	}, [queueManager.currentSong]);
+	}, [queueManager.currentSong]);*/
+	const lyricsUrl = queueManager.currentSong?.lyrics ?? null;
+	const [lyrics, loadingState] = useAsyncCachedFetch(lyricsUrl);
+
+	const loading = loadingState === 'pending';
+	console.log(loadingState);
+	const lyricsRef = useRef(lyrics);
+	useLayoutEffect(() => {
+		lyricsRef.current = lyrics;
+		updateCurrentLine();
+	}, [lyrics]);
+
 
 	const updateCurrentLine = () => {
 		if (!lyricsRef.current) return;
