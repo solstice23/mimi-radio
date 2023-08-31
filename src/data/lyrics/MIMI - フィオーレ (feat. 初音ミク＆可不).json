@@ -7,31 +7,37 @@
     {
         "time": 30129,
         "text": "僕はさ今日もさなんでか涙が",
+        "cn": "今天我自己也不知为何落下了眼泪",
         "ro": "boku wa sa kyou mo sa nande ka namida ga"
     },
     {
         "time": 35132,
         "text": "零れて零れて眠るの",
+        "cn": "哭着哭着就睡着了",
         "ro": "koborete koborete nemuru no"
     },
     {
         "time": 39038,
         "text": "いつか楽に消えること",
+        "cn": "什么时候才能安乐死",
         "ro": "itsuka raku ni kieru koto"
     },
     {
         "time": 41924,
         "text": "生きるのが辛い",
+        "cn": "活着好难受",
         "ro": "ikiru no ga tsurai"
     },
     {
         "time": 43825,
         "text": "なんてさ妄想ばっかり",
+        "cn": "为什么全是这些想法",
         "ro": "nante sa mousou bakkari"
     },
     {
         "time": 46904,
         "text": "笑っておくれよ",
+        "cn": "不要再难过了",
         "ro": "waratte okure yo"
     },
     {
@@ -42,11 +48,13 @@
     {
         "time": 48738,
         "text": "でも君はいつでも",
+        "cn": "但是你随时",
         "ro": "demo kimi wa itsu demo"
     },
     {
         "time": 51494,
         "text": "語りかける",
+        "cn": "都在安慰着我",
         "ro": "katarikakeru"
     },
     {
@@ -57,21 +65,25 @@
     {
         "time": 53620,
         "text": "本当は生きていたいから",
+        "cn": "因为真实的想要活着",
         "ro": "hontou wa ikiteitai kara"
     },
     {
         "time": 56652,
         "text": "人並みに笑いたいから",
+        "cn": "因为想和一般人一样欢笑",
         "ro": "hitonami ni waraitai kara"
     },
     {
         "time": 58866,
         "text": "泣いちゃう夜に問いかけるの",
+        "cn": "在哭泣的夜里我询问着",
         "ro": "naichau yoru ni toikakeru no"
     },
     {
         "time": 61643,
         "text": "答えがなくても",
+        "cn": "就算没有回应",
         "ro": "kotae ga nakutemo"
     },
     {
@@ -82,21 +94,25 @@
     {
         "time": 63801,
         "text": "1 番輝くのは今日じゃない",
+        "cn": "最闪耀如果不是今天的话",
         "ro": "ichiban kagayaku no wa kyou janai"
     },
     {
         "time": 66266,
         "text": "ならいつか寂しさが星になる",
+        "cn": "那么终有一天孤独会变成繁星",
         "ro": "nara itsuka samishisa ga hoshi ni naru"
     },
     {
         "time": 68650,
         "text": "僕ら幸せの欠片を",
+        "cn": "一边收集着我们幸福的碎片",
         "ro": "bokura shiawase no kakera wo"
     },
     {
         "time": 71379,
         "text": "集めながら君と笑う",
+        "cn": "一边与你一起欢笑",
         "ro": "atsume nagara kimi to warau"
     },
     {
@@ -107,21 +123,25 @@
     {
         "time": 102426,
         "text": "いつの間にか転んで",
+        "cn": "不知不觉中",
         "ro": "itsu no ma ni ka koronde"
     },
     {
         "time": 104980,
         "text": "年老いてどうでも良くなる",
+        "cn": "跌倒了老去了 变得冷漠了",
         "ro": "toshioite dou demo yoku naru"
     },
     {
         "time": 107816,
         "text": "分かってる仕方ないしさ",
+        "cn": "我知道这是没办法的",
         "ro": "wakatteru shikatanai shi sa"
     },
     {
         "time": 110139,
         "text": "逃げることにも疲れたんだよ",
+        "cn": "就连逃避的力气都没了",
         "ro": "nigeru koto ni mo tsukaretan da yo"
     },
     {
@@ -132,21 +152,25 @@
     {
         "time": 112695,
         "text": "嗚呼",
+        "cn": "啊啊",
         "ro": "aa"
     },
     {
         "time": 113154,
         "text": "月明かりの題名のない想像の果て空っぽ",
+        "cn": "月光下没有标题的问题想到最后也没有答案",
         "ro": "tsukiakari no daimei no nai souzou no hate karappo"
     },
     {
         "time": 117531,
         "text": "ねぇここじゃないからさ問いかける声",
+        "cn": "呐因为不在这里",
         "ro": "nee koko janai kara sa toikakeru koe"
     },
     {
         "time": 120399,
         "text": "答えのない煌めきの中",
+        "cn": "所以询问的声音 沉没在没有回答的光芒中",
         "ro": "kotae no nai kirameki no naka"
     },
     {
@@ -157,21 +181,25 @@
     {
         "time": 141887,
         "text": "本当は生きていたいから",
+        "cn": "因为其实真的想要活着",
         "ro": "hontou wa ikiteitai kara"
     },
     {
         "time": 144758,
         "text": "人並みに笑いたいから",
+        "cn": "因为想和一般人一样欢笑",
         "ro": "hitonami ni waraitai kara"
     },
     {
         "time": 147055,
         "text": "泣いちゃう夜に問いかけるの",
+        "cn": "在哭泣的夜里我询问着",
         "ro": "naichau yoru ni toikakeru no"
     },
     {
         "time": 149738,
         "text": "答えがなくても",
+        "cn": "就算没有回答",
         "ro": "kotae ga nakutemo"
     },
     {
@@ -182,21 +210,25 @@
     {
         "time": 151954,
         "text": "1 番輝くのは今日じゃない",
+        "cn": "最闪耀如果不是今天的话",
         "ro": "ichiban kagayaku no wa kyou janai"
     },
     {
         "time": 154430,
         "text": "ならいつか寂しさが星になる",
+        "cn": "那么总有一天孤独会变成繁星",
         "ro": "nara itsuka samishisa ga hoshi ni naru"
     },
     {
         "time": 156819,
         "text": "僕ら幸せの欠片を",
+        "cn": "只是想将我们幸福的碎片",
         "ro": "bokura shiawase no kakera wo"
     },
     {
         "time": 159607,
         "text": "集めてゆくだけ",
+        "cn": "尽情收集起来",
         "ro": "atsumete yuku dake"
     },
     {
@@ -207,21 +239,25 @@
     {
         "time": 161741,
         "text": "きっと笑えるから今日だけ",
+        "cn": "只有今天我一定会笑的",
         "ro": "kitto waraeru kara kyou dake"
     },
     {
         "time": 164263,
         "text": "今日だけはこのままで歌おう",
+        "cn": "单独今天就让我这样唱下去吧",
         "ro": "kyou dake wa kono mama de utaou"
     },
     {
         "time": 166579,
         "text": "いつか忘れてしまっても",
+        "cn": "即使哪一天忘记了",
         "ro": "itsuka wasurete shimattemo"
     },
     {
         "time": 169018,
         "text": "それには意味があると信じて",
+        "cn": "我还是相信这是有意义的",
         "ro": "sore ni wa imi ga aru to shinjite"
     },
     {
@@ -232,21 +268,25 @@
     {
         "time": 171911,
         "text": "形のない願いだけ",
+        "cn": "只是个无形的愿望而已",
         "ro": "katachi no nai negai dake"
     },
     {
         "time": 173911,
         "text": "心のヒビワレの奥巡った",
+        "cn": "在心灵裂痕的深处徘徊",
         "ro": "kokoro no hibiware no oku megutta"
     },
     {
         "time": 176677,
         "text": "抱きしめてても縫い合わせても",
+        "cn": "不管是紧紧抱在一起还是缝合在一起",
         "ro": "dakishimetetemo nuiawasetemo"
     },
     {
         "time": 179198,
         "text": "愛されたいって思うだけ",
+        "cn": "也只是单纯想着被爱着",
         "ro": "aisaretai tte omou dake"
     },
     {
@@ -257,21 +297,25 @@
     {
         "time": 181296,
         "text": "けど本当は生きていたいから",
+        "cn": "但是真的想要活着",
         "ro": "kedo hontou wa ikiteitai kara"
     },
     {
         "time": 184019,
         "text": "人並みに笑いたいから",
+        "cn": "因为想和一般人一样欢笑",
         "ro": "hitonami ni waraitai kara"
     },
     {
         "time": 186283,
         "text": "僕ら幸せの欠片を",
+        "cn": "一边收集着我们幸福的碎片",
         "ro": "bokura shiawase no kakera wo"
     },
     {
         "time": 188818,
         "text": "集めながら君と笑う",
+        "cn": "一边与你一起欢笑",
         "ro": "atsume nagara kimi to warau"
     }
 ]
