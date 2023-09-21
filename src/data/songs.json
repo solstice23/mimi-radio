@@ -1653,5 +1653,24 @@
             "cn",
             "ro"
         ]
+    },
+    {
+        "name": "I Need You",
+        "artist": "MIMI",
+        "singer": "Miuna Usako",
+        "translatedName": null,
+        "length": "2:13",
+        "type": "Collab",
+        "hasLyrics": "Yes",
+        "releaseDate": "2023-09-17T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=OQd8pMuxxtM",
+        "desc": "As long as you're here, I can smile 🧡",
+        "staff": "Music: MIMI @mimi_3mi  \nVocals & Video: Miuna Usako @miunausako  \nMix: akitsu@akitsucchi\nIllustration: ë(よー)@wetpotatosunsun  \nSpecial thanks: Raki Kazuki",
+        "fileName": "I Need You - Miuna Usako.mp3",
+        "quality": "320K",
+        "highestQuality": "No",
+        "note": "₍ᐢᐢ₎ Digital Streaming Platforms:\n→ Coming Soon",
+        "hidden": null,
+        "cover": "I Need You - Miuna Usako.jpg"
     }
 ]
