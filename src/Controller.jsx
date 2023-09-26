@@ -33,6 +33,14 @@ export function Controller(props) {
 		}
 	}, []);
 
+	useEffect(() => {
+		if (isPaused) {
+			document.title = "MIMI Radio";
+		} else {
+			document.title = `MIMI Radio | ${queueManager.currentSong?.name ?? "MIMI Radio"} - ${queueManager.currentSong?.artist}`;
+		}
+	}, [queueManager.currentSong, isPaused]);
+
 	return (
 		<Card className="controller" ripple={false} layer={false}>
 			<ControllerBg/>
