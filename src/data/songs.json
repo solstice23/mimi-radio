@@ -1671,6 +1671,12 @@
         "highestQuality": "No",
         "note": "₍ᐢᐢ₎ Digital Streaming Platforms:\n→ Coming Soon",
         "hidden": null,
-        "cover": "I Need You - Miuna Usako.jpg"
+        "cover": "I Need You - Miuna Usako.jpg",
+        "lyrics": "I Need You - Miuna Usako.json",
+        "lyricsLangs": [
+            "ja",
+            "cn",
+            "en"
+        ]
     }
 ]
