@@ -1702,5 +1702,24 @@
             "ja",
             "cn"
         ]
+    },
+    {
+        "name": "心を刺す言葉だけ",
+        "artist": "MIMI",
+        "singer": "初音ミク,可不",
+        "translatedName": null,
+        "length": "3:11",
+        "type": "Standalone",
+        "hasLyrics": "Yes",
+        "releaseDate": "2023-10-18T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=FXNUn2KzcE8",
+        "desc": null,
+        "staff": "Music : MIMI @mimi_3mi\nIllustration : おむたつ @omrice4869\nmovie : 藍瀬まなみ: AiseManami\nmix, mastering : はるお @haluo_haluo",
+        "fileName": "MIMI - 心を刺す言葉だけ feat. 初音ミク & 可不.flac",
+        "quality": "Lossless",
+        "highestQuality": "Yes",
+        "note": null,
+        "hidden": null,
+        "cover": "MIMI - 心を刺す言葉だけ feat. 初音ミク & 可不.jpg"
     }
 ]
