@@ -1696,6 +1696,11 @@
         "highestQuality": "Yes",
         "note": null,
         "hidden": null,
-        "cover": "MIMI,羽累 - Maple (feat. 羽累).jpg"
+        "cover": "MIMI,羽累 - Maple (feat. 羽累).jpg",
+        "lyrics": "MIMI,羽累 - Maple (feat. 羽累).json",
+        "lyricsLangs": [
+            "ja",
+            "cn"
+        ]
     }
 ]
