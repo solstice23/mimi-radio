@@ -116,7 +116,10 @@
 	.lyrics-container {
 		flex: 1;
 		display: flex;
-		min-height: 30vh;
+		min-height: min(30vh, 500px);
+		&.no-lyrics {
+			min-height: 50px;
+		}
 		.lyrics {
 			height: 100%;
 			width: 100%;
@@ -308,7 +311,7 @@
 				padding-left: 12px;
 				display: flex;
 				flex-direction: row;
-				gap: 0.2em;
+				gap: 0.3em;
 				.song-badge {
 					background-color: var(--md-sys-color-secondary);
 					color: var(--md-sys-color-on-secondary);
@@ -317,6 +320,10 @@
 					font-size: 0.9em;
 					transform: translateY(6px);
 					user-select: none;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 0.15em;
 				}
 			}
 			.controller-top {

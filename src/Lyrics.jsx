@@ -146,7 +146,15 @@ export function Lyrics(props) {
 
 
 	return (
-		<Card className="lyrics-container" ripple={false} layer={false}>
+		<Card
+		className={classNames(
+			"lyrics-container",
+			{
+				"no-lyrics": lyrics === null
+			}
+		)}
+		ripple={false}
+		layer={false}>
 			{
 				lyrics &&
 				<div className="lyrics" ref={containerRef}>

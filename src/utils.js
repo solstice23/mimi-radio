@@ -1,4 +1,5 @@
 import { Hct } from "@material/material-color-utilities";
+import md5 from "md5";
 
 
 const mdTokens = [
@@ -67,7 +68,7 @@ const songs = songsRaw.map((song) => {
 		song.isPiano = true;
 	}
 	song.length = song.length.split(':').map((value) => parseInt(value)).reduce((acc, time) => (60 * acc) + time);
-	song.hash = song.name + song.length;
+	song.hash = md5(song.name + song.length + song.artist + song.singer).slice(0, 8);
 	song.releaseDate = new Date(song.releaseDate);
 	if (song.link.includes('youtube.com') || song.link.includes('youtu.be')) {
 		song.youtubeID = song.link.replace('https://www.youtube.com/watch?v=', '').replace('https://youtu.be/', '');
@@ -75,7 +76,7 @@ const songs = songsRaw.map((song) => {
 	return song;
 }).concat(shortsRaw.map((short) => {
 	short.length = short.length.split(':').map((value) => parseInt(value)).reduce((acc, time) => (60 * acc) + time);
-	short.hash = short.name + short.length;
+	short.hash = md5(short.name + short.length).slice(0, 8);
 	if (typeof(short.releaseDate) === 'number' && short.releaseDate < 10000000000) short.releaseDate *= 1000;
 	short.releaseDate = new Date(short.releaseDate);
 	short.videoURL = `//mimi-radio-files.s23.moe/` + short.fileName;

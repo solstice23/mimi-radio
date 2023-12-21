@@ -5,7 +5,7 @@ import IconButton from './components/IconButton.jsx';
 import FAB from './components/FAB.jsx';
 import Menu from './components/Menu.jsx';
 import WaveProgressBar from './components/WaveProgressBar.jsx';
-import { MdSkipPrevious, MdSkipNext, MdOutlineSkipPrevious, MdOutlineSkipNext, MdPause, MdPlayArrow, MdShuffle, MdRepeat, MdRepeatOne, MdQueueMusic, MdPlaylistRemove, MdClearAll } from 'react-icons/md';
+import { MdSkipPrevious, MdSkipNext, MdOutlineSkipPrevious, MdOutlineSkipNext, MdPause, MdPlayArrow, MdShuffle, MdRepeat, MdRepeatOne, MdQueueMusic, MdPlaylistRemove, MdClearAll, MdAlbum } from 'react-icons/md';
 
 import { QueueContext } from './contexts/QueueContext.jsx';
 import { ThemeColorSetContext } from './contexts/ThemeColorSetContext.jsx'
@@ -49,6 +49,14 @@ export function Controller(props) {
 					<div className="song-badge">
 						{ queueManager.currentSong?.type.replace(/^\w/, c => c.toUpperCase()) ?? " " }
 					</div>
+					{
+						queueManager.currentSong?.album && (
+							<div className="song-badge">
+								<MdAlbum/>
+								{ queueManager.currentSong?.album ?? " " }
+							</div>
+						)
+					}
 				</div>
 				<div className="controller-top">
 					<div className="song-info">

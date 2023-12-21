@@ -1,5 +1,11 @@
 .tag {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	gap: 0.25em;
 	border-radius: 8px;
 	text-align: center;
 	font-size: 0.8em;

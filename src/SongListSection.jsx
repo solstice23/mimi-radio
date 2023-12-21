@@ -10,7 +10,7 @@ import Menu from './components/Menu.jsx';
 import MenuItem, {MenuDivider} from './components/MenuItem.jsx';
 import Checkbox from './components/Checkbox.jsx';
 import NowPlayingIndicatorIcon from './components/NowPlayingIndicatorIcon.jsx';
-import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPiano, MdPianoOff, MdOutlineInfo, MdGridView, MdViewList, MdPlayArrow } from 'react-icons/md';
+import { MdDesignServices, MdMic, MdPlayCircleOutline, MdSort, MdSchedule, MdCalendarMonth, MdSortByAlpha, MdSwapVert, MdOpenInNew, MdPiano, MdPianoOff, MdOutlineInfo, MdGridView, MdViewList, MdPlayArrow, MdAlbum } from 'react-icons/md';
 import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 import './SongListSection.scss';
@@ -338,6 +338,10 @@ function Song(props) {
 				</div>
 				<div className="song-metas">
 					<Tag className="song-type">{props.song.type}</Tag>
+					{
+						props.song.album &&
+						<Tag className="song-album"><MdAlbum/>{props.song.album}</Tag>
+					}
 					<div className="song-date">{formatDate(props.song.releaseDate)}</div>
 					<div className="song-length">{formatLength(props.song.length)}</div>
 					{ !props.song.hasLyrics && <div className="song-instrumental-tag" title="Instrumental"><MdPiano/></div> }
