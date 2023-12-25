@@ -7,6 +7,7 @@ import YouTube from 'react-youtube';
 import { QueueContext } from './contexts/QueueContext.jsx';
 import classNames from 'classnames';
 
+const enableMirror = false;
 
 export function VideoPlayer() {
 	const queueManager = useContext(QueueContext);
@@ -23,8 +24,12 @@ export function VideoPlayer() {
 	return (
 		<Card className="video-player-container" ripple={false} layer={false}>
 			{
-				videoType === 'youtube' &&
+				videoType === 'youtube' && (!queueManager.currentSong.mirrored || !enableMirror )&&
 				<YoutubePlayer/>
+			}
+			{
+				videoType === 'youtube' && queueManager.currentSong.mirrored && enableMirror &&
+				<URLPlayer/>
 			}
 			{
 				videoType === 'url' &&

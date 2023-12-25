@@ -59,6 +59,7 @@ export function applyNewMdTokens(theme, dark = false) {
 
 import songsRaw from './data/songs.json'
 import shortsRaw from './data/shorts.json'
+import mirroredIds from './data/mirrored.json'
 
 
 
@@ -71,8 +72,12 @@ const songs = songsRaw.map((song) => {
 	song.hash = md5(song.name + song.length + song.artist + song.singer).slice(0, 8);
 	song.releaseDate = new Date(song.releaseDate);
 	if (song.link.includes('youtube.com') || song.link.includes('youtu.be')) {
-		song.youtubeID = song.link.replace('https://www.youtube.com/watch?v=', '').replace('https://youtu.be/', '');
+		song.youtubeID = song.link.replace('https://www.youtube.com/watch?v=', '')
+								.replace('https://youtu.be/', '')
+								.replace('/', '');
 	}
+	song.mirrored = mirroredIds.includes(song.youtubeID);
+	if (song.mirrored) song.videoURL = `//mimi-radio-files.s23.moe/${song.youtubeID}.mp4`;
 	return song;
 }).concat(shortsRaw.map((short) => {
 	short.length = short.length.split(':').map((value) => parseInt(value)).reduce((acc, time) => (60 * acc) + time);
@@ -96,6 +101,7 @@ const songs = songsRaw.map((song) => {
 });
 
 export function getSongsData() {
+	console.log(songs);
 	return songs;
 }
 
