@@ -101,7 +101,6 @@ const songs = songsRaw.map((song) => {
 });
 
 export function getSongsData() {
-	console.log(songs);
 	return songs;
 }
 
