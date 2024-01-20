@@ -439,7 +439,7 @@
         "hasLyrics": "Yes",
         "album": null,
         "releaseDate": "2020-11-19T00:00:00.000Z",
-        "link": "https://www.youtube.com/watch?v=r5xaccIl1Ps&t=63s",
+        "link": "https://www.youtube.com/watch?v=r5xaccIl1Ps",
         "desc": "/",
         "staff": "Music / MIMI @mimi_3mi\nIllustration / マルシェ @marche_30\nmix, mastering / 佐藤主税 @studioonett",
         "fileName": "MIMI - SorrowChat.flac",
@@ -732,7 +732,7 @@
         "hasLyrics": "Yes",
         "album": null,
         "releaseDate": "2021-12-22T00:00:00.000Z",
-        "link": "https://www.youtube.com/watch?v=p_t_hY1o3gE",
+        "link": "https://www.youtube.com/watch?v=0bEmLE7JrQQ",
         "desc": "/",
         "staff": "Composer: カンザキイオリ\nLyricist: カンザキイオリ",
         "fileName": "花譜 feat. 理芽 - まほう(MIMI Remix).flac",
@@ -1742,7 +1742,13 @@
         "highestQuality": "Yes",
         "note": null,
         "hidden": null,
-        "cover": "Miuna Usako - I Need You.jpg"
+        "cover": "Miuna Usako - I Need You.jpg",
+        "lyrics": "Miuna Usako - I Need You.json",
+        "lyricsLangs": [
+            "ja",
+            "cn",
+            "en"
+        ]
     },
     {
         "name": "Maple",
@@ -1879,7 +1885,7 @@
         "hasLyrics": "Yes",
         "album": null,
         "releaseDate": "2023-12-02T00:00:00.000Z",
-        "link": "https://www.youtube.com/watch?v=tW6pTE_Eneo",
+        "link": "https://www.youtube.com/watch?v=tW6pTE_ENeo",
         "desc": null,
         "staff": "Music/MIMI\nIllustration/しまざきジョゼ",
         "fileName": "MIMI,初音ミク - 始点前夕暮れ (feat. 初音ミク).flac",
@@ -2088,5 +2094,45 @@
         "note": null,
         "hidden": null,
         "cover": "MIMI - 遠く夢の奥.jpg"
+    },
+    {
+        "name": "ダイヤモンドリリー",
+        "artist": "MIMI",
+        "singer": "原因は自分にある。",
+        "translatedName": null,
+        "length": "3:39",
+        "type": "Collab",
+        "hasLyrics": "Yes",
+        "album": null,
+        "releaseDate": "2024-01-09T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=_VuO_Sxn7o0",
+        "desc": null,
+        "staff": null,
+        "fileName": "原因は自分にある  - ダイヤモンドリリー.flac",
+        "quality": "Lossless",
+        "highestQuality": "Yes",
+        "note": null,
+        "hidden": null,
+        "cover": "原因は自分にある  - ダイヤモンドリリー.jpg"
+    },
+    {
+        "name": "愛し愛",
+        "artist": "MIMI",
+        "singer": "初音ミク,可不",
+        "translatedName": null,
+        "length": "3:03",
+        "type": "Standalone",
+        "hasLyrics": "Yes",
+        "album": null,
+        "releaseDate": "2024-01-14T00:00:00.000Z",
+        "link": "https://www.youtube.com/watch?v=xQYp4-Ett6A",
+        "desc": null,
+        "staff": null,
+        "fileName": "MIMI - 愛し愛 (feat. 初音ミク & 可不).flac",
+        "quality": "Lossless",
+        "highestQuality": "Yes",
+        "note": null,
+        "hidden": null,
+        "cover": "MIMI - 愛し愛 (feat. 初音ミク & 可不).jpg"
     }
 ]
